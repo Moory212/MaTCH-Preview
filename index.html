@@ -34,6 +34,15 @@
 .auth-divider:before,.auth-divider:after{content:"";height:1px;background:var(--line);flex:1}
 .auth-quick{display:grid;grid-template-columns:1fr 1fr;gap:9px}
 .auth-quick .btn{width:100%}
+.pass-wrap{position:relative}
+.pass-wrap input{padding-right:62px}
+.pass-toggle{position:absolute;right:5px;top:50%;transform:translateY(-50%);border:0;background:transparent;color:var(--blue);font-size:10px;font-weight:700;letter-spacing:.4px;padding:5px 9px;border-radius:6px;line-height:1}
+.pass-toggle:hover{background:#eef4f2}
+.field input.invalid,.field select.invalid,.field textarea.invalid{border-color:#c97b6f;background:#fdf6f5}
+.field-error{color:#a4473d;font-size:11px;line-height:1.35}
+.auth-demo-creds{margin-top:16px;padding:12px 14px;background:#f4f7f5;border:1px solid var(--line);border-radius:9px;font-size:11px;color:#50616a;line-height:1.7}
+.auth-demo-creds strong{display:block;font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:var(--blue);margin-bottom:4px}
+.auth-demo-creds code{background:#e7efec;color:#2e5f55;padding:1px 5px;border-radius:4px;font-family:ui-monospace,Menlo,monospace;font-size:10.5px}
 @media(max-width:900px){.auth{grid-template-columns:1fr}.auth-side{padding:32px 24px}.auth-side h1{font-size:26px!important}.auth-points{display:none}.auth-main{padding:24px 16px 48px}}
 
 /* ---------- Notifications ---------- */
@@ -120,9 +129,14 @@ const initialRequests=[
 {id:'r2',title:'AI literacy for business teams',category:'AI literacy',industry:'Professional Services',format:'Online',location:'Malaysia',budget:3500,language:'English',date:'Flexible',status:'Submitted',created:'10 Oct 2026',summary:'Help a cross-functional group understand AI opportunities, limitations and responsible use at work.',skills:['AI literacy','Digital transformation'],audience:30,duration:'Half day'}
 ];
 const STATUS_FLOW=['Submitted','Reviewing matches','Shortlisted','Booked','Completed'];
+const DEMO_ACCOUNTS=[
+  {id:'u-client-demo',name:'Acme Learning Co.',email:'client@acme.demo',password:'demo1234',role:'client',org:'Acme Learning Co.'},
+  {id:'u-assoc-demo',name:'Amira Hassan',email:'amira@match.demo',password:'demo1234',role:'associate',org:'Leadership & Culture Facilitator'}
+];
 
 function defaultState(){
   return {
+    v:2,
     associates:structuredClone(initialAssociates),
     requests:structuredClone(initialRequests),
     enquiries:[
@@ -160,8 +174,15 @@ function loadState(){
   let s=null;
   try{s=JSON.parse(localStorage.getItem('matchDemoState'))}catch(e){}
   const base=defaultState();
-  if(s&&s.associates&&s.requests) return Object.assign({},base,s);
-  return base;
+  let merged=(s&&s.associates&&s.requests)?Object.assign({},base,s):base;
+  // Force a clean sign-in for data created by older versions of the demo
+  if(!s||!s.v||s.v<2){merged.session=null;}
+  merged.v=2;
+  merged.users=merged.users||[];
+  DEMO_ACCOUNTS.forEach(d=>{
+    if(!merged.users.some(u=>u.email===d.email))merged.users.push({...d});
+  });
+  return merged;
 }
 let state = loadState();
 function persist(){localStorage.setItem('matchDemoState',JSON.stringify(state))}
@@ -207,24 +228,44 @@ function authScreen(){
   </div>`;
 }
 function loginForm(){
-  return `<form onsubmit="doLogin(event)">
-    <div class="field"><label for="loginEmail">Email</label><input id="loginEmail" name="email" type="email" required value="client@acme.demo" autocomplete="username"></div>
-    <div class="field" style="margin-top:13px"><label for="loginPass">Password</label><input id="loginPass" name="password" type="password" required value="demo1234" autocomplete="current-password"></div>
+  return `<form onsubmit="doLogin(event)" novalidate>
+    <div class="field"><label for="loginEmail">Email</label><input id="loginEmail" name="email" type="email" required value="client@acme.demo" autocomplete="username" placeholder="you@company.com"></div>
+    <div class="field" style="margin-top:13px"><label for="loginPass">Password</label>
+      <div class="pass-wrap">
+        <input id="loginPass" name="password" type="password" required value="demo1234" autocomplete="current-password" placeholder="Your password">
+        <button type="button" class="pass-toggle" onclick="togglePass('loginPass',this)" aria-label="Show password">Show</button>
+      </div>
+    </div>
     <button class="btn primary" type="submit" style="width:100%;margin-top:18px">Sign in →</button>
   </form>
-  <div class="auth-divider"><span>or jump straight in</span></div>
+  <div class="auth-divider"><span>or use a demo account</span></div>
   <div class="auth-quick">
     <button class="btn secondary" onclick="quickLogin('client')">Client demo</button>
     <button class="btn secondary" onclick="quickLogin('associate')">Associate demo</button>
   </div>
-  <p class="footnote">Any email and password work in this demo. Demo credentials are pre-filled above.</p>`;
+  <div class="auth-demo-creds">
+    <strong>Demo credentials</strong>
+    <div><code>client@acme.demo</code> · <code>amira@match.demo</code></div>
+    <div>Password: <code>demo1234</code></div>
+  </div>`;
 }
 function registerForm(){
   const role=state.authRole||'client';
-  return `<form onsubmit="doRegister(event)">
-    <div class="field"><label for="regName">Full name *</label><input id="regName" name="name" required placeholder="e.g. Jamie Tan"></div>
-    <div class="field" style="margin-top:13px"><label for="regEmail">Work email *</label><input id="regEmail" name="email" type="email" required placeholder="you@company.com"></div>
-    <div class="field" style="margin-top:13px"><label for="regPass">Password *</label><input id="regPass" name="password" type="password" required minlength="6" placeholder="At least 6 characters"></div>
+  return `<form onsubmit="doRegister(event)" novalidate>
+    <div class="field"><label for="regName">Full name *</label><input id="regName" name="name" required placeholder="e.g. Jamie Tan" autocomplete="name"></div>
+    <div class="field" style="margin-top:13px"><label for="regEmail">Work email *</label><input id="regEmail" name="email" type="email" required placeholder="you@company.com" autocomplete="email"></div>
+    <div class="field" style="margin-top:13px"><label for="regPass">Password *</label>
+      <div class="pass-wrap">
+        <input id="regPass" name="password" type="password" required minlength="6" placeholder="At least 6 characters" autocomplete="new-password">
+        <button type="button" class="pass-toggle" onclick="togglePass('regPass',this)" aria-label="Show password">Show</button>
+      </div>
+    </div>
+    <div class="field" style="margin-top:13px"><label for="regConfirm">Confirm password *</label>
+      <div class="pass-wrap">
+        <input id="regConfirm" name="confirm" type="password" required minlength="6" placeholder="Re-enter your password" autocomplete="new-password">
+        <button type="button" class="pass-toggle" onclick="togglePass('regConfirm',this)" aria-label="Show password">Show</button>
+      </div>
+    </div>
     <div class="field" style="margin-top:16px"><label>I'm joining as</label>
       <div class="auth-role">
         <button type="button" data-role="client" class="${role==='client'?'selected':''}" onclick="pickRole('client')"><strong>I'm hiring</strong><span>Find associates for my team</span></button>
@@ -232,7 +273,10 @@ function registerForm(){
       </div>
       <input type="hidden" name="role" id="regRole" value="${role}">
     </div>
-    <div class="field" style="margin-top:13px" id="regOrgWrap"><label for="regOrg">${role==='client'?'Company name':'Professional headline'}</label><input id="regOrg" name="org" placeholder="${role==='client'?'e.g. Acme Learning Co.':'e.g. Leadership facilitator'}"></div>
+    <div class="field" style="margin-top:13px" id="regOrgWrap">
+      <label for="regOrg">${role==='client'?'Company name':'Professional headline'}</label>
+      <input id="regOrg" name="org" placeholder="${role==='client'?'e.g. Acme Learning Co.':'e.g. Leadership facilitator'}">
+    </div>
     <button class="btn primary" type="submit" style="width:100%;margin-top:18px">Create account →</button>
   </form>
   <p class="footnote">This is a local demo — accounts and data are stored in your browser only.</p>`;
@@ -245,45 +289,117 @@ function pickRole(r){
   const lab=document.getElementById('regOrgWrap');
   if(lab){
     lab.querySelector('label').textContent = r==='client'?'Company name':'Professional headline';
-    document.getElementById('regOrg').placeholder = r==='client'?'e.g. Acme Learning Co.':'e.g. Leadership facilitator';
+    const inp=document.getElementById('regOrg');
+    if(inp) inp.placeholder = r==='client'?'e.g. Acme Learning Co.':'e.g. Leadership facilitator';
   }
+}
+function isEmail(s){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s)}
+function clearAuthErrors(){
+  document.querySelectorAll('.auth-card .field-error').forEach(n=>n.remove());
+  document.querySelectorAll('.auth-card .invalid').forEach(n=>{n.classList.remove('invalid');n.removeAttribute('aria-invalid');});
+}
+function setFieldError(id,msg){
+  const el=document.getElementById(id);
+  if(!el)return;
+  el.classList.add('invalid');
+  el.setAttribute('aria-invalid','true');
+  const wrap=el.closest('.field');
+  if(!wrap)return;
+  let err=wrap.querySelector('.field-error');
+  if(!err){err=document.createElement('div');err.className='field-error';wrap.appendChild(err);}
+  err.textContent=msg;
+}
+function togglePass(id,btn){
+  const el=document.getElementById(id);
+  if(!el)return;
+  const show=el.type==='password';
+  el.type=show?'text':'password';
+  if(btn){btn.textContent=show?'Hide':'Show';btn.setAttribute('aria-label',show?'Hide password':'Show password');}
 }
 function doLogin(e){
   e.preventDefault();
-  const f=new FormData(e.target);
+  clearAuthErrors();
+  const form=e.target;
+  const f=new FormData(form);
   const email=(f.get('email')||'').trim().toLowerCase();
-  const password=f.get('password');
-  if(!email||!password){notify('Enter your email and password.',true);return;}
-  const known=(state.users||[]).find(u=>u.email===email);
-  if(known){
-    if(known.password!==password){notify('That password does not match this demo account.',true);return;}
-    signIn({name: known.role==='client'?(known.org||known.name):known.name, email, role:known.role, initials:initials(known.name), tone:known.role==='associate'?'green':''});
+  const password=f.get('password')||'';
+  let ok=true;
+  if(!email){setFieldError('loginEmail','Enter your email address.');ok=false;}
+  else if(!isEmail(email)){setFieldError('loginEmail','That doesn’t look like a valid email address.');ok=false;}
+  if(!password){setFieldError('loginPass','Enter your password.');ok=false;}
+  if(!ok)return;
+  const user=(state.users||[]).find(u=>u.email===email);
+  if(!user){
+    setFieldError('loginEmail','No account found for this email. Create an account or use a demo login below.');
     return;
   }
-  const isAssociate=email.startsWith('amira')||email.includes('associate');
-  signIn(isAssociate
-    ? {name:'Amira Hassan',email,role:'associate',initials:'AH',tone:'green'}
-    : {name:'Acme Learning Co.',email,role:'client',initials:'AC',tone:''});
+  if(user.password!==password){
+    setFieldError('loginPass','Incorrect password. Try again.');
+    return;
+  }
+  const sessionUser={
+    name: user.role==='client'?(user.org||user.name):user.name,
+    email:user.email,
+    role:user.role,
+    initials:initials(user.name),
+    tone:user.role==='associate'?'green':''
+  };
+  const btn=form.querySelector('button[type="submit"]');
+  if(btn){btn.disabled=true;btn.textContent='Signing in…';}
+  signIn(sessionUser);
 }
 function doRegister(e){
   e.preventDefault();
-  const f=new FormData(e.target);
+  clearAuthErrors();
+  const form=e.target;
+  const f=new FormData(form);
   const name=(f.get('name')||'').trim();
   const email=(f.get('email')||'').trim().toLowerCase();
-  const password=f.get('password');
+  const password=f.get('password')||'';
+  const confirm=f.get('confirm')||'';
   const role=f.get('role')||'client';
   const org=(f.get('org')||'').trim();
-  if(!name||!email||!password){notify('Please complete all required fields.',true);return;}
-  if(password.length<6){notify('Use a password of at least 6 characters.',true);return;}
-  state.users=(state.users||[]).filter(u=>u.email!==email);
-  state.users.push({id:'u'+Date.now(),name,email,password,role,org});
-  state.authView='login'; state.authRole='client';
-  signIn({name: role==='client'?(org||name):name, email, role, initials:initials(name), tone: role==='associate'?'green':''});
+  let ok=true;
+  if(!name){setFieldError('regName','Enter your full name.');ok=false;}
+  if(!email){setFieldError('regEmail','Enter your email address.');ok=false;}
+  else if(!isEmail(email)){setFieldError('regEmail','That doesn’t look like a valid email address.');ok=false;}
+  else if((state.users||[]).some(u=>u.email===email)){setFieldError('regEmail','An account with this email already exists. Try signing in instead.');ok=false;}
+  if(!password){setFieldError('regPass','Choose a password.');ok=false;}
+  else if(password.length<6){setFieldError('regPass','Use at least 6 characters.');ok=false;}
+  if(confirm!==password){setFieldError('regConfirm','Passwords do not match.');ok=false;}
+  if(!ok)return;
+  const user={id:'u'+Date.now(),name,email,password,role,org};
+  state.users.push(user);
+  state.authView='login';
+  state.authRole='client';
+  const sessionUser={
+    name: role==='client'?(org||name):name,
+    email,
+    role,
+    initials:initials(name),
+    tone: role==='associate'?'green':''
+  };
+  const btn=form.querySelector('button[type="submit"]');
+  if(btn){btn.disabled=true;btn.textContent='Creating account…';}
+  signIn(sessionUser);
   notify('Account created. Welcome to MaTCH.');
 }
 function quickLogin(role){
-  if(role==='client') signIn({name:'Acme Learning Co.',email:'client@acme.demo',role:'client',initials:'AC',tone:''});
-  else signIn({name:'Amira Hassan',email:'amira@match.demo',role:'associate',initials:'AH',tone:'green'});
+  const email = role==='client'?'client@acme.demo':'amira@match.demo';
+  const user = (state.users||[]).find(u=>u.email===email);
+  if(user){
+    signIn({
+      name: user.role==='client'?(user.org||user.name):user.name,
+      email:user.email,
+      role:user.role,
+      initials:initials(user.name),
+      tone:user.role==='associate'?'green':''
+    });
+  } else if(role==='client'){
+    signIn({name:'Acme Learning Co.',email,role:'client',initials:'AC',tone:''});
+  } else {
+    signIn({name:'Amira Hassan',email,role:'associate',initials:'AH',tone:'green'});
+  }
 }
 function signIn(user){
   state.session=user;
@@ -299,6 +415,8 @@ function logout(){
   state.session=null;
   state.page='dashboard';
   state.mode='client';
+  state.authView='login';
+  state.authRole='client';
   persist(); render();
 }
 
@@ -718,7 +836,6 @@ function openEnquiry(id){
 function associateDashboard(){
   const pending=state.enquiries.filter(e=>e.associateId==='a1'&&e.status!=='Closed').length;
   const pendingProps=state.proposals.filter(p=>p.associateId==='a1'&&p.status==='Pending').length;
-  const interested=state.opportunityResponses.length;
   return `<div class="pagehead"><div><div class="eyebrow">Your workspace · Associate</div><h1>Good morning, ${esc(greetingName())}.</h1><p class="subhead">Your professional workspace, with relevant opportunities and conversations in one place.</p></div><button class="btn primary" onclick="go('editProfile')">Edit my profile →</button></div>
 <div class="feature-banner"><div><div class="eyebrow">Your professional profile</div><h2>Make it easier for the right clients to find you.</h2><p>Keep your expertise, delivery preferences and availability current so your profile reflects the work you want to do.</p></div><button class="btn primary" onclick="go('profilePreview')">Preview profile ↗</button></div>
 <div class="grid stats">${stat('Profile completeness','82%','A few details can improve clarity','◎')}${stat('Relevant opportunities',opportunities().length,'Based on your demo profile','◈')}${stat('Open enquiries',pending,'Across your sample inbox','✉')}${stat('Proposals',pendingProps,'Awaiting your response','◈')}</div>
