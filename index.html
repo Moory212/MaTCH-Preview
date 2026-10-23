@@ -6,10 +6,9 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
 :root{--ink:#182b3a;--navy:#173f55;--blue:#2e6f7e;--teal:#d7ebe6;--accent:#d76b43;--paper:#f7f7f3;--white:#fff;--muted:#687780;--line:#e2e7e4;--green:#28745e;--gold:#a46d22;--red:#ad4b42;--radius:14px;--shadow:0 8px 24px rgba(23,50,61,.06);--space:8px}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.5 'DM Sans',sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible{outline:3px solid #87bdb3;outline-offset:2px}h1,h2,h3,h4,p{margin-top:0}h1,h2,h3,h4{font-family:Manrope,sans-serif;letter-spacing:-.035em}h1{font-size:clamp(26px,3vw,38px);line-height:1.12;margin-bottom:10px}h2{font-size:24px;line-height:1.2;margin-bottom:8px}h3{font-size:17px;line-height:1.3;margin-bottom:7px}p{color:var(--muted)}.app{min-height:100vh}.sidebar{position:fixed;inset:0 auto 0 0;width:246px;background:#183d4d;color:#fff;padding:25px 17px;display:flex;flex-direction:column;z-index:5}.brand{display:flex;align-items:center;gap:10px;padding:0 11px 28px;font:800 25px Manrope,sans-serif;letter-spacing:-1.5px}.brandmark{width:30px;height:30px;border-radius:9px;background:var(--accent);display:grid;place-items:center;color:#fff;font-size:15px;letter-spacing:-1px}.brand small{display:block;font:500 10px 'DM Sans';letter-spacing:1.7px;color:#a8c5c9;margin-top:-3px}.navlabel{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8fb1b8;padding:13px 12px 8px}.nav{display:flex;flex-direction:column;gap:4px}.nav button{border:0;background:transparent;color:#d0e0e1;padding:11px 12px;border-radius:9px;text-align:left;display:flex;align-items:center;gap:12px;font-weight:500;transition:.16s}.nav button:hover{background:#254e5e;color:#fff}.nav button.active{background:#315a66;color:#fff;box-shadow:inset 3px 0 var(--accent)}.nav .ico{width:18px;text-align:center;font-size:16px;opacity:.9}.sidebar-bottom{margin-top:auto;padding:16px 10px 0;border-top:1px solid #315663}.demo-note{font-size:11px;color:#a9c2c5;line-height:1.5}.mini-user{display:flex;align-items:center;gap:10px;margin-top:17px}.avatar{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#dce9e4;color:#244b55;font-weight:700;flex-shrink:0;font-size:12px}.avatar.coral{background:#f4ded2;color:#87472f}.avatar.blue{background:#dce7f3;color:#315c81}.avatar.gold{background:#f4e9c9;color:#856421}.avatar.green{background:#d6e9df;color:#28634e}.avatar.large{width:58px;height:58px;font-size:17px}.mini-user strong{display:block;font-size:12px}.mini-user span{font-size:11px;color:#a9c2c5}.main{margin-left:246px;min-height:100vh}.topbar{height:76px;background:rgba(255,255,255,.88);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 36px;position:sticky;top:0;z-index:4;backdrop-filter:blur(12px)}.crumb{color:var(--muted);font-size:12px}.top-actions{display:flex;align-items:center;gap:12px}.mode-switch{display:flex;background:#f0f3f0;border:1px solid var(--line);border-radius:9px;padding:3px}.mode-switch button{border:0;background:transparent;padding:7px 11px;border-radius:6px;color:var(--muted);font-size:12px}.mode-switch button.active{background:#fff;color:var(--ink);box-shadow:0 1px 4px #193d4d14;font-weight:700}.iconbtn{border:1px solid var(--line);background:#fff;width:36px;height:36px;border-radius:9px;color:var(--ink);position:relative;display:inline-flex;align-items:center;justify-content:center;padding:0}.content{max-width:1440px;padding:34px 36px 56px;margin:0 auto}.pagehead{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:28px}.eyebrow{font-size:10px;letter-spacing:1.7px;text-transform:uppercase;color:var(--blue);font-weight:700;margin-bottom:9px}.subhead{max-width:660px;margin-bottom:0}.btn{border:1px solid transparent;border-radius:8px;padding:10px 15px;font-weight:700;font-size:12px;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:background .15s,transform .15s;white-space:nowrap}.btn:active{transform:translateY(1px)}.primary{background:var(--navy);color:#fff}.primary:hover{background:#245a6d}.secondary{background:#fff;color:var(--ink);border-color:#d7dfdc}.secondary:hover{background:#f2f5f3}.accent{background:var(--accent);color:#fff}.accent:hover{background:#bc5734}.quiet{background:transparent;color:var(--blue);padding:6px 0}.danger{color:var(--red);background:#fff;border-color:#edd7d3}.small{padding:7px 10px;font-size:11px}.grid{display:grid;gap:18px}.stats{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:22px}.stat,.panel,.profile-card,.associate-card,.request-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}.stat{padding:19px 20px}.stat-top{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:12px}.stat-icon{width:30px;height:30px;border-radius:9px;background:#edf4f1;display:grid;place-items:center;color:var(--blue)}.stat-num{font:800 28px Manrope,sans-serif;letter-spacing:-1.5px;margin:14px 0 4px}.stat-foot{font-size:11px;color:var(--muted)}.positive{color:var(--green);font-weight:700}.dashboard-grid{grid-template-columns:minmax(0,1.5fr) minmax(280px,.9fr);align-items:start}.panel{padding:22px}.panel-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:18px}.panel-head p{font-size:12px;margin-bottom:0}.section-title{font:700 16px Manrope,sans-serif;letter-spacing:-.4px}.list{display:flex;flex-direction:column}.list-row{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid #edf0ee}.list-row:last-child{border-bottom:0}.list-info{min-width:0;flex:1}.list-info strong{display:block;font-size:12px}.list-info span{font-size:11px;color:var(--muted)}.row-end{text-align:right}.row-end strong{display:block;font-size:12px}.row-end span{font-size:10px;color:var(--muted)}.pill{display:inline-flex;align-items:center;gap:5px;padding:4px 8px;border-radius:6px;font-size:10px;font-weight:700;letter-spacing:.1px;background:#edf3f0;color:#386a5b}.pill.orange{background:#faeee7;color:#a45130}.pill.blue{background:#eaf0f6;color:#3f6382}.pill.gold{background:#f7f0df;color:#886520}.pill.gray{background:#eff1ef;color:#65716d}.pill.red{background:#f9e9e6;color:#a4473d}.feature-banner{background:#e4efea;border-radius:var(--radius);padding:24px 25px;display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:22px;position:relative;overflow:hidden}.feature-banner:after{content:"";position:absolute;right:11%;top:-50px;width:170px;height:170px;border:1px solid #c2d9d0;border-radius:50%;box-shadow:0 0 0 24px #d2e5dd,0 0 0 48px #dcebe5;opacity:.7}.feature-banner>*{position:relative;z-index:1}.feature-banner h2{max-width:520px}.feature-banner p{max-width:540px;margin-bottom:0;color:#516a68}.feature-actions{display:flex;gap:9px;flex-wrap:wrap}.searchbar{display:flex;gap:10px;margin-bottom:18px}.field{display:flex;flex-direction:column;gap:6px;min-width:0}.field label{font-size:11px;font-weight:700;color:#4d5f66}.field input,.field select,.field textarea,.search-input{width:100%;background:#fff;border:1px solid #dce3df;border-radius:8px;padding:10px 11px;color:var(--ink);min-width:0}.field textarea{resize:vertical;min-height:94px}.search-input{flex:1;padding-left:40px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23687780' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-4-4'/%3E%3C/svg%3E") no-repeat 13px center}.filter-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:19px}.filter-row select{border:1px solid #dce3df;background:#fff;border-radius:8px;padding:8px 10px;color:#50616a;font-size:11px}.result-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;font-size:12px;color:var(--muted)}.associate-list{display:flex;flex-direction:column;gap:12px}.associate-card{padding:19px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:15px;align-items:start;box-shadow:none;transition:border-color .15s,transform .15s}.associate-card:hover{border-color:#b8cec7;transform:translateY(-1px)}.associate-main{min-width:0}.name-line{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.name-line h3{margin:0;font-size:16px}.role{font-size:12px;color:var(--muted);margin:4px 0 8px}.bio{font-size:12px;line-height:1.6;margin:0 0 12px;color:#596a70;max-width:780px}.tags{display:flex;flex-wrap:wrap;gap:6px}.tag{font-size:10px;border:1px solid #e1e7e3;border-radius:5px;padding:4px 7px;color:#51646a;background:#fafbf9}.card-side{text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:10px;min-width:108px}.match-score{font:800 23px Manrope,sans-serif;letter-spacing:-1px;color:var(--green)}.match-label{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-top:-9px}.price{font-size:11px;color:#596b70}.card-actions{display:flex;gap:7px;margin-top:14px;flex-wrap:wrap}.heart{border:1px solid #dfe6e2;background:#fff;color:#657780;border-radius:8px;width:34px;height:34px}.heart.saved{color:#bd5943;background:#fff3ef;border-color:#f0d1c6}.heart.compared{color:#2e6f7e;background:#eaf1f5;border-color:#c9dae4}.filters-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}.request-card{padding:18px;box-shadow:none;display:flex;gap:15px;align-items:flex-start}.request-icon{width:42px;height:42px;border-radius:11px;background:#e7f0ec;color:var(--blue);display:grid;place-items:center;font-size:18px;flex-shrink:0}.request-main{flex:1;min-width:0}.request-main p{font-size:12px;margin:7px 0 12px}.request-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.request-meta{display:flex;gap:12px;flex-wrap:wrap;font-size:11px;color:var(--muted)}.request-meta span{display:inline-flex;gap:5px;align-items:center}.form-panel{max-width:850px;margin:0 auto}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field.full{grid-column:1/-1}.form-section{padding:19px 0;border-bottom:1px solid var(--line)}.form-section:first-child{padding-top:0}.form-section:last-child{border-bottom:0}.form-section h3{margin-bottom:4px}.form-section>p{font-size:12px;margin-bottom:17px}.form-actions{display:flex;justify-content:space-between;gap:12px;margin-top:22px}.match-explain{margin-top:13px;padding:11px 12px;background:#f4f7f5;border-radius:8px;font-size:11px;color:#5b6b70}.match-explain strong{color:#355c52}.profile-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:18px;align-items:start}.profile-hero{padding:25px;display:flex;gap:18px;align-items:flex-start}.profile-title{flex:1}.profile-title h2{margin-bottom:4px}.profile-title p{margin-bottom:10px;font-size:12px}.profile-details{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:19px}.detailbox{background:#f6f8f6;border-radius:9px;padding:12px}.detailbox span{display:block;font-size:10px;color:var(--muted);margin-bottom:5px}.detailbox strong{font-size:12px}.prose{font-size:13px;line-height:1.8;color:#596a70}.skill-list{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.side-sticky{position:sticky;top:94px}.empty{padding:40px 20px;text-align:center;border:1px dashed #cbd7d1;border-radius:12px;background:#fbfcfa}.empty-icon{font-size:25px;color:#7e9b90;margin-bottom:10px}.empty p{max-width:360px;margin:0 auto 16px;font-size:12px}.toast{position:fixed;right:24px;bottom:24px;background:#173d4c;color:white;padding:13px 17px;border-radius:10px;box-shadow:0 12px 30px #183d4d2e;z-index:30;font-size:12px;max-width:340px;animation:slidein .2s ease}.toast.error{background:#923f36}@keyframes slidein{from{transform:translateY(8px);opacity:0}to{transform:translateY(0);opacity:1}}.overlay{position:fixed;inset:0;background:#102d38a8;display:grid;place-items:center;z-index:20;padding:20px}.modal{background:#fff;border-radius:16px;padding:25px;max-width:530px;width:100%;max-height:90vh;overflow:auto;box-shadow:0 25px 80px #102d3833}.modal.wide{max-width:900px}.modal-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:20px}.modal-head p{font-size:12px;margin:0}.close{border:1px solid var(--line);border-radius:8px;background:#fff;width:32px;height:32px}.mobile-menu{display:none}.footnote{font-size:10px;color:#84918e;margin-top:18px}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}.progress{height:6px;background:#e8eeea;border-radius:99px;overflow:hidden}.progress span{display:block;height:100%;background:#4e9181;border-radius:99px}.timeline{display:flex;flex-direction:column}.timeline-item{display:flex;gap:12px;padding:12px 0}.timeline-dot{width:9px;height:9px;border-radius:50%;background:#6e9b8d;margin-top:5px;flex-shrink:0;box-shadow:0 0 0 4px #e8f1ed}.timeline-item p{font-size:11px;margin:2px 0 0}.timeline-item strong{font-size:12px}.compare-bar{background:#f4f6f3;border:1px solid var(--line);padding:10px 14px;border-radius:10px;display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;font-size:12px}.mobile-bottom{display:none}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.5 'DM Sans',sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible{outline:3px solid #87bdb3;outline-offset:2px}h1,h2,h3,h4,p{margin-top:0}h1,h2,h3,h4{font-family:Manrope,sans-serif;letter-spacing:-.035em}h1{font-size:clamp(26px,3vw,38px);line-height:1.12;margin-bottom:10px}h2{font-size:24px;line-height:1.2;margin-bottom:8px}h3{font-size:17px;line-height:1.3;margin-bottom:7px}p{color:var(--muted)}.app{min-height:100vh}.sidebar{position:fixed;inset:0 auto 0 0;width:246px;background:#183d4d;color:#fff;padding:25px 17px;display:flex;flex-direction:column;z-index:5}.brand{display:flex;align-items:center;gap:10px;padding:0 11px 28px;font:800 25px Manrope,sans-serif;letter-spacing:-1.5px}.brandmark{width:30px;height:30px;border-radius:9px;background:var(--accent);display:grid;place-items:center;color:#fff;font-size:15px;letter-spacing:-1px}.brand small{display:block;font:500 10px 'DM Sans';letter-spacing:1.7px;color:#a8c5c9;margin-top:-3px}.navlabel{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8fb1b8;padding:13px 12px 8px}.nav{display:flex;flex-direction:column;gap:4px}.nav button{border:0;background:transparent;color:#d0e0e1;padding:11px 12px;border-radius:9px;text-align:left;display:flex;align-items:center;gap:12px;font-weight:500;transition:.16s}.nav button:hover{background:#254e5e;color:#fff}.nav button.active{background:#315a66;color:#fff;box-shadow:inset 3px 0 var(--accent)}.nav .ico{width:18px;text-align:center;font-size:16px;opacity:.9}.sidebar-bottom{margin-top:auto;padding:16px 10px 0;border-top:1px solid #315663}.demo-note{font-size:11px;color:#a9c2c5;line-height:1.5}.mini-user{display:flex;align-items:center;gap:10px;margin-top:17px}.avatar{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#dce9e4;color:#244b55;font-weight:700;flex-shrink:0;font-size:12px}.avatar.coral{background:#f4ded2;color:#87472f}.avatar.blue{background:#dce7f3;color:#315c81}.avatar.gold{background:#f4e9c9;color:#856421}.avatar.green{background:#d6e9df;color:#28634e}.avatar.large{width:58px;height:58px;font-size:17px}.mini-user strong{display:block;font-size:12px}.mini-user span{font-size:11px;color:#a9c2c5}.main{margin-left:246px;min-height:100vh}.topbar{height:76px;background:rgba(255,255,255,.88);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 36px;position:sticky;top:0;z-index:4;backdrop-filter:blur(12px)}.crumb{color:var(--muted);font-size:12px}.top-actions{display:flex;align-items:center;gap:12px}.mode-switch{display:flex;background:#f0f3f0;border:1px solid var(--line);border-radius:9px;padding:3px}.mode-switch button{border:0;background:transparent;padding:7px 11px;border-radius:6px;color:var(--muted);font-size:12px}.mode-switch button.active{background:#fff;color:var(--ink);box-shadow:0 1px 4px #193d4d14;font-weight:700}.iconbtn{border:1px solid var(--line);background:#fff;width:36px;height:36px;border-radius:9px;color:var(--ink);position:relative;display:inline-flex;align-items:center;justify-content:center;padding:0}.content{max-width:1440px;padding:34px 36px 56px;margin:0 auto}.pagehead{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:28px}.eyebrow{font-size:10px;letter-spacing:1.7px;text-transform:uppercase;color:var(--blue);font-weight:700;margin-bottom:9px}.subhead{max-width:660px;margin-bottom:0}.btn{border:1px solid transparent;border-radius:8px;padding:10px 15px;font-weight:700;font-size:12px;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:background .15s,transform .15s;white-space:nowrap}.btn:active{transform:translateY(1px)}.primary{background:var(--navy);color:#fff}.primary:hover{background:#245a6d}.secondary{background:#fff;color:var(--ink);border-color:#d7dfdc}.secondary:hover{background:#f2f5f3}.accent{background:var(--accent);color:#fff}.accent:hover{background:#bc5734}.quiet{background:transparent;color:var(--blue);padding:6px 0}.danger{color:var(--red);background:#fff;border-color:#edd7d3}.small{padding:7px 10px;font-size:11px}.grid{display:grid;gap:18px}.stats{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:22px}.stat,.panel,.profile-card,.associate-card,.request-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}.stat{padding:19px 20px}.stat-top{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:12px}.stat-icon{width:30px;height:30px;border-radius:9px;background:#edf4f1;display:grid;place-items:center;color:var(--blue)}.stat-num{font:800 28px Manrope,sans-serif;letter-spacing:-1.5px;margin:14px 0 4px}.stat-foot{font-size:11px;color:var(--muted)}.positive{color:var(--green);font-weight:700}.dashboard-grid{grid-template-columns:minmax(0,1.5fr) minmax(280px,.9fr);align-items:start}.panel{padding:22px}.panel-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:18px}.panel-head p{font-size:12px;margin-bottom:0}.section-title{font:700 16px Manrope,sans-serif;letter-spacing:-.4px}.list{display:flex;flex-direction:column}.list-row{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid #edf0ee}.list-row:last-child{border-bottom:0}.list-info{min-width:0;flex:1}.list-info strong{display:block;font-size:12px}.list-info span{font-size:11px;color:var(--muted)}.row-end{text-align:right}.row-end strong{display:block;font-size:12px}.row-end span{font-size:10px;color:var(--muted)}.pill{display:inline-flex;align-items:center;gap:5px;padding:4px 8px;border-radius:6px;font-size:10px;font-weight:700;letter-spacing:.1px;background:#edf3f0;color:#386a5b}.pill.orange{background:#faeee7;color:#a45130}.pill.blue{background:#eaf0f6;color:#3f6382}.pill.gold{background:#f7f0df;color:#886520}.pill.gray{background:#eff1ef;color:#65716d}.pill.red{background:#f9e9e6;color:#a4473d}.feature-banner{background:#e4efea;border-radius:var(--radius);padding:24px 25px;display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:22px;position:relative;overflow:hidden}.feature-banner:after{content:"";position:absolute;right:11%;top:-50px;width:170px;height:170px;border:1px solid #c2d9d0;border-radius:50%;box-shadow:0 0 0 24px #d2e5dd,0 0 0 48px #dcebe5;opacity:.7}.feature-banner>*{position:relative;z-index:1}.feature-banner h2{max-width:520px}.feature-banner p{max-width:540px;margin-bottom:0;color:#516a68}.feature-actions{display:flex;gap:9px;flex-wrap:wrap}.searchbar{display:flex;gap:10px;margin-bottom:18px}.field{display:flex;flex-direction:column;gap:6px;min-width:0}.field label{font-size:11px;font-weight:700;color:#4d5f66}.field input,.field select,.field textarea,.search-input{width:100%;background:#fff;border:1px solid #dce3df;border-radius:8px;padding:10px 11px;color:var(--ink);min-width:0}.field textarea{resize:vertical;min-height:94px}.search-input{flex:1;padding-left:40px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23687780' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-4-4'/%3E%3C/svg%3E") no-repeat 13px center}.filter-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:19px}.filter-row select{border:1px solid #dce3df;background:#fff;border-radius:8px;padding:8px 10px;color:#50616a;font-size:11px}.result-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;font-size:12px;color:var(--muted)}.associate-list{display:flex;flex-direction:column;gap:12px}.associate-card{padding:19px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:15px;align-items:start;box-shadow:none;transition:border-color .15s,transform .15s}.associate-card:hover{border-color:#b8cec7;transform:translateY(-1px)}.associate-main{min-width:0}.name-line{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.name-line h3{margin:0;font-size:16px}.role{font-size:12px;color:var(--muted);margin:4px 0 8px}.bio{font-size:12px;line-height:1.6;margin:0 0 12px;color:#596a70;max-width:780px}.tags{display:flex;flex-wrap:wrap;gap:6px}.tag{font-size:10px;border:1px solid #e1e7e3;border-radius:5px;padding:4px 7px;color:#51646a;background:#fafbf9}.card-side{text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:10px;min-width:108px}.match-score{font:800 23px Manrope,sans-serif;letter-spacing:-1px;color:var(--green)}.match-label{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-top:-9px}.price{font-size:11px;color:#596b70}.card-actions{display:flex;gap:7px;margin-top:14px;flex-wrap:wrap}.heart{border:1px solid #dfe6e2;background:#fff;color:#657780;border-radius:8px;width:34px;height:34px}.heart.saved{color:#bd5943;background:#fff3ef;border-color:#f0d1c6}.heart.compared{color:#2e6f7e;background:#eaf1f5;border-color:#c9dae4}.filters-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}.request-card{padding:18px;box-shadow:none;display:flex;gap:15px;align-items:flex-start}.request-icon{width:42px;height:42px;border-radius:11px;background:#e7f0ec;color:var(--blue);display:grid;place-items:center;font-size:18px;flex-shrink:0}.request-main{flex:1;min-width:0}.request-main p{font-size:12px;margin:7px 0 12px}.request-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.request-meta{display:flex;gap:12px;flex-wrap:wrap;font-size:11px;color:var(--muted)}.request-meta span{display:inline-flex;gap:5px;align-items:center}.form-panel{max-width:850px;margin:0 auto}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field.full{grid-column:1/-1}.form-section{padding:19px 0;border-bottom:1px solid var(--line)}.form-section:first-child{padding-top:0}.form-section:last-child{border-bottom:0}.form-section h3{margin-bottom:4px}.form-section>p{font-size:12px;margin-bottom:17px}.form-actions{display:flex;justify-content:space-between;gap:12px;margin-top:22px}.match-explain{margin-top:13px;padding:11px 12px;background:#f4f7f5;border-radius:8px;font-size:11px;color:#5b6b70}.match-explain strong{color:#355c52}.profile-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:18px;align-items:start}.profile-hero{padding:25px;display:flex;gap:18px;align-items:flex-start}.profile-title{flex:1}.profile-title h2{margin-bottom:4px}.profile-title p{margin-bottom:10px;font-size:12px}.profile-details{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:19px}.detailbox{background:#f6f8f6;border-radius:9px;padding:12px}.detailbox span{display:block;font-size:10px;color:var(--muted);margin-bottom:5px}.detailbox strong{font-size:12px}.prose{font-size:13px;line-height:1.8;color:#596a70}.skill-list{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.side-sticky{position:sticky;top:94px}.empty{padding:40px 20px;text-align:center;border:1px dashed #cbd7d1;border-radius:12px;background:#fbfcfa}.empty-icon{font-size:25px;color:#7e9b90;margin-bottom:10px}.empty p{max-width:360px;margin:0 auto 16px;font-size:12px}.toast{position:fixed;right:24px;bottom:24px;background:#173d4c;color:white;padding:13px 17px;border-radius:10px;box-shadow:0 12px 30px #183d4d2e;z-index:30;font-size:12px;max-width:340px;animation:slidein .22s cubic-bezier(.2,.85,.35,1.08) backwards}.toast.error{background:#923f36}@keyframes slidein{from{transform:translateY(8px);opacity:0}to{transform:translateY(0);opacity:1}}.overlay{position:fixed;inset:0;background:#102d38a8;display:grid;place-items:center;z-index:20;padding:20px}.modal{background:#fff;border-radius:16px;padding:25px;max-width:530px;width:100%;max-height:90vh;overflow:auto;box-shadow:0 25px 80px #102d3833}.modal.wide{max-width:900px}.modal-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:20px}.modal-head p{font-size:12px;margin:0}.close{border:1px solid var(--line);border-radius:8px;background:#fff;width:32px;height:32px}.mobile-menu{display:none}.footnote{font-size:10px;color:#84918e;margin-top:18px}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}.progress{height:6px;background:#e8eeea;border-radius:99px;overflow:hidden}.progress span{display:block;height:100%;background:#4e9181;border-radius:99px}.timeline{display:flex;flex-direction:column}.timeline-item{display:flex;gap:12px;padding:12px 0}.timeline-dot{width:9px;height:9px;border-radius:50%;background:#6e9b8d;margin-top:5px;flex-shrink:0;box-shadow:0 0 0 4px #e8f1ed}.timeline-item p{font-size:11px;margin:2px 0 0}.timeline-item strong{font-size:12px}.compare-bar{background:#f4f6f3;border:1px solid var(--line);padding:10px 14px;border-radius:10px;display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;font-size:12px}.mobile-bottom{display:none}
 @media(max-width:1100px){.sidebar{width:215px}.main{margin-left:215px}.content{padding:28px 24px 45px}.topbar{padding:0 24px}.stats{grid-template-columns:repeat(2,1fr)}.dashboard-grid{grid-template-columns:1fr}.profile-layout{grid-template-columns:1fr 260px}.associate-card{grid-template-columns:auto minmax(0,1fr)}.card-side{grid-column:2;flex-direction:row;align-items:center;justify-content:flex-start;text-align:left;min-width:0}.card-side .match-label{margin:0}.card-side .match-score{font-size:18px}}
 @media(max-width:760px){.sidebar{display:none}.main{margin-left:0}.topbar{height:64px;padding:0 16px}.mobile-menu{display:inline-grid}.crumb{display:none}.content{padding:24px 16px 88px}.pagehead{align-items:flex-start;flex-direction:column;margin-bottom:21px}.pagehead .btn{width:100%}.top-actions{gap:7px}.mode-switch button{padding:7px 8px}.stats{gap:10px}.stat{padding:15px}.stat-num{font-size:24px}.stat-foot{font-size:10px}.feature-banner{align-items:flex-start;flex-direction:column;padding:21px}.feature-banner:after{right:-50px;opacity:.35}.feature-actions{width:100%}.searchbar{flex-direction:column}.filter-row{gap:7px}.filter-row select{flex:1;min-width:calc(50% - 8px)}.associate-card{grid-template-columns:auto minmax(0,1fr);gap:11px;padding:14px}.associate-card>.avatar{width:42px;height:42px}.name-line h3{font-size:14px}.card-side{grid-column:1/-1;border-top:1px solid #edf0ee;padding-top:10px;width:100%;justify-content:space-between}.card-actions .btn{flex:1}.request-card{padding:14px;gap:11px}.request-top{flex-direction:column}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.form-panel{padding:18px}.profile-layout{grid-template-columns:1fr}.side-sticky{position:static}.profile-hero{padding:18px;flex-wrap:wrap}.profile-details{grid-template-columns:1fr 1fr}.profile-title{min-width:180px}.two-col{grid-template-columns:1fr}.panel{padding:17px}.panel-head{margin-bottom:14px}.mobile-bottom{display:flex;position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);z-index:8;padding:7px 6px calc(7px + env(safe-area-inset-bottom));justify-content:space-around}.mobile-bottom button{border:0;background:transparent;color:#6c7b7e;font-size:9px;display:flex;flex-direction:column;align-items:center;gap:3px;padding:4px 9px}.mobile-bottom button.active{color:var(--blue);font-weight:700}.mobile-bottom span{font-size:17px}.form-actions{flex-direction:column-reverse}.form-actions .btn{width:100%}.compare-bar{gap:10px}.profile-hero .avatar.large{width:52px;height:52px}.topbar .brand{display:flex;padding:0;font-size:21px}.topbar .brandmark{width:26px;height:26px}.topbar .brand small{display:none}#resetBtn{display:none}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 
 /* ---------- Auth screen ---------- */
 .auth{min-height:100vh;display:grid;grid-template-columns:1.02fr .98fr;background:var(--paper)}
@@ -43,6 +42,9 @@
 .auth-demo-creds{margin-top:16px;padding:12px 14px;background:#f4f7f5;border:1px solid var(--line);border-radius:9px;font-size:11px;color:#50616a;line-height:1.7}
 .auth-demo-creds strong{display:block;font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:var(--blue);margin-bottom:4px}
 .auth-demo-creds code{background:#e7efec;color:#2e5f55;padding:1px 5px;border-radius:4px;font-family:ui-monospace,Menlo,monospace;font-size:10.5px}
+.auth-admin{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);text-align:center}
+.auth-admin .footnote{margin:0}
+.auth-admin .btn{padding:4px 0;font-size:11px}
 @media(max-width:900px){.auth{grid-template-columns:1fr}.auth-side{padding:32px 24px}.auth-side h1{font-size:26px!important}.auth-points{display:none}.auth-main{padding:24px 16px 48px}}
 
 /* ---------- Notifications ---------- */
@@ -69,6 +71,89 @@
 .review-head{display:flex;justify-content:space-between;gap:10px;font-size:12px;flex-wrap:wrap}
 .review p{font-size:12px;margin:4px 0 0;color:#596a70;line-height:1.6}
 .stars{color:#c8871f;font-size:11px;letter-spacing:1.5px}
+
+/* ---------- Motion (visuals unchanged) ---------- */
+@keyframes mFadeIn{from{opacity:0}to{opacity:1}}
+@keyframes mFadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes mFadeScale{from{opacity:0;transform:translateY(8px) scale(.985)}to{opacity:1;transform:none}}
+@keyframes mPop{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}
+@keyframes mDockIn{from{opacity:0;transform:translate(-50%,10px)}to{opacity:1;transform:translate(-50%,0)}}
+@keyframes mGrowBar{from{width:0}}
+@keyframes mPulseDot{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.4);opacity:.65}}
+@keyframes mBellRing{0%,100%{transform:rotate(0)}15%{transform:rotate(-9deg)}30%{transform:rotate(9deg)}45%{transform:rotate(-6deg)}60%{transform:rotate(6deg)}75%{transform:rotate(-3deg)}}
+
+.content{animation:mFadeIn .2s ease backwards}
+.content > *{animation:mFadeUp .32s cubic-bezier(.2,.7,.3,1) backwards}
+.content > *:nth-child(2){animation-delay:.045s}
+.content > *:nth-child(3){animation-delay:.09s}
+.content > *:nth-child(4){animation-delay:.13s}
+.content > *:nth-child(5){animation-delay:.17s}
+.content > *:nth-child(6){animation-delay:.2s}
+.content > *:nth-child(n+7){animation-delay:.22s}
+
+.associate-list .associate-card{animation:mFadeUp .3s cubic-bezier(.2,.7,.3,1) backwards}
+.associate-list .associate-card:nth-child(1){animation-delay:.02s}
+.associate-list .associate-card:nth-child(2){animation-delay:.055s}
+.associate-list .associate-card:nth-child(3){animation-delay:.09s}
+.associate-list .associate-card:nth-child(4){animation-delay:.12s}
+.associate-list .associate-card:nth-child(5){animation-delay:.15s}
+.associate-list .associate-card:nth-child(n+6){animation-delay:.17s}
+.list .list-row{animation:mFadeUp .28s ease backwards}
+.list .list-row:nth-child(2){animation-delay:.04s}
+.list .list-row:nth-child(3){animation-delay:.08s}
+.list .list-row:nth-child(4){animation-delay:.11s}
+.list .list-row:nth-child(n+5){animation-delay:.14s}
+.grid.stats .stat{animation:mFadeUp .3s ease backwards}
+.grid.stats .stat:nth-child(2){animation-delay:.05s}
+.grid.stats .stat:nth-child(3){animation-delay:.1s}
+.grid.stats .stat:nth-child(4){animation-delay:.14s}
+.dashboard-grid > .panel{animation:mFadeUp .32s ease backwards}
+.dashboard-grid > .panel:nth-child(2){animation-delay:.06s}
+.profile-layout > *{animation:mFadeUp .32s ease backwards}
+.profile-layout > *:nth-child(2){animation-delay:.06s}
+.request-card{animation:mFadeUp .28s ease backwards}
+
+.btn{transition:background .15s,transform .15s,box-shadow .2s,border-color .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn:active{transform:translateY(1px)}
+.nav button{transition:background .16s,color .16s,transform .16s,box-shadow .16s}
+.nav button:hover{transform:translateX(2px)}
+.iconbtn{transition:background .15s,transform .15s,border-color .15s}
+.iconbtn:hover{background:#f4f7f5;transform:translateY(-1px)}
+#bellBtn:hover svg{animation:mBellRing .7s ease backwards}
+.associate-card,.stat,.panel,.request-card{transition:border-color .18s,transform .18s,box-shadow .22s}
+.stat:hover,.panel:hover{transform:translateY(-1px)}
+.heart{transition:background .15s,color .15s,border-color .15s,transform .12s}
+.heart:hover{transform:scale(1.06)}
+.heart:active{transform:scale(.96)}
+.mode-switch button{transition:background .18s,color .18s,box-shadow .18s}
+
+.overlay{animation:mFadeIn .18s ease backwards}
+.modal{animation:mPop .24s cubic-bezier(.2,.85,.35,1.08) backwards}
+
+.auth-card{animation:mFadeScale .4s cubic-bezier(.2,.7,.3,1) backwards}
+.auth-side .brand{animation:mFadeUp .45s ease backwards}
+.auth-side h1{animation:mFadeUp .5s ease .05s backwards}
+.auth-side p{animation:mFadeUp .5s ease .1s backwards}
+.auth-side .auth-points li{animation:mFadeUp .45s ease backwards}
+.auth-side .auth-points li:nth-child(1){animation-delay:.16s}
+.auth-side .auth-points li:nth-child(2){animation-delay:.22s}
+.auth-side .auth-points li:nth-child(3){animation-delay:.28s}
+.auth-card form{animation:mFadeIn .26s ease backwards}
+.auth-tabs button{transition:background .16s,color .16s,box-shadow .16s}
+.auth-role button{transition:border-color .16s,background .16s,box-shadow .16s,transform .12s}
+.auth-role button:hover{transform:translateY(-1px)}
+
+.progress span{animation:mGrowBar .85s cubic-bezier(.2,.7,.2,1) backwards}
+.bell-dot.on{animation:mPulseDot 2.1s ease-in-out infinite}
+.compare-dock{animation:mDockIn .26s cubic-bezier(.2,.85,.35,1.08) backwards}
+.compare-chips .tag{animation:mFadeIn .2s ease backwards}
+
+.content.no-anim,.content.no-anim *{animation:none!important}
+
+@media(prefers-reduced-motion:reduce){
+  *,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+}
 </style>
 </head>
 <body>
@@ -130,13 +215,13 @@ const initialRequests=[
 ];
 const STATUS_FLOW=['Submitted','Reviewing matches','Shortlisted','Booked','Completed'];
 const DEMO_ACCOUNTS=[
-  {id:'u-client-demo',name:'Acme Learning Co.',email:'client@acme.demo',password:'demo1234',role:'client',org:'Acme Learning Co.'},
-  {id:'u-assoc-demo',name:'Amira Hassan',email:'amira@match.demo',password:'demo1234',role:'associate',org:'Leadership & Culture Facilitator'}
+  {id:'u-client-demo',name:'Acme Learning Co.',email:'client@acme.demo',password:'demo1234',role:'client',org:'Acme Learning Co.',status:'approved'},
+  {id:'u-assoc-demo',name:'Amira Hassan',email:'amira@match.demo',password:'demo1234',role:'associate',org:'Leadership & Culture Facilitator',status:'approved'}
 ];
 
 function defaultState(){
   return {
-    v:2,
+    v:3,
     associates:structuredClone(initialAssociates),
     requests:structuredClone(initialRequests),
     enquiries:[
@@ -167,7 +252,8 @@ function defaultState(){
     draft:null,
     toast:null,
     authView:'login',
-    authRole:'client'
+    authRole:'client',
+    pendingLoginEmail:null
   };
 }
 function loadState(){
@@ -175,12 +261,14 @@ function loadState(){
   try{s=JSON.parse(localStorage.getItem('matchDemoState'))}catch(e){}
   const base=defaultState();
   let merged=(s&&s.associates&&s.requests)?Object.assign({},base,s):base;
-  // Force a clean sign-in for data created by older versions of the demo
   if(!s||!s.v||s.v<2){merged.session=null;}
-  merged.v=2;
-  merged.users=merged.users||[];
+  merged.v=3;
+  merged.users=Array.isArray(merged.users)?merged.users:[];
+  merged.users.forEach(u=>{if(!u.status)u.status='approved';});
   DEMO_ACCOUNTS.forEach(d=>{
-    if(!merged.users.some(u=>u.email===d.email))merged.users.push({...d});
+    const existing=merged.users.find(u=>u.email===d.email);
+    if(existing){existing.status='approved';existing.role=d.role;existing.password=d.password;existing.org=d.org;}
+    else merged.users.push({...d,status:'approved'});
   });
   return merged;
 }
@@ -202,6 +290,7 @@ const associateManage=[['profilePreview','↗','Profile preview']];
 /* ============ AUTH ============ */
 function authScreen(){
   const view=state.authView||'login';
+  const pending=(state.users||[]).filter(u=>u.status==='pending').length;
   return `<div class="auth">
     <aside class="auth-side">
       <div>
@@ -223,16 +312,21 @@ function authScreen(){
           <button class="${view==='register'?'active':''}" onclick="setAuthView('register')">Create account</button>
         </div>
         ${view==='login'?loginForm():registerForm()}
+        <div class="auth-admin">
+          <p class="footnote">Demo administration · <button type="button" class="btn quiet small" onclick="openAdminConsole()">Review registrations${pending?' ('+pending+' pending)':''} →</button></p>
+        </div>
       </div>
     </main>
   </div>`;
 }
 function loginForm(){
+  const email=state.pendingLoginEmail||'client@acme.demo';
+  const pass=state.pendingLoginEmail?'':'demo1234';
   return `<form onsubmit="doLogin(event)" novalidate>
-    <div class="field"><label for="loginEmail">Email</label><input id="loginEmail" name="email" type="email" required value="client@acme.demo" autocomplete="username" placeholder="you@company.com"></div>
+    <div class="field"><label for="loginEmail">Email</label><input id="loginEmail" name="email" type="email" required value="${attr(email)}" autocomplete="username" placeholder="you@company.com"></div>
     <div class="field" style="margin-top:13px"><label for="loginPass">Password</label>
       <div class="pass-wrap">
-        <input id="loginPass" name="password" type="password" required value="demo1234" autocomplete="current-password" placeholder="Your password">
+        <input id="loginPass" name="password" type="password" required value="${attr(pass)}" autocomplete="current-password" placeholder="Your password">
         <button type="button" class="pass-toggle" onclick="togglePass('loginPass',this)" aria-label="Show password">Show</button>
       </div>
     </div>
@@ -337,6 +431,9 @@ function doLogin(e){
     setFieldError('loginPass','Incorrect password. Try again.');
     return;
   }
+  if(user.status==='pending'){openPendingNotice(user);return;}
+  if(user.status==='rejected'){openRejectedNotice(user);return;}
+  state.pendingLoginEmail=null;
   const sessionUser={
     name: user.role==='client'?(user.org||user.name):user.name,
     email:user.email,
@@ -368,21 +465,19 @@ function doRegister(e){
   else if(password.length<6){setFieldError('regPass','Use at least 6 characters.');ok=false;}
   if(confirm!==password){setFieldError('regConfirm','Passwords do not match.');ok=false;}
   if(!ok)return;
-  const user={id:'u'+Date.now(),name,email,password,role,org};
+  const user={
+    id:'u'+Date.now(),name,email,password,role,org,
+    status:'pending',created:new Date().toISOString(),reviewedAt:null
+  };
   state.users.push(user);
   state.authView='login';
   state.authRole='client';
-  const sessionUser={
-    name: role==='client'?(org||name):name,
-    email,
-    role,
-    initials:initials(name),
-    tone: role==='associate'?'green':''
-  };
+  state.pendingLoginEmail=email;
   const btn=form.querySelector('button[type="submit"]');
   if(btn){btn.disabled=true;btn.textContent='Creating account…';}
-  signIn(sessionUser);
-  notify('Account created. Welcome to MaTCH.');
+  persist();
+  render();
+  showApprovalPending(user);
 }
 function quickLogin(role){
   const email = role==='client'?'client@acme.demo':'amira@match.demo';
@@ -417,7 +512,123 @@ function logout(){
   state.mode='client';
   state.authView='login';
   state.authRole='client';
+  state.pendingLoginEmail=null;
   persist(); render();
+}
+
+/* ============ APPROVAL & ADMIN REVIEW ============ */
+function showApprovalPending(user){
+  openModal('Application received',`
+    <div style="display:flex;gap:14px;align-items:flex-start;margin-bottom:16px">
+      <div class="request-icon" style="width:48px;height:48px;font-size:20px">⏳</div>
+      <div><h3 style="margin:0 0 4px">Thanks, ${esc(user.name.split(' ')[0])}.</h3><p style="font-size:12px;margin:0">Your account has been created and sent for review. You'll be able to sign in once the MaTCH team approves it.</p></div>
+    </div>
+    <div class="two-col">
+      <div class="detailbox"><span>Name</span><strong>${esc(user.name)}</strong></div>
+      <div class="detailbox"><span>Email</span><strong>${esc(user.email)}</strong></div>
+      <div class="detailbox"><span>Role</span><strong>${user.role==='client'?'Client (hiring)':'Associate'}</strong></div>
+      <div class="detailbox"><span>${user.role==='client'?'Company':'Headline'}</span><strong>${esc(user.org||'—')}</strong></div>
+    </div>
+    <div class="match-explain">This demo has no backend email. To move things along, open <strong>Review registrations</strong> on the sign-in screen and approve this account yourself.</div>
+    <div class="form-actions"><button class="btn primary" onclick="closeModal()">Back to sign in</button></div>
+  `);
+  notify('Registration submitted for review.');
+}
+function openPendingNotice(user){
+  openModal('Account awaiting approval',`
+    <div style="display:flex;gap:14px;align-items:flex-start;margin-bottom:16px">
+      <div class="request-icon" style="width:48px;height:48px;font-size:20px">⏳</div>
+      <div><h3 style="margin:0 0 4px">Almost there, ${esc(user.name.split(' ')[0])}.</h3><p style="font-size:12px;margin:0">Your registration is still being reviewed by the MaTCH team. You'll be able to sign in as soon as it's approved.</p></div>
+    </div>
+    <div class="two-col">
+      <div class="detailbox"><span>Email</span><strong>${esc(user.email)}</strong></div>
+      <div class="detailbox"><span>Role</span><strong>${user.role==='client'?'Client':'Associate'}</strong></div>
+    </div>
+    <div class="match-explain">In this demo, open <strong>Review registrations</strong> on the sign-in screen to approve this account yourself.</div>
+    <div class="form-actions"><button class="btn secondary" onclick="closeModal()">Close</button><button class="btn primary" onclick="closeModal();openAdminConsole()">Open admin console →</button></div>
+  `);
+}
+function openRejectedNotice(user){
+  openModal('Registration not approved',`
+    <div style="display:flex;gap:14px;align-items:flex-start;margin-bottom:16px">
+      <div class="request-icon" style="width:48px;height:48px;font-size:20px;background:#f9e9e6;color:#a4473d">!</div>
+      <div><h3 style="margin:0 0 4px">This registration wasn't approved.</h3><p style="font-size:12px;margin:0">The MaTCH team reviewed this account and did not grant access. If you think this is a mistake, contact the team.</p></div>
+    </div>
+    <div class="form-actions"><button class="btn primary" onclick="closeModal()">Close</button></div>
+  `);
+}
+function fmtDate(iso){
+  try{const d=new Date(iso);return d.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'})}catch(e){return ''}
+}
+function adminBody(){
+  const users=state.users||[];
+  const pending=users.filter(u=>u.status==='pending');
+  const reviewed=users.filter(u=>u.status==='approved'||u.status==='rejected')
+    .filter(u=>!DEMO_ACCOUNTS.some(d=>d.email===u.email));
+  const row=(u,actions)=>`<div class="list-row">
+    <div class="avatar ${u.role==='associate'?'green':'blue'}">${initials(u.name)}</div>
+    <div class="list-info">
+      <strong>${esc(u.name)}</strong>
+      <span>${esc(u.email)} · ${u.role==='client'?'Client':'Associate'}${u.org?' · '+esc(u.org):''}</span>
+      <div style="margin-top:7px;display:flex;gap:8px;align-items:center;flex-wrap:wrap">${statusPill(u.status==='pending'?'Pending approval':u.status==='approved'?'Approved':'Rejected')}${u.created?`<span style="font-size:10px;color:var(--muted)">Requested ${esc(fmtDate(u.created))}</span>`:''}</div>
+    </div>
+    <div class="row-end" style="display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end">${actions}</div>
+  </div>`;
+  return `
+    <div class="match-explain" style="margin-top:0;margin-bottom:16px">New registrations appear here for review. Approve to let the person sign in, or reject to keep them out. Changes apply immediately in this demo.</div>
+    <div class="section-title" style="margin-bottom:6px">Pending review (${pending.length})</div>
+    <div class="list">${pending.length?pending.map(u=>row(u,`
+      <button class="btn primary small" onclick="approveUser('${u.id}')">Approve</button>
+      <button class="btn secondary small" onclick="rejectUser('${u.id}')">Reject</button>
+    `)).join(''):emptyInline('No registrations waiting for review.')}</div>
+    <div class="section-title" style="margin:22px 0 6px">Recently reviewed (${reviewed.length})</div>
+    <div class="list">${reviewed.length?reviewed.slice(0,8).map(u=>row(u,`
+      ${u.status==='rejected'?`<button class="btn secondary small" onclick="deleteUser('${u.id}')">Remove</button>`:''}
+    `)).join(''):emptyInline('No reviewed accounts yet.')}</div>
+  `;
+}
+function openAdminConsole(){
+  openModal('Registration review',`<div id="adminBody">${adminBody()}</div>`,true);
+}
+function refreshAdminConsole(){
+  const el=document.getElementById('adminBody');
+  if(el)el.innerHTML=adminBody();
+}
+function approveUser(id){
+  const u=(state.users||[]).find(x=>x.id===id); if(!u)return;
+  u.status='approved'; u.reviewedAt=new Date().toISOString();
+  persist(); render(); refreshAdminConsole();
+  notify(`${u.name} approved. They can now sign in.`);
+}
+function rejectUser(id){
+  const u=(state.users||[]).find(x=>x.id===id); if(!u)return;
+  u.status='rejected'; u.reviewedAt=new Date().toISOString();
+  persist(); render(); refreshAdminConsole();
+  notify(`${u.name}'s registration was rejected.`);
+}
+function deleteUser(id){
+  state.users=(state.users||[]).filter(x=>x.id!==id);
+  persist(); render(); refreshAdminConsole();
+  notify('Account removed from the demo.');
+}
+function runCounters(){
+  const reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const contentEl=document.getElementById('content');
+  const noAnim=contentEl?contentEl.classList.contains('no-anim'):false;
+  document.querySelectorAll('[data-count]').forEach(el=>{
+    const target=Number(el.dataset.count)||0;
+    const suffix=el.dataset.suffix||'';
+    if(reduce||noAnim){el.textContent=target+suffix;return;}
+    const dur=Number(el.dataset.dur)||700;
+    const start=performance.now();
+    function tick(now){
+      const t=Math.min(1,(now-start)/dur);
+      const eased=1-Math.pow(1-t,3);
+      el.textContent=Math.round(target*eased)+suffix;
+      if(t<1)requestAnimationFrame(tick); else el.textContent=target+suffix;
+    }
+    requestAnimationFrame(tick);
+  });
 }
 
 /* ============ SHELL ============ */
@@ -450,14 +661,19 @@ function renderBell(){
 }
 function go(page){state.page=page;state.selectedAssociate=null;persist();render();window.scrollTo({top:0,behavior:'smooth'})}
 function titleFor(page){const map={dashboard:'Overview',discover:'Discover associates',newRequest:'Create a matching request',matches:'Your matches',saved:'Saved associates',requests:'Requests & enquiries',associateDashboard:'Associate overview',opportunities:'Opportunities',inbox:'Enquiries',editProfile:'My professional profile',profilePreview:'Profile preview'};return map[page]||'Workspace'}
+let lastRenderKey='';
 function render(){
   const authRoot=document.getElementById('authScreen');
   const shell=document.getElementById('appShell');
   const dock=document.getElementById('compareDock');
+  const key=!state.session?('auth/'+(state.authView||'login')):(state.mode+'/'+state.page+'/'+(state.selectedAssociate||''));
+  const same=key===lastRenderKey;
+  lastRenderKey=key;
   if(!state.session){
     shell.style.display='none';
     authRoot.innerHTML=authScreen();
     dock.innerHTML='';
+    runCounters();
     return;
   }
   authRoot.innerHTML='';
@@ -465,9 +681,12 @@ function render(){
   renderNav();
   document.getElementById('crumb').textContent=`${state.mode==='client'?'Client workspace':'Associate workspace'} / ${titleFor(state.page)}`;
   const pages={dashboard:clientDashboard,discover:discoverPage,newRequest:requestPage,matches:matchesPage,saved:savedPage,requests:requestsPage,associateDashboard:associateDashboard,opportunities:opportunitiesPage,inbox:inboxPage,editProfile:editProfilePage,profilePreview:profilePreviewPage};
-  document.getElementById('content').innerHTML=(pages[state.page]||clientDashboard)();
+  const content=document.getElementById('content');
+  content.classList.toggle('no-anim',same);
+  content.innerHTML=(pages[state.page]||clientDashboard)();
   document.getElementById('mobileBrand').style.display=innerWidth<=760?'flex':'none';
   dock.innerHTML=compareDock();
+  runCounters();
 }
 function greetingName(){const n=state.session?.name||'there';return n.split(' ')[0]}
 
@@ -484,8 +703,8 @@ function statusPill(s){
   if(/pending|sent|submitted|interested|proposed/i.test(t))c='orange';
   if(/review|respond/i.test(t))c='blue';
   if(/limited/i.test(t))c='gold';
-  if(/accepted|booked|completed|complete|^available/i.test(t))c='';
-  if(/declined|closed|cancelled|unavailable/i.test(t))c='red';
+  if(/accepted|approved|booked|completed|complete|^available/i.test(t))c='';
+  if(/declined|rejected|closed|cancelled|unavailable/i.test(t))c='red';
   return `<span class="pill ${c}">${t}</span>`;
 }
 function stat(label,num,foot,icon){return `<div class="stat"><div class="stat-top">${label}<span class="stat-icon">${icon}</span></div><div class="stat-num">${num}</div><div class="stat-foot">${foot}</div></div>`}
@@ -687,7 +906,8 @@ function matchesPage(){
   let r=currentRequest();
   if(!r)return `<div class="pagehead"><div><div class="eyebrow">Recommendations</div><h1>Your matches</h1><p>Create a brief to see relevant professionals.</p></div><button class="btn primary" onclick="go('newRequest')">Create request</button></div>`;
   let arr=state.associates.map(a=>({...a,match:score(a,r)})).sort((a,b)=>b.match.value-a.match.value);
-  return `<div class="pagehead"><div><div class="eyebrow">Recommendations for your brief</div><h1>Your matches</h1><p class="subhead">A shortlist ranked against your requirements, with the reasoning visible so you can make your own judgement.</p></div><button class="btn secondary" onclick="editRequest('${r.id}')">Edit brief</button></div><div class="feature-banner"><div><div class="eyebrow">Current brief</div><h2>${esc(r.title)}</h2><p>${esc(r.summary)} </p><div class="tags" style="margin-top:13px"><span class="tag">${esc(r.format||'Any format')}</span><span class="tag">${esc(r.industry||'Any industry')}</span><span class="tag">${r.budget?fmt(r.budget)+' / day':'Budget flexible'}</span></div></div><div><div class="stat-num" style="font-size:36px">${arr.filter(a=>a.match.value>=75).length}</div><div class="stat-foot">strong fits in this demo</div></div></div><div class="result-head"><span><strong style="color:var(--ink)">${arr.length}</strong> associates ranked by brief fit</span><span>Demo scoring · transparent factors</span></div><div class="associate-list">${arr.map(a=>associateCard(a)).join('')}</div><div class="footnote">Scores are deterministic estimates based on demo profile data and the criteria provided. They do not guarantee outcomes or replace professional evaluation.</div>`;
+  const strongCount=arr.filter(a=>a.match.value>=75).length;
+  return `<div class="pagehead"><div><div class="eyebrow">Recommendations for your brief</div><h1>Your matches</h1><p class="subhead">A shortlist ranked against your requirements, with the reasoning visible so you can make your own judgement.</p></div><button class="btn secondary" onclick="editRequest('${r.id}')">Edit brief</button></div><div class="feature-banner"><div><div class="eyebrow">Current brief</div><h2>${esc(r.title)}</h2><p>${esc(r.summary)} </p><div class="tags" style="margin-top:13px"><span class="tag">${esc(r.format||'Any format')}</span><span class="tag">${esc(r.industry||'Any industry')}</span><span class="tag">${r.budget?fmt(r.budget)+' / day':'Budget flexible'}</span></div></div><div><div class="stat-num" style="font-size:36px" data-count="${strongCount}">${strongCount}</div><div class="stat-foot">strong fits in this demo</div></div></div><div class="result-head"><span><strong style="color:var(--ink)">${arr.length}</strong> associates ranked by brief fit</span><span>Demo scoring · transparent factors</span></div><div class="associate-list">${arr.map(a=>associateCard(a)).join('')}</div><div class="footnote">Scores are deterministic estimates based on demo profile data and the criteria provided. They do not guarantee outcomes or replace professional evaluation.</div>`;
 }
 function savedPage(){
   let arr=state.associates.filter(a=>state.saved.includes(a.id));
@@ -695,7 +915,20 @@ function savedPage(){
 }
 
 /* ============ ASSOCIATE PROFILE ============ */
-function viewAssociate(id){state.selectedAssociate=id;state.viewed=[id,...(state.viewed||[]).filter(x=>x!==id)].slice(0,5);persist();render();document.getElementById('content').innerHTML=associateProfilePage(id)}
+function viewAssociate(id){
+  state.selectedAssociate=id;
+  state.viewed=[id,...(state.viewed||[]).filter(x=>x!==id)].slice(0,5);
+  persist();
+  renderNav();
+  document.getElementById('crumb').textContent=`${state.mode==='client'?'Client workspace':'Associate workspace'} / Profile`;
+  const c=document.getElementById('content');
+  c.classList.remove('no-anim');
+  c.innerHTML=associateProfilePage(id);
+  lastRenderKey='';
+  runCounters();
+  document.getElementById('mobileBrand').style.display=innerWidth<=760?'flex':'none';
+  document.getElementById('compareDock').innerHTML=compareDock();
+}
 function reviewsFor(a){
   const first=a.name.split(' ')[0];
   const s1=a.skills[0]||'facilitation';
@@ -714,7 +947,7 @@ function associateProfilePage(id){
     <section class="panel profile-hero">${avatar(a,true)}<div class="profile-title"><div class="name-line"><h2>${esc(a.name)}</h2>${a.verified?'<span class="pill">Profile reviewed</span>':''}</div><p>${esc(a.role)}</p><div class="tags"><span class="tag">${a.experience} years’ experience</span><span class="tag">${esc(a.location)}</span><span class="tag">★ ${a.rating.toFixed(1)} demo rating</span></div><div class="profile-details"><div class="detailbox"><span>Indicative rate</span><strong>${fmt(a.price)} / day</strong></div><div class="detailbox"><span>Availability</span><strong>${esc(a.availability)}</strong></div><div class="detailbox"><span>Programmes delivered</span><strong>${a.programmes} (demo)</strong></div></div></div></section>
     <section class="panel" style="margin-top:16px"><div class="section-title">About ${esc(a.name.split(' ')[0])}</div><p class="prose" style="margin:12px 0 0">${esc(a.bio)}</p><div style="margin-top:24px"><div class="section-title">Areas of expertise</div><div class="skill-list">${a.skills.map(s=>`<span class="tag">${esc(s)}</span>`).join('')}</div></div><div style="margin-top:24px"><div class="section-title">Industry experience</div><div class="skill-list">${a.industries.map(s=>`<span class="tag">${esc(s)}</span>`).join('')}</div></div><div style="margin-top:24px"><div class="section-title">Delivery and languages</div><p class="prose" style="margin:8px 0">${a.formats.map(esc).join(' · ')}<br>${a.languages.map(esc).join(' · ')}</p></div></section>
     <section class="panel" style="margin-top:16px"><div class="panel-head"><div><div class="section-title">Client feedback</div><p>Sample feedback from previous demo engagements</p></div><span class="pill">★ ${a.rating.toFixed(1)} · ${a.programmes} programmes</span></div><div>${reviewsFor(a).map(r=>`<div class="review"><div class="avatar">${initials(r.name)}</div><div style="flex:1;min-width:0"><div class="review-head"><div><strong>${esc(r.name)}</strong> <span style="color:var(--muted)">· ${esc(r.role)}, ${esc(r.org)}</span></div><div class="stars" title="${r.rating} out of 5">${'★'.repeat(r.rating)}${'☆'.repeat(5-r.rating)}</div></div><p>${esc(r.text)}</p></div></div>`).join('')}</div></section>
-  </div><aside class="side-sticky"><section class="panel"><div class="eyebrow">Fit for your brief</div><div style="display:flex;align-items:baseline;gap:7px"><span class="match-score" style="font-size:37px">${m.value}%</span><span style="font-size:11px;color:var(--muted)">estimated fit</span></div><p style="font-size:11px;margin:4px 0 17px">Based on ${esc(currentRequest()?.title||'your current brief')}.</p>${m.factors.slice(0,5).map(f=>`<div style="margin:13px 0"><div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:5px"><span>${f.name}</span><strong>${f.value}%</strong></div><div class="progress"><span style="width:${f.value}%"></span></div></div>`).join('')}<div class="match-explain">This score is a guide to compare stated requirements with the sample profile. It is not a measure of professional quality.</div><div style="display:grid;gap:8px;margin-top:18px"><button class="btn primary" onclick="startProposal('${a.id}')">Request a proposal →</button><button class="btn secondary" onclick="startEnquiry('${a.id}')">Send an enquiry</button><button class="btn secondary" onclick="toggleSave('${a.id}')">${state.saved.includes(a.id)?'♥ Saved · Remove':'♡ Save associate'}</button><button class="btn secondary" onclick="toggleCompare('${a.id}')">${state.compare.includes(a.id)?'✓ In comparison':'⇄ Add to compare'}</button></div></section><div class="footnote">Profile details are fictional sample data for this prototype.</div></aside></div>`;
+  </div><aside class="side-sticky"><section class="panel"><div class="eyebrow">Fit for your brief</div><div style="display:flex;align-items:baseline;gap:7px"><span class="match-score" style="font-size:37px" data-count="${m.value}" data-suffix="%">${m.value}%</span><span style="font-size:11px;color:var(--muted)">estimated fit</span></div><p style="font-size:11px;margin:4px 0 17px">Based on ${esc(currentRequest()?.title||'your current brief')}.</p>${m.factors.slice(0,5).map(f=>`<div style="margin:13px 0"><div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:5px"><span>${f.name}</span><strong data-count="${f.value}" data-suffix="%" data-dur="650">${f.value}%</strong></div><div class="progress"><span style="width:${f.value}%"></span></div></div>`).join('')}<div class="match-explain">This score is a guide to compare stated requirements with the sample profile. It is not a measure of professional quality.</div><div style="display:grid;gap:8px;margin-top:18px"><button class="btn primary" onclick="startProposal('${a.id}')">Request a proposal →</button><button class="btn secondary" onclick="startEnquiry('${a.id}')">Send an enquiry</button><button class="btn secondary" onclick="toggleSave('${a.id}')">${state.saved.includes(a.id)?'♥ Saved · Remove':'♡ Save associate'}</button><button class="btn secondary" onclick="toggleCompare('${a.id}')">${state.compare.includes(a.id)?'✓ In comparison':'⇄ Add to compare'}</button></div></section><div class="footnote">Profile details are fictional sample data for this prototype.</div></aside></div>`;
 }
 
 /* ============ ENQUIRIES ============ */
