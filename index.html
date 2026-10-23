@@ -6,14 +6,64 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
 :root{--ink:#182b3a;--navy:#173f55;--blue:#2e6f7e;--teal:#d7ebe6;--accent:#d76b43;--paper:#f7f7f3;--white:#fff;--muted:#687780;--line:#e2e7e4;--green:#28745e;--gold:#a46d22;--red:#ad4b42;--radius:14px;--shadow:0 8px 24px rgba(23,50,61,.06);--space:8px}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.5 'DM Sans',sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible{outline:3px solid #87bdb3;outline-offset:2px}h1,h2,h3,h4,p{margin-top:0}h1,h2,h3,h4{font-family:Manrope,sans-serif;letter-spacing:-.035em}h1{font-size:clamp(26px,3vw,38px);line-height:1.12;margin-bottom:10px}h2{font-size:24px;line-height:1.2;margin-bottom:8px}h3{font-size:17px;line-height:1.3;margin-bottom:7px}p{color:var(--muted)}.app{min-height:100vh}.sidebar{position:fixed;inset:0 auto 0 0;width:246px;background:#183d4d;color:#fff;padding:25px 17px;display:flex;flex-direction:column;z-index:5}.brand{display:flex;align-items:center;gap:10px;padding:0 11px 28px;font:800 25px Manrope,sans-serif;letter-spacing:-1.5px}.brandmark{width:30px;height:30px;border-radius:9px;background:var(--accent);display:grid;place-items:center;color:#fff;font-size:15px;letter-spacing:-1px}.brand small{display:block;font:500 10px 'DM Sans';letter-spacing:1.7px;color:#a8c5c9;margin-top:-3px}.navlabel{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8fb1b8;padding:13px 12px 8px}.nav{display:flex;flex-direction:column;gap:4px}.nav button{border:0;background:transparent;color:#d0e0e1;padding:11px 12px;border-radius:9px;text-align:left;display:flex;align-items:center;gap:12px;font-weight:500;transition:.16s}.nav button:hover{background:#254e5e;color:#fff}.nav button.active{background:#315a66;color:#fff;box-shadow:inset 3px 0 var(--accent)}.nav .ico{width:18px;text-align:center;font-size:16px;opacity:.9}.sidebar-bottom{margin-top:auto;padding:16px 10px 0;border-top:1px solid #315663}.demo-note{font-size:11px;color:#a9c2c5;line-height:1.5}.mini-user{display:flex;align-items:center;gap:10px;margin-top:17px}.avatar{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#dce9e4;color:#244b55;font-weight:700;flex-shrink:0;font-size:12px}.avatar.coral{background:#f4ded2;color:#87472f}.avatar.blue{background:#dce7f3;color:#315c81}.avatar.gold{background:#f4e9c9;color:#856421}.avatar.green{background:#d6e9df;color:#28634e}.avatar.large{width:58px;height:58px;font-size:17px}.mini-user strong{display:block;font-size:12px}.mini-user span{font-size:11px;color:#a9c2c5}.main{margin-left:246px;min-height:100vh}.topbar{height:76px;background:rgba(255,255,255,.88);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 36px;position:sticky;top:0;z-index:4;backdrop-filter:blur(12px)}.crumb{color:var(--muted);font-size:12px}.top-actions{display:flex;align-items:center;gap:12px}.mode-switch{display:flex;background:#f0f3f0;border:1px solid var(--line);border-radius:9px;padding:3px}.mode-switch button{border:0;background:transparent;padding:7px 11px;border-radius:6px;color:var(--muted);font-size:12px}.mode-switch button.active{background:#fff;color:var(--ink);box-shadow:0 1px 4px #193d4d14;font-weight:700}.iconbtn{border:1px solid var(--line);background:#fff;width:36px;height:36px;border-radius:9px;color:var(--ink)}.content{max-width:1440px;padding:34px 36px 56px;margin:0 auto}.pagehead{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:28px}.eyebrow{font-size:10px;letter-spacing:1.7px;text-transform:uppercase;color:var(--blue);font-weight:700;margin-bottom:9px}.subhead{max-width:660px;margin-bottom:0}.btn{border:1px solid transparent;border-radius:8px;padding:10px 15px;font-weight:700;font-size:12px;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:background .15s,transform .15s;white-space:nowrap}.btn:active{transform:translateY(1px)}.primary{background:var(--navy);color:#fff}.primary:hover{background:#245a6d}.secondary{background:#fff;color:var(--ink);border-color:#d7dfdc}.secondary:hover{background:#f2f5f3}.accent{background:var(--accent);color:#fff}.accent:hover{background:#bc5734}.quiet{background:transparent;color:var(--blue);padding:6px 0}.danger{color:var(--red);background:#fff;border-color:#edd7d3}.small{padding:7px 10px;font-size:11px}.grid{display:grid;gap:18px}.stats{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:22px}.stat,.panel,.profile-card,.associate-card,.request-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}.stat{padding:19px 20px}.stat-top{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:12px}.stat-icon{width:30px;height:30px;border-radius:9px;background:#edf4f1;display:grid;place-items:center;color:var(--blue)}.stat-num{font:800 28px Manrope,sans-serif;letter-spacing:-1.5px;margin:14px 0 4px}.stat-foot{font-size:11px;color:var(--muted)}.positive{color:var(--green);font-weight:700}.dashboard-grid{grid-template-columns:minmax(0,1.5fr) minmax(280px,.9fr);align-items:start}.panel{padding:22px}.panel-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:18px}.panel-head p{font-size:12px;margin-bottom:0}.section-title{font:700 16px Manrope,sans-serif;letter-spacing:-.4px}.list{display:flex;flex-direction:column}.list-row{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid #edf0ee}.list-row:last-child{border-bottom:0}.list-info{min-width:0;flex:1}.list-info strong{display:block;font-size:12px}.list-info span{font-size:11px;color:var(--muted)}.row-end{text-align:right}.row-end strong{display:block;font-size:12px}.row-end span{font-size:10px;color:var(--muted)}.pill{display:inline-flex;align-items:center;gap:5px;padding:4px 8px;border-radius:6px;font-size:10px;font-weight:700;letter-spacing:.1px;background:#edf3f0;color:#386a5b}.pill.orange{background:#faeee7;color:#a45130}.pill.blue{background:#eaf0f6;color:#3f6382}.pill.gold{background:#f7f0df;color:#886520}.pill.gray{background:#eff1ef;color:#65716d}.pill.red{background:#f9e9e6;color:#a4473d}.feature-banner{background:#e4efea;border-radius:var(--radius);padding:24px 25px;display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:22px;position:relative;overflow:hidden}.feature-banner:after{content:"";position:absolute;right:11%;top:-50px;width:170px;height:170px;border:1px solid #c2d9d0;border-radius:50%;box-shadow:0 0 0 24px #d2e5dd,0 0 0 48px #dcebe5;opacity:.7}.feature-banner>*{position:relative;z-index:1}.feature-banner h2{max-width:520px}.feature-banner p{max-width:540px;margin-bottom:0;color:#516a68}.feature-actions{display:flex;gap:9px;flex-wrap:wrap}.searchbar{display:flex;gap:10px;margin-bottom:18px}.field{display:flex;flex-direction:column;gap:6px;min-width:0}.field label{font-size:11px;font-weight:700;color:#4d5f66}.field input,.field select,.field textarea,.search-input{width:100%;background:#fff;border:1px solid #dce3df;border-radius:8px;padding:10px 11px;color:var(--ink);min-width:0}.field textarea{resize:vertical;min-height:94px}.search-input{flex:1;padding-left:40px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23687780' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-4-4'/%3E%3C/svg%3E") no-repeat 13px center}.filter-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:19px}.filter-row select{border:1px solid #dce3df;background:#fff;border-radius:8px;padding:8px 10px;color:#50616a;font-size:11px}.result-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;font-size:12px;color:var(--muted)}.associate-list{display:flex;flex-direction:column;gap:12px}.associate-card{padding:19px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:15px;align-items:start;box-shadow:none;transition:border-color .15s,transform .15s}.associate-card:hover{border-color:#b8cec7;transform:translateY(-1px)}.associate-main{min-width:0}.name-line{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.name-line h3{margin:0;font-size:16px}.role{font-size:12px;color:var(--muted);margin:4px 0 8px}.bio{font-size:12px;line-height:1.6;margin:0 0 12px;color:#596a70;max-width:780px}.tags{display:flex;flex-wrap:wrap;gap:6px}.tag{font-size:10px;border:1px solid #e1e7e3;border-radius:5px;padding:4px 7px;color:#51646a;background:#fafbf9}.card-side{text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:10px;min-width:108px}.match-score{font:800 23px Manrope,sans-serif;letter-spacing:-1px;color:var(--green)}.match-label{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-top:-9px}.price{font-size:11px;color:#596b70}.card-actions{display:flex;gap:7px;margin-top:14px;flex-wrap:wrap}.heart{border:1px solid #dfe6e2;background:#fff;color:#657780;border-radius:8px;width:34px;height:34px}.heart.saved{color:#bd5943;background:#fff3ef;border-color:#f0d1c6}.filters-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}.request-card{padding:18px;box-shadow:none;display:flex;gap:15px;align-items:flex-start}.request-icon{width:42px;height:42px;border-radius:11px;background:#e7f0ec;color:var(--blue);display:grid;place-items:center;font-size:18px;flex-shrink:0}.request-main{flex:1;min-width:0}.request-main p{font-size:12px;margin:7px 0 12px}.request-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.request-meta{display:flex;gap:12px;flex-wrap:wrap;font-size:11px;color:var(--muted)}.request-meta span{display:inline-flex;gap:5px;align-items:center}.form-panel{max-width:850px;margin:0 auto}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field.full{grid-column:1/-1}.form-section{padding:19px 0;border-bottom:1px solid var(--line)}.form-section:first-child{padding-top:0}.form-section:last-child{border-bottom:0}.form-section h3{margin-bottom:4px}.form-section>p{font-size:12px;margin-bottom:17px}.form-actions{display:flex;justify-content:space-between;gap:12px;margin-top:22px}.match-explain{margin-top:13px;padding:11px 12px;background:#f4f7f5;border-radius:8px;font-size:11px;color:#5b6b70}.match-explain strong{color:#355c52}.profile-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:18px;align-items:start}.profile-hero{padding:25px;display:flex;gap:18px;align-items:flex-start}.profile-title{flex:1}.profile-title h2{margin-bottom:4px}.profile-title p{margin-bottom:10px;font-size:12px}.profile-details{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:19px}.detailbox{background:#f6f8f6;border-radius:9px;padding:12px}.detailbox span{display:block;font-size:10px;color:var(--muted);margin-bottom:5px}.detailbox strong{font-size:12px}.prose{font-size:13px;line-height:1.8;color:#596a70}.skill-list{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.side-sticky{position:sticky;top:94px}.empty{padding:40px 20px;text-align:center;border:1px dashed #cbd7d1;border-radius:12px;background:#fbfcfa}.empty-icon{font-size:25px;color:#7e9b90;margin-bottom:10px}.empty p{max-width:360px;margin:0 auto 16px;font-size:12px}.toast{position:fixed;right:24px;bottom:24px;background:#173d4c;color:white;padding:13px 17px;border-radius:10px;box-shadow:0 12px 30px #183d4d2e;z-index:30;font-size:12px;max-width:340px;animation:slidein .2s ease}.toast.error{background:#923f36}@keyframes slidein{from{transform:translateY(8px);opacity:0}to{transform:translateY(0);opacity:1}}.overlay{position:fixed;inset:0;background:#102d38a8;display:grid;place-items:center;z-index:20;padding:20px}.modal{background:#fff;border-radius:16px;padding:25px;max-width:530px;width:100%;max-height:90vh;overflow:auto;box-shadow:0 25px 80px #102d3833}.modal-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:20px}.modal-head p{font-size:12px;margin:0}.close{border:1px solid var(--line);border-radius:8px;background:#fff;width:32px;height:32px}.mobile-menu{display:none}.footnote{font-size:10px;color:#84918e;margin-top:18px}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}.progress{height:6px;background:#e8eeea;border-radius:99px;overflow:hidden}.progress span{display:block;height:100%;background:#4e9181;border-radius:99px}.timeline{display:flex;flex-direction:column}.timeline-item{display:flex;gap:12px;padding:12px 0}.timeline-dot{width:9px;height:9px;border-radius:50%;background:#6e9b8d;margin-top:5px;flex-shrink:0;box-shadow:0 0 0 4px #e8f1ed}.timeline-item p{font-size:11px;margin:2px 0 0}.timeline-item strong{font-size:12px}.compare-bar{background:#f4f6f3;border:1px solid var(--line);padding:10px 14px;border-radius:10px;display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;font-size:12px}.mobile-bottom{display:none}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.5 'DM Sans',sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible{outline:3px solid #87bdb3;outline-offset:2px}h1,h2,h3,h4,p{margin-top:0}h1,h2,h3,h4{font-family:Manrope,sans-serif;letter-spacing:-.035em}h1{font-size:clamp(26px,3vw,38px);line-height:1.12;margin-bottom:10px}h2{font-size:24px;line-height:1.2;margin-bottom:8px}h3{font-size:17px;line-height:1.3;margin-bottom:7px}p{color:var(--muted)}.app{min-height:100vh}.sidebar{position:fixed;inset:0 auto 0 0;width:246px;background:#183d4d;color:#fff;padding:25px 17px;display:flex;flex-direction:column;z-index:5}.brand{display:flex;align-items:center;gap:10px;padding:0 11px 28px;font:800 25px Manrope,sans-serif;letter-spacing:-1.5px}.brandmark{width:30px;height:30px;border-radius:9px;background:var(--accent);display:grid;place-items:center;color:#fff;font-size:15px;letter-spacing:-1px}.brand small{display:block;font:500 10px 'DM Sans';letter-spacing:1.7px;color:#a8c5c9;margin-top:-3px}.navlabel{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#8fb1b8;padding:13px 12px 8px}.nav{display:flex;flex-direction:column;gap:4px}.nav button{border:0;background:transparent;color:#d0e0e1;padding:11px 12px;border-radius:9px;text-align:left;display:flex;align-items:center;gap:12px;font-weight:500;transition:.16s}.nav button:hover{background:#254e5e;color:#fff}.nav button.active{background:#315a66;color:#fff;box-shadow:inset 3px 0 var(--accent)}.nav .ico{width:18px;text-align:center;font-size:16px;opacity:.9}.sidebar-bottom{margin-top:auto;padding:16px 10px 0;border-top:1px solid #315663}.demo-note{font-size:11px;color:#a9c2c5;line-height:1.5}.mini-user{display:flex;align-items:center;gap:10px;margin-top:17px}.avatar{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#dce9e4;color:#244b55;font-weight:700;flex-shrink:0;font-size:12px}.avatar.coral{background:#f4ded2;color:#87472f}.avatar.blue{background:#dce7f3;color:#315c81}.avatar.gold{background:#f4e9c9;color:#856421}.avatar.green{background:#d6e9df;color:#28634e}.avatar.large{width:58px;height:58px;font-size:17px}.mini-user strong{display:block;font-size:12px}.mini-user span{font-size:11px;color:#a9c2c5}.main{margin-left:246px;min-height:100vh}.topbar{height:76px;background:rgba(255,255,255,.88);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 36px;position:sticky;top:0;z-index:4;backdrop-filter:blur(12px)}.crumb{color:var(--muted);font-size:12px}.top-actions{display:flex;align-items:center;gap:12px}.mode-switch{display:flex;background:#f0f3f0;border:1px solid var(--line);border-radius:9px;padding:3px}.mode-switch button{border:0;background:transparent;padding:7px 11px;border-radius:6px;color:var(--muted);font-size:12px}.mode-switch button.active{background:#fff;color:var(--ink);box-shadow:0 1px 4px #193d4d14;font-weight:700}.iconbtn{border:1px solid var(--line);background:#fff;width:36px;height:36px;border-radius:9px;color:var(--ink);position:relative;display:inline-flex;align-items:center;justify-content:center;padding:0}.content{max-width:1440px;padding:34px 36px 56px;margin:0 auto}.pagehead{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:28px}.eyebrow{font-size:10px;letter-spacing:1.7px;text-transform:uppercase;color:var(--blue);font-weight:700;margin-bottom:9px}.subhead{max-width:660px;margin-bottom:0}.btn{border:1px solid transparent;border-radius:8px;padding:10px 15px;font-weight:700;font-size:12px;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:background .15s,transform .15s;white-space:nowrap}.btn:active{transform:translateY(1px)}.primary{background:var(--navy);color:#fff}.primary:hover{background:#245a6d}.secondary{background:#fff;color:var(--ink);border-color:#d7dfdc}.secondary:hover{background:#f2f5f3}.accent{background:var(--accent);color:#fff}.accent:hover{background:#bc5734}.quiet{background:transparent;color:var(--blue);padding:6px 0}.danger{color:var(--red);background:#fff;border-color:#edd7d3}.small{padding:7px 10px;font-size:11px}.grid{display:grid;gap:18px}.stats{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:22px}.stat,.panel,.profile-card,.associate-card,.request-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}.stat{padding:19px 20px}.stat-top{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:12px}.stat-icon{width:30px;height:30px;border-radius:9px;background:#edf4f1;display:grid;place-items:center;color:var(--blue)}.stat-num{font:800 28px Manrope,sans-serif;letter-spacing:-1.5px;margin:14px 0 4px}.stat-foot{font-size:11px;color:var(--muted)}.positive{color:var(--green);font-weight:700}.dashboard-grid{grid-template-columns:minmax(0,1.5fr) minmax(280px,.9fr);align-items:start}.panel{padding:22px}.panel-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:18px}.panel-head p{font-size:12px;margin-bottom:0}.section-title{font:700 16px Manrope,sans-serif;letter-spacing:-.4px}.list{display:flex;flex-direction:column}.list-row{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid #edf0ee}.list-row:last-child{border-bottom:0}.list-info{min-width:0;flex:1}.list-info strong{display:block;font-size:12px}.list-info span{font-size:11px;color:var(--muted)}.row-end{text-align:right}.row-end strong{display:block;font-size:12px}.row-end span{font-size:10px;color:var(--muted)}.pill{display:inline-flex;align-items:center;gap:5px;padding:4px 8px;border-radius:6px;font-size:10px;font-weight:700;letter-spacing:.1px;background:#edf3f0;color:#386a5b}.pill.orange{background:#faeee7;color:#a45130}.pill.blue{background:#eaf0f6;color:#3f6382}.pill.gold{background:#f7f0df;color:#886520}.pill.gray{background:#eff1ef;color:#65716d}.pill.red{background:#f9e9e6;color:#a4473d}.feature-banner{background:#e4efea;border-radius:var(--radius);padding:24px 25px;display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:22px;position:relative;overflow:hidden}.feature-banner:after{content:"";position:absolute;right:11%;top:-50px;width:170px;height:170px;border:1px solid #c2d9d0;border-radius:50%;box-shadow:0 0 0 24px #d2e5dd,0 0 0 48px #dcebe5;opacity:.7}.feature-banner>*{position:relative;z-index:1}.feature-banner h2{max-width:520px}.feature-banner p{max-width:540px;margin-bottom:0;color:#516a68}.feature-actions{display:flex;gap:9px;flex-wrap:wrap}.searchbar{display:flex;gap:10px;margin-bottom:18px}.field{display:flex;flex-direction:column;gap:6px;min-width:0}.field label{font-size:11px;font-weight:700;color:#4d5f66}.field input,.field select,.field textarea,.search-input{width:100%;background:#fff;border:1px solid #dce3df;border-radius:8px;padding:10px 11px;color:var(--ink);min-width:0}.field textarea{resize:vertical;min-height:94px}.search-input{flex:1;padding-left:40px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23687780' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-4-4'/%3E%3C/svg%3E") no-repeat 13px center}.filter-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:19px}.filter-row select{border:1px solid #dce3df;background:#fff;border-radius:8px;padding:8px 10px;color:#50616a;font-size:11px}.result-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;font-size:12px;color:var(--muted)}.associate-list{display:flex;flex-direction:column;gap:12px}.associate-card{padding:19px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:15px;align-items:start;box-shadow:none;transition:border-color .15s,transform .15s}.associate-card:hover{border-color:#b8cec7;transform:translateY(-1px)}.associate-main{min-width:0}.name-line{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.name-line h3{margin:0;font-size:16px}.role{font-size:12px;color:var(--muted);margin:4px 0 8px}.bio{font-size:12px;line-height:1.6;margin:0 0 12px;color:#596a70;max-width:780px}.tags{display:flex;flex-wrap:wrap;gap:6px}.tag{font-size:10px;border:1px solid #e1e7e3;border-radius:5px;padding:4px 7px;color:#51646a;background:#fafbf9}.card-side{text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:10px;min-width:108px}.match-score{font:800 23px Manrope,sans-serif;letter-spacing:-1px;color:var(--green)}.match-label{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-top:-9px}.price{font-size:11px;color:#596b70}.card-actions{display:flex;gap:7px;margin-top:14px;flex-wrap:wrap}.heart{border:1px solid #dfe6e2;background:#fff;color:#657780;border-radius:8px;width:34px;height:34px}.heart.saved{color:#bd5943;background:#fff3ef;border-color:#f0d1c6}.heart.compared{color:#2e6f7e;background:#eaf1f5;border-color:#c9dae4}.filters-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}.request-card{padding:18px;box-shadow:none;display:flex;gap:15px;align-items:flex-start}.request-icon{width:42px;height:42px;border-radius:11px;background:#e7f0ec;color:var(--blue);display:grid;place-items:center;font-size:18px;flex-shrink:0}.request-main{flex:1;min-width:0}.request-main p{font-size:12px;margin:7px 0 12px}.request-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.request-meta{display:flex;gap:12px;flex-wrap:wrap;font-size:11px;color:var(--muted)}.request-meta span{display:inline-flex;gap:5px;align-items:center}.form-panel{max-width:850px;margin:0 auto}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field.full{grid-column:1/-1}.form-section{padding:19px 0;border-bottom:1px solid var(--line)}.form-section:first-child{padding-top:0}.form-section:last-child{border-bottom:0}.form-section h3{margin-bottom:4px}.form-section>p{font-size:12px;margin-bottom:17px}.form-actions{display:flex;justify-content:space-between;gap:12px;margin-top:22px}.match-explain{margin-top:13px;padding:11px 12px;background:#f4f7f5;border-radius:8px;font-size:11px;color:#5b6b70}.match-explain strong{color:#355c52}.profile-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:18px;align-items:start}.profile-hero{padding:25px;display:flex;gap:18px;align-items:flex-start}.profile-title{flex:1}.profile-title h2{margin-bottom:4px}.profile-title p{margin-bottom:10px;font-size:12px}.profile-details{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:19px}.detailbox{background:#f6f8f6;border-radius:9px;padding:12px}.detailbox span{display:block;font-size:10px;color:var(--muted);margin-bottom:5px}.detailbox strong{font-size:12px}.prose{font-size:13px;line-height:1.8;color:#596a70}.skill-list{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.side-sticky{position:sticky;top:94px}.empty{padding:40px 20px;text-align:center;border:1px dashed #cbd7d1;border-radius:12px;background:#fbfcfa}.empty-icon{font-size:25px;color:#7e9b90;margin-bottom:10px}.empty p{max-width:360px;margin:0 auto 16px;font-size:12px}.toast{position:fixed;right:24px;bottom:24px;background:#173d4c;color:white;padding:13px 17px;border-radius:10px;box-shadow:0 12px 30px #183d4d2e;z-index:30;font-size:12px;max-width:340px;animation:slidein .2s ease}.toast.error{background:#923f36}@keyframes slidein{from{transform:translateY(8px);opacity:0}to{transform:translateY(0);opacity:1}}.overlay{position:fixed;inset:0;background:#102d38a8;display:grid;place-items:center;z-index:20;padding:20px}.modal{background:#fff;border-radius:16px;padding:25px;max-width:530px;width:100%;max-height:90vh;overflow:auto;box-shadow:0 25px 80px #102d3833}.modal.wide{max-width:900px}.modal-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:20px}.modal-head p{font-size:12px;margin:0}.close{border:1px solid var(--line);border-radius:8px;background:#fff;width:32px;height:32px}.mobile-menu{display:none}.footnote{font-size:10px;color:#84918e;margin-top:18px}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}.progress{height:6px;background:#e8eeea;border-radius:99px;overflow:hidden}.progress span{display:block;height:100%;background:#4e9181;border-radius:99px}.timeline{display:flex;flex-direction:column}.timeline-item{display:flex;gap:12px;padding:12px 0}.timeline-dot{width:9px;height:9px;border-radius:50%;background:#6e9b8d;margin-top:5px;flex-shrink:0;box-shadow:0 0 0 4px #e8f1ed}.timeline-item p{font-size:11px;margin:2px 0 0}.timeline-item strong{font-size:12px}.compare-bar{background:#f4f6f3;border:1px solid var(--line);padding:10px 14px;border-radius:10px;display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;font-size:12px}.mobile-bottom{display:none}
 @media(max-width:1100px){.sidebar{width:215px}.main{margin-left:215px}.content{padding:28px 24px 45px}.topbar{padding:0 24px}.stats{grid-template-columns:repeat(2,1fr)}.dashboard-grid{grid-template-columns:1fr}.profile-layout{grid-template-columns:1fr 260px}.associate-card{grid-template-columns:auto minmax(0,1fr)}.card-side{grid-column:2;flex-direction:row;align-items:center;justify-content:flex-start;text-align:left;min-width:0}.card-side .match-label{margin:0}.card-side .match-score{font-size:18px}}
-@media(max-width:760px){.sidebar{display:none}.main{margin-left:0}.topbar{height:64px;padding:0 16px}.mobile-menu{display:inline-grid}.crumb{display:none}.content{padding:24px 16px 88px}.pagehead{align-items:flex-start;flex-direction:column;margin-bottom:21px}.pagehead .btn{width:100%}.top-actions{gap:7px}.mode-switch button{padding:7px 8px}.stats{gap:10px}.stat{padding:15px}.stat-num{font-size:24px}.stat-foot{font-size:10px}.feature-banner{align-items:flex-start;flex-direction:column;padding:21px}.feature-banner:after{right:-50px;opacity:.35}.feature-actions{width:100%}.searchbar{flex-direction:column}.filter-row{gap:7px}.filter-row select{flex:1;min-width:calc(50% - 8px)}.associate-card{grid-template-columns:auto minmax(0,1fr);gap:11px;padding:14px}.associate-card>.avatar{width:42px;height:42px}.name-line h3{font-size:14px}.card-side{grid-column:1/-1;border-top:1px solid #edf0ee;padding-top:10px;width:100%;justify-content:space-between}.card-actions .btn{flex:1}.request-card{padding:14px;gap:11px}.request-top{flex-direction:column}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.form-panel{padding:18px}.profile-layout{grid-template-columns:1fr}.side-sticky{position:static}.profile-hero{padding:18px;flex-wrap:wrap}.profile-details{grid-template-columns:1fr 1fr}.profile-title{min-width:180px}.two-col{grid-template-columns:1fr}.panel{padding:17px}.panel-head{margin-bottom:14px}.mobile-bottom{display:flex;position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);z-index:8;padding:7px 6px calc(7px + env(safe-area-inset-bottom));justify-content:space-around}.mobile-bottom button{border:0;background:transparent;color:#6c7b7e;font-size:9px;display:flex;flex-direction:column;align-items:center;gap:3px;padding:4px 9px}.mobile-bottom button.active{color:var(--blue);font-weight:700}.mobile-bottom span{font-size:17px}.form-actions{flex-direction:column-reverse}.form-actions .btn{width:100%}.compare-bar{gap:10px}.profile-hero .avatar.large{width:52px;height:52px}.topbar .brand{display:flex;padding:0;font-size:21px}.topbar .brandmark{width:26px;height:26px}.topbar .brand small{display:none}}
+@media(max-width:760px){.sidebar{display:none}.main{margin-left:0}.topbar{height:64px;padding:0 16px}.mobile-menu{display:inline-grid}.crumb{display:none}.content{padding:24px 16px 88px}.pagehead{align-items:flex-start;flex-direction:column;margin-bottom:21px}.pagehead .btn{width:100%}.top-actions{gap:7px}.mode-switch button{padding:7px 8px}.stats{gap:10px}.stat{padding:15px}.stat-num{font-size:24px}.stat-foot{font-size:10px}.feature-banner{align-items:flex-start;flex-direction:column;padding:21px}.feature-banner:after{right:-50px;opacity:.35}.feature-actions{width:100%}.searchbar{flex-direction:column}.filter-row{gap:7px}.filter-row select{flex:1;min-width:calc(50% - 8px)}.associate-card{grid-template-columns:auto minmax(0,1fr);gap:11px;padding:14px}.associate-card>.avatar{width:42px;height:42px}.name-line h3{font-size:14px}.card-side{grid-column:1/-1;border-top:1px solid #edf0ee;padding-top:10px;width:100%;justify-content:space-between}.card-actions .btn{flex:1}.request-card{padding:14px;gap:11px}.request-top{flex-direction:column}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.form-panel{padding:18px}.profile-layout{grid-template-columns:1fr}.side-sticky{position:static}.profile-hero{padding:18px;flex-wrap:wrap}.profile-details{grid-template-columns:1fr 1fr}.profile-title{min-width:180px}.two-col{grid-template-columns:1fr}.panel{padding:17px}.panel-head{margin-bottom:14px}.mobile-bottom{display:flex;position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);z-index:8;padding:7px 6px calc(7px + env(safe-area-inset-bottom));justify-content:space-around}.mobile-bottom button{border:0;background:transparent;color:#6c7b7e;font-size:9px;display:flex;flex-direction:column;align-items:center;gap:3px;padding:4px 9px}.mobile-bottom button.active{color:var(--blue);font-weight:700}.mobile-bottom span{font-size:17px}.form-actions{flex-direction:column-reverse}.form-actions .btn{width:100%}.compare-bar{gap:10px}.profile-hero .avatar.large{width:52px;height:52px}.topbar .brand{display:flex;padding:0;font-size:21px}.topbar .brandmark{width:26px;height:26px}.topbar .brand small{display:none}#resetBtn{display:none}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+/* ---------- Auth screen ---------- */
+.auth{min-height:100vh;display:grid;grid-template-columns:1.02fr .98fr;background:var(--paper)}
+.auth-side{background:#183d4d;color:#fff;padding:52px 48px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.auth-side:after{content:"";position:absolute;right:-120px;bottom:-120px;width:340px;height:340px;border:1px solid #2c5b6b;border-radius:50%;box-shadow:0 0 0 40px #1e4757,0 0 0 80px #214d5d;opacity:.5}
+.auth-side>*{position:relative;z-index:1}
+.auth-side .brand{padding:0}
+.auth-points{list-style:none;padding:0;margin:26px 0 0;display:flex;flex-direction:column;gap:12px;max-width:400px}
+.auth-points li{font-size:13px;color:#c6dcdf;padding-left:26px;position:relative;line-height:1.55}
+.auth-points li:before{content:"✓";position:absolute;left:0;top:1px;width:18px;height:18px;border-radius:50%;background:#2c5a68;color:#b9ded4;font-size:10px;display:grid;place-items:center}
+.auth-main{display:grid;place-items:center;padding:40px 28px}
+.auth-card{width:100%;max-width:440px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px;box-shadow:var(--shadow)}
+.auth-tabs{display:flex;background:#f0f3f0;border:1px solid var(--line);border-radius:9px;padding:3px;margin-bottom:22px}
+.auth-tabs button{flex:1;border:0;background:transparent;padding:9px 11px;border-radius:6px;color:var(--muted);font-size:12px;font-weight:600}
+.auth-tabs button.active{background:#fff;color:var(--ink);box-shadow:0 1px 4px #193d4d14;font-weight:700}
+.auth-role{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.auth-role button{border:1px solid #dce3df;background:#fff;border-radius:9px;padding:12px;text-align:left;display:flex;flex-direction:column;gap:3px;transition:.15s}
+.auth-role button strong{font-size:12px;color:var(--ink)}
+.auth-role button span{font-size:10px;color:var(--muted);line-height:1.35}
+.auth-role button.selected{border-color:var(--blue);background:#eef4f2;box-shadow:inset 0 0 0 1px var(--blue)}
+.auth-divider{display:flex;align-items:center;gap:12px;margin:20px 0 14px;color:var(--muted);font-size:10px;letter-spacing:1.2px;text-transform:uppercase}
+.auth-divider:before,.auth-divider:after{content:"";height:1px;background:var(--line);flex:1}
+.auth-quick{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.auth-quick .btn{width:100%}
+@media(max-width:900px){.auth{grid-template-columns:1fr}.auth-side{padding:32px 24px}.auth-side h1{font-size:26px!important}.auth-points{display:none}.auth-main{padding:24px 16px 48px}}
+
+/* ---------- Notifications ---------- */
+.bell-dot{position:absolute;top:6px;right:7px;width:7px;height:7px;border-radius:50%;background:var(--accent);display:none;border:1.5px solid #fff}
+.bell-dot.on{display:block}
+
+/* ---------- Compare ---------- */
+.btn.compared{background:#e7f0ec;border-color:#bcd6cc;color:var(--green)}
+.compare-dock{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);z-index:9;display:flex;align-items:center;gap:10px;background:#173d4c;color:#fff;padding:10px 14px;border-radius:12px;box-shadow:0 14px 34px #102d3840;font-size:12px;max-width:calc(100vw - 32px)}
+.compare-dock .compare-count{font-weight:700;white-space:nowrap}
+.compare-chips{display:flex;gap:5px;flex-wrap:wrap}
+.compare-chips .tag{background:#2c5563;border-color:#3a6270;color:#d7ebe6;padding:4px 8px}
+@media(max-width:760px){.compare-dock{bottom:74px;padding:9px 11px;font-size:11px}.compare-dock .compare-chips{display:none}}
+.cmp-table{width:100%;border-collapse:collapse;font-size:12px}
+.cmp-table th,.cmp-table td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.cmp-table th{font-weight:700;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;width:132px}
+.cmp-table td{min-width:150px}
+.cmp-table thead td{border-bottom:1px solid var(--line);padding-bottom:14px}
+
+/* ---------- Reviews ---------- */
+.review{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid #edf0ee}
+.review:last-child{border-bottom:0;padding-bottom:0}
+.review .avatar{width:34px;height:34px;font-size:11px}
+.review-head{display:flex;justify-content:space-between;gap:10px;font-size:12px;flex-wrap:wrap}
+.review p{font-size:12px;margin:4px 0 0;color:#596a70;line-height:1.6}
+.stars{color:#c8871f;font-size:11px;letter-spacing:1.5px}
 </style>
 </head>
 <body>
-<div class="app">
+<div class="app" id="appShell">
 <aside class="sidebar">
   <div class="brand"><span class="brandmark">M</span><div>MaTCH<small>PEOPLE. PURPOSE. PROGRESS.</small></div></div>
   <div class="navlabel">Workspace</div>
@@ -22,7 +72,7 @@
   <nav class="nav" id="manageNav"></nav>
   <div class="sidebar-bottom">
     <div class="demo-note">DEMO ENVIRONMENT<br>Sample data only. No real messages or bookings are sent.</div>
-    <div class="mini-user"><div class="avatar">AC</div><div><strong>Acme Learning Co.</strong><span id="roleCaption">Client workspace</span></div></div>
+    <div class="mini-user" id="miniUser"></div>
   </div>
 </aside>
 <main class="main">
@@ -34,14 +84,22 @@
       <button id="clientMode" class="active" onclick="setMode('client')">Client view</button>
       <button id="associateMode" onclick="setMode('associate')">Associate view</button>
     </div>
-    <button class="iconbtn" title="Reset demo data" onclick="resetDemo()">↻</button>
+    <button class="iconbtn" id="bellBtn" title="Notifications" aria-label="Notifications" onclick="openNotifications()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+      <span class="bell-dot" id="bellDot"></span>
+    </button>
+    <button class="iconbtn" id="accountBtn" title="Account" aria-label="Account" onclick="openAccount()"></button>
+    <button class="iconbtn" id="resetBtn" title="Reset demo data" onclick="resetDemo()">↻</button>
   </div>
 </header>
 <div class="content" id="content"></div>
 </main>
 <nav class="mobile-bottom" id="mobileNav"></nav>
-<div id="modalRoot"></div><div id="toastRoot" aria-live="polite"></div>
 </div>
+<div id="authScreen"></div>
+<div id="compareDock"></div>
+<div id="modalRoot"></div>
+<div id="toastRoot" aria-live="polite"></div>
 <script>
 const initialAssociates = [
 {id:'a1',name:'Amira Hassan',initials:'AH',tone:'green',role:'Leadership & Culture Facilitator',experience:14,location:'Kuala Lumpur, Malaysia',formats:['In-person','Hybrid'],languages:['English','Malay','Arabic'],industries:['Professional Services','Technology','Finance'],skills:['Leadership development','Team effectiveness','Change management'],bio:'Works with leadership teams navigating growth, culture shifts and organisational change. Known for practical workshops that turn difficult conversations into clear commitments.',price:4200,availability:'Available in November',rating:4.9,programmes:86,verified:true},
@@ -61,69 +119,619 @@ const initialRequests=[
 {id:'r1',title:'Leading teams through change',category:'Leadership development',industry:'Technology',format:'Hybrid',location:'Kuala Lumpur',budget:4500,language:'English',date:'November 2026',status:'Reviewing matches',created:'12 Oct 2026',summary:'A practical workshop for 18 new and experienced people managers who are navigating a period of organisational change.',skills:['Leadership development','Change management'],audience:18,duration:'1 day'},
 {id:'r2',title:'AI literacy for business teams',category:'AI literacy',industry:'Professional Services',format:'Online',location:'Malaysia',budget:3500,language:'English',date:'Flexible',status:'Submitted',created:'10 Oct 2026',summary:'Help a cross-functional group understand AI opportunities, limitations and responsible use at work.',skills:['AI literacy','Digital transformation'],audience:30,duration:'Half day'}
 ];
+const STATUS_FLOW=['Submitted','Reviewing matches','Shortlisted','Booked','Completed'];
+
+function defaultState(){
+  return {
+    associates:structuredClone(initialAssociates),
+    requests:structuredClone(initialRequests),
+    enquiries:[
+      {id:'e1',associateId:'a1',requestId:'r1',client:'Acme Learning Co.',message:'Could you share a little more about how you approach change leadership with first-time managers?',status:'Sent',date:'14 Oct 2026'},
+      {id:'e2',associateId:'a3',requestId:'r2',client:'Northstar People Team',message:'We are exploring a short coaching series for senior managers.',status:'Responded',date:'11 Oct 2026',response:'Happy to discuss the objectives and possible session structure.'}
+    ],
+    proposals:[
+      {id:'p1',associateId:'a1',requestId:'r1',client:'Acme Learning Co.',date:'18 November 2026',budget:4400,message:'We would like to book a one-day workshop for 18 managers focused on leading through change. Could you confirm availability and share a short outline?',status:'Pending',created:'15 Oct 2026',response:''}
+    ],
+    notifications:[
+      {id:'n1',text:'6 new matches are ready for “Leading teams through change”.',page:'matches',read:false,time:'2h ago'},
+      {id:'n2',text:'Amira Hassan responded to your enquiry.',page:'requests',read:false,time:'Yesterday'},
+      {id:'n3',text:'Your brief “AI literacy for business teams” was submitted.',page:'requests',read:true,time:'12 Oct'}
+    ],
+    users:[],
+    session:null,
+    saved:['a1','a3'],
+    compare:[],
+    profile:{summary:'I help teams turn learning goals into practical changes at work.',skills:['Facilitation','Leadership development','Change management'],formats:['Hybrid','Online'],languages:['English','Malay'],location:'Kuala Lumpur, Malaysia',price:4000,availability:'Available in November'},
+    opportunityResponses:[],
+    viewed:[],
+    mode:'client',
+    page:'dashboard',
+    selectedAssociate:null,
+    selectedRequest:'r1',
+    search:'',
+    filters:{industry:'',format:'',language:'',budget:'',sort:'relevance'},
+    draft:null,
+    toast:null,
+    authView:'login',
+    authRole:'client'
+  };
+}
+function loadState(){
+  let s=null;
+  try{s=JSON.parse(localStorage.getItem('matchDemoState'))}catch(e){}
+  const base=defaultState();
+  if(s&&s.associates&&s.requests) return Object.assign({},base,s);
+  return base;
+}
 let state = loadState();
-function loadState(){try{const s=JSON.parse(localStorage.getItem('matchDemoState'));if(s&&s.associates&&s.requests)return s}catch(e){}return {associates:structuredClone(initialAssociates),requests:structuredClone(initialRequests),enquiries:[{id:'e1',associateId:'a1',requestId:'r1',client:'Acme Learning Co.',message:'Could you share a little more about how you approach change leadership with first-time managers?',status:'Sent',date:'14 Oct 2026'},{id:'e2',associateId:'a3',requestId:'r2',client:'Northstar People Team',message:'We are exploring a short coaching series for senior managers.',status:'Responded',date:'11 Oct 2026',response:'Happy to discuss the objectives and possible session structure.'}],saved:['a1','a3'],profile:{summary:'I help teams turn learning goals into practical changes at work.',skills:['Facilitation','Leadership development','Change management'],formats:['Hybrid','Online'],languages:['English','Malay'],location:'Kuala Lumpur, Malaysia',price:4000,availability:'Available in November'},opportunityResponses:[],viewed:[],mode:'client',page:'dashboard',selectedAssociate:null,selectedRequest:'r1',search:'',filters:{industry:'',format:'',language:'',budget:'',sort:'relevance'},draft:null,toast:null};}
 function persist(){localStorage.setItem('matchDemoState',JSON.stringify(state))}
-function resetDemo(){if(confirm('Reset all demo changes and restore the original sample data?')){localStorage.removeItem('matchDemoState');state=loadState();render();notify('Demo data restored.');}}
+function resetDemo(){
+  if(!confirm('Reset all demo changes and restore the original sample data? This will also sign you out.'))return;
+  closeModal();
+  localStorage.removeItem('matchDemoState');
+  state=loadState();
+  render();
+  notify('Demo data restored. Signed out of the demo workspace.');
+}
 const clientNav=[['dashboard','▦','Overview'],['discover','⌕','Discover associates'],['newRequest','＋','New request'],['matches','✳','Matching results'],['saved','♡','Saved associates']];
 const clientManage=[['requests','▤','Requests & enquiries']];
 const associateNav=[['associateDashboard','▦','Overview'],['opportunities','◈','Opportunities'],['inbox','✉','Enquiries'],['editProfile','◎','My profile']];
 const associateManage=[['profilePreview','↗','Profile preview']];
+
+/* ============ AUTH ============ */
+function authScreen(){
+  const view=state.authView||'login';
+  return `<div class="auth">
+    <aside class="auth-side">
+      <div>
+        <div class="brand"><span class="brandmark">M</span><div>MaTCH<small>PEOPLE. PURPOSE. PROGRESS.</small></div></div>
+        <h1 style="color:#fff;margin-top:40px;max-width:420px;font-size:clamp(28px,3.4vw,40px)">Find the right people for meaningful work.</h1>
+        <p style="color:#a8c5c9;max-width:400px;margin-top:0">MaTCH connects organisations with experienced associates — and helps associates find briefs that fit their expertise.</p>
+        <ul class="auth-points">
+          <li>Describe the outcome, then review a shortlist with visible reasoning.</li>
+          <li>Compare experience, availability and budget side by side.</li>
+          <li>Send enquiries and proposals, and track every next step.</li>
+        </ul>
+      </div>
+      <div class="demo-note">DEMO ENVIRONMENT<br>Sample data only. No real messages or bookings are sent.</div>
+    </aside>
+    <main class="auth-main">
+      <div class="auth-card">
+        <div class="auth-tabs">
+          <button class="${view==='login'?'active':''}" onclick="setAuthView('login')">Sign in</button>
+          <button class="${view==='register'?'active':''}" onclick="setAuthView('register')">Create account</button>
+        </div>
+        ${view==='login'?loginForm():registerForm()}
+      </div>
+    </main>
+  </div>`;
+}
+function loginForm(){
+  return `<form onsubmit="doLogin(event)">
+    <div class="field"><label for="loginEmail">Email</label><input id="loginEmail" name="email" type="email" required value="client@acme.demo" autocomplete="username"></div>
+    <div class="field" style="margin-top:13px"><label for="loginPass">Password</label><input id="loginPass" name="password" type="password" required value="demo1234" autocomplete="current-password"></div>
+    <button class="btn primary" type="submit" style="width:100%;margin-top:18px">Sign in →</button>
+  </form>
+  <div class="auth-divider"><span>or jump straight in</span></div>
+  <div class="auth-quick">
+    <button class="btn secondary" onclick="quickLogin('client')">Client demo</button>
+    <button class="btn secondary" onclick="quickLogin('associate')">Associate demo</button>
+  </div>
+  <p class="footnote">Any email and password work in this demo. Demo credentials are pre-filled above.</p>`;
+}
+function registerForm(){
+  const role=state.authRole||'client';
+  return `<form onsubmit="doRegister(event)">
+    <div class="field"><label for="regName">Full name *</label><input id="regName" name="name" required placeholder="e.g. Jamie Tan"></div>
+    <div class="field" style="margin-top:13px"><label for="regEmail">Work email *</label><input id="regEmail" name="email" type="email" required placeholder="you@company.com"></div>
+    <div class="field" style="margin-top:13px"><label for="regPass">Password *</label><input id="regPass" name="password" type="password" required minlength="6" placeholder="At least 6 characters"></div>
+    <div class="field" style="margin-top:16px"><label>I'm joining as</label>
+      <div class="auth-role">
+        <button type="button" data-role="client" class="${role==='client'?'selected':''}" onclick="pickRole('client')"><strong>I'm hiring</strong><span>Find associates for my team</span></button>
+        <button type="button" data-role="associate" class="${role==='associate'?'selected':''}" onclick="pickRole('associate')"><strong>I'm an associate</strong><span>Find work that fits</span></button>
+      </div>
+      <input type="hidden" name="role" id="regRole" value="${role}">
+    </div>
+    <div class="field" style="margin-top:13px" id="regOrgWrap"><label for="regOrg">${role==='client'?'Company name':'Professional headline'}</label><input id="regOrg" name="org" placeholder="${role==='client'?'e.g. Acme Learning Co.':'e.g. Leadership facilitator'}"></div>
+    <button class="btn primary" type="submit" style="width:100%;margin-top:18px">Create account →</button>
+  </form>
+  <p class="footnote">This is a local demo — accounts and data are stored in your browser only.</p>`;
+}
+function setAuthView(v){state.authView=v;persist();render();}
+function pickRole(r){
+  state.authRole=r;
+  document.querySelectorAll('.auth-role button').forEach(b=>b.classList.toggle('selected',b.dataset.role===r));
+  const hidden=document.getElementById('regRole'); if(hidden) hidden.value=r;
+  const lab=document.getElementById('regOrgWrap');
+  if(lab){
+    lab.querySelector('label').textContent = r==='client'?'Company name':'Professional headline';
+    document.getElementById('regOrg').placeholder = r==='client'?'e.g. Acme Learning Co.':'e.g. Leadership facilitator';
+  }
+}
+function doLogin(e){
+  e.preventDefault();
+  const f=new FormData(e.target);
+  const email=(f.get('email')||'').trim().toLowerCase();
+  const password=f.get('password');
+  if(!email||!password){notify('Enter your email and password.',true);return;}
+  const known=(state.users||[]).find(u=>u.email===email);
+  if(known){
+    if(known.password!==password){notify('That password does not match this demo account.',true);return;}
+    signIn({name: known.role==='client'?(known.org||known.name):known.name, email, role:known.role, initials:initials(known.name), tone:known.role==='associate'?'green':''});
+    return;
+  }
+  const isAssociate=email.startsWith('amira')||email.includes('associate');
+  signIn(isAssociate
+    ? {name:'Amira Hassan',email,role:'associate',initials:'AH',tone:'green'}
+    : {name:'Acme Learning Co.',email,role:'client',initials:'AC',tone:''});
+}
+function doRegister(e){
+  e.preventDefault();
+  const f=new FormData(e.target);
+  const name=(f.get('name')||'').trim();
+  const email=(f.get('email')||'').trim().toLowerCase();
+  const password=f.get('password');
+  const role=f.get('role')||'client';
+  const org=(f.get('org')||'').trim();
+  if(!name||!email||!password){notify('Please complete all required fields.',true);return;}
+  if(password.length<6){notify('Use a password of at least 6 characters.',true);return;}
+  state.users=(state.users||[]).filter(u=>u.email!==email);
+  state.users.push({id:'u'+Date.now(),name,email,password,role,org});
+  state.authView='login'; state.authRole='client';
+  signIn({name: role==='client'?(org||name):name, email, role, initials:initials(name), tone: role==='associate'?'green':''});
+  notify('Account created. Welcome to MaTCH.');
+}
+function quickLogin(role){
+  if(role==='client') signIn({name:'Acme Learning Co.',email:'client@acme.demo',role:'client',initials:'AC',tone:''});
+  else signIn({name:'Amira Hassan',email:'amira@match.demo',role:'associate',initials:'AH',tone:'green'});
+}
+function signIn(user){
+  state.session=user;
+  state.mode=user.role;
+  state.page=user.role==='client'?'dashboard':'associateDashboard';
+  state.selectedAssociate=null;
+  state.compare=[];
+  persist(); render();
+  notify(`Signed in as ${user.name}.`);
+}
+function logout(){
+  if(!confirm('Sign out of the demo workspace?'))return;
+  state.session=null;
+  state.page='dashboard';
+  state.mode='client';
+  persist(); render();
+}
+
+/* ============ SHELL ============ */
 function setMode(mode){state.mode=mode;state.page=mode==='client'?'dashboard':'associateDashboard';state.selectedAssociate=null;persist();render()}
 function navButton(item){return `<button class="${state.page===item[0]?'active':''}" onclick="go('${item[0]}')"><span class="ico">${item[1]}</span>${item[2]}</button>`}
-function renderNav(){const nav=state.mode==='client'?clientNav:associateNav,man=state.mode==='client'?clientManage:associateManage;document.getElementById('mainNav').innerHTML=nav.map(navButton).join('');document.getElementById('manageNav').innerHTML=man.map(navButton).join('');document.getElementById('clientMode').classList.toggle('active',state.mode==='client');document.getElementById('associateMode').classList.toggle('active',state.mode==='associate');document.getElementById('roleCaption').textContent=state.mode==='client'?'Client workspace':'Associate workspace';document.getElementById('mobileNav').innerHTML=nav.slice(0,4).map(n=>`<button class="${state.page===n[0]?'active':''}" onclick="go('${n[0]}')"><span>${n[1]}</span>${n[2].replace(' associates','').replace('Matching results','Matches')}</button>`).join('');}
+function renderNav(){
+  const nav=state.mode==='client'?clientNav:associateNav,man=state.mode==='client'?clientManage:associateManage;
+  document.getElementById('mainNav').innerHTML=nav.map(navButton).join('');
+  document.getElementById('manageNav').innerHTML=man.map(navButton).join('');
+  document.getElementById('clientMode').classList.toggle('active',state.mode==='client');
+  document.getElementById('associateMode').classList.toggle('active',state.mode==='associate');
+  document.getElementById('mobileNav').innerHTML=nav.slice(0,4).map(n=>`<button class="${state.page===n[0]?'active':''}" onclick="go('${n[0]}')"><span>${n[1]}</span>${n[2].replace(' associates','').replace('Matching results','Matches')}</button>`).join('');
+  const s=state.session;
+  if(s){
+    const chip=document.getElementById('miniUser');
+    if(chip) chip.innerHTML=`<div class="avatar ${s.tone||''}">${s.initials}</div><div style="min-width:0"><strong style="display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(s.name)}</strong><span>${s.role==='client'?'Client workspace':'Associate workspace'}</span></div>`;
+    const av=document.getElementById('accountBtn');
+    if(av){
+      av.textContent=s.initials;
+      av.style.background=s.role==='associate'?'#d6e9df':'#dce9e4';
+      av.style.color=s.role==='associate'?'#28634e':'#244b55';
+      av.style.fontSize='10px'; av.style.fontWeight='700';
+    }
+  }
+  renderBell();
+}
+function renderBell(){
+  const dot=document.getElementById('bellDot');
+  if(dot) dot.classList.toggle('on',(state.notifications||[]).some(n=>!n.read));
+}
 function go(page){state.page=page;state.selectedAssociate=null;persist();render();window.scrollTo({top:0,behavior:'smooth'})}
 function titleFor(page){const map={dashboard:'Overview',discover:'Discover associates',newRequest:'Create a matching request',matches:'Your matches',saved:'Saved associates',requests:'Requests & enquiries',associateDashboard:'Associate overview',opportunities:'Opportunities',inbox:'Enquiries',editProfile:'My professional profile',profilePreview:'Profile preview'};return map[page]||'Workspace'}
-function render(){renderNav();document.getElementById('crumb').textContent=`${state.mode==='client'?'Client workspace':'Associate workspace'} / ${titleFor(state.page)}`;const pages={dashboard:clientDashboard,discover:discoverPage,newRequest:requestPage,matches:matchesPage,saved:savedPage,requests:requestsPage,associateDashboard:associateDashboard,opportunities:opportunitiesPage,inbox:inboxPage,editProfile:editProfilePage,profilePreview:profilePreviewPage};document.getElementById('content').innerHTML=(pages[state.page]||clientDashboard)();document.getElementById('mobileBrand').style.display=innerWidth<=760?'flex':'none';}
-function initials(name){return name.split(' ').map(x=>x[0]).slice(0,2).join('').toUpperCase()}
+function render(){
+  const authRoot=document.getElementById('authScreen');
+  const shell=document.getElementById('appShell');
+  const dock=document.getElementById('compareDock');
+  if(!state.session){
+    shell.style.display='none';
+    authRoot.innerHTML=authScreen();
+    dock.innerHTML='';
+    return;
+  }
+  authRoot.innerHTML='';
+  shell.style.display='';
+  renderNav();
+  document.getElementById('crumb').textContent=`${state.mode==='client'?'Client workspace':'Associate workspace'} / ${titleFor(state.page)}`;
+  const pages={dashboard:clientDashboard,discover:discoverPage,newRequest:requestPage,matches:matchesPage,saved:savedPage,requests:requestsPage,associateDashboard:associateDashboard,opportunities:opportunitiesPage,inbox:inboxPage,editProfile:editProfilePage,profilePreview:profilePreviewPage};
+  document.getElementById('content').innerHTML=(pages[state.page]||clientDashboard)();
+  document.getElementById('mobileBrand').style.display=innerWidth<=760?'flex':'none';
+  dock.innerHTML=compareDock();
+}
+function greetingName(){const n=state.session?.name||'there';return n.split(' ')[0]}
+
+/* ============ HELPERS ============ */
+function initials(name){return String(name||'?').split(' ').map(x=>x[0]).slice(0,2).join('').toUpperCase()}
 function avatar(a,large=false){return `<div class="avatar ${a.tone||''} ${large?'large':''}">${a.initials||initials(a.name)}</div>`}
 function fmt(n){return 'RM '+Number(n).toLocaleString('en-MY')}
 function assocById(id){return state.associates.find(a=>a.id===id)}
 function reqById(id){return state.requests.find(r=>r.id===id)}
 function notify(msg,error=false){const root=document.getElementById('toastRoot');root.innerHTML=`<div class="toast ${error?'error':''}" role="status">${msg}</div>`;setTimeout(()=>{root.innerHTML=''},3000)}
-function statusPill(s){let c='gray';if(/review|respond/i.test(s))c='blue';if(/sent|submitted|interested/i.test(s))c='orange';if(/complete|accepted|available/i.test(s))c='';if(/declined|closed/i.test(s))c='red';return `<span class="pill ${c}">${s}</span>`}
+function statusPill(s){
+  const t=String(s||'');
+  let c='gray';
+  if(/pending|sent|submitted|interested|proposed/i.test(t))c='orange';
+  if(/review|respond/i.test(t))c='blue';
+  if(/limited/i.test(t))c='gold';
+  if(/accepted|booked|completed|complete|^available/i.test(t))c='';
+  if(/declined|closed|cancelled|unavailable/i.test(t))c='red';
+  return `<span class="pill ${c}">${t}</span>`;
+}
 function stat(label,num,foot,icon){return `<div class="stat"><div class="stat-top">${label}<span class="stat-icon">${icon}</span></div><div class="stat-num">${num}</div><div class="stat-foot">${foot}</div></div>`}
-function clientDashboard(){const enquiries=state.enquiries.length;return `
-<div class="pagehead"><div><div class="eyebrow">Your workspace · Client</div><h1>Good morning, Acme team.</h1><p class="subhead">Find the right expertise for the work that matters. Pick up where you left off or start a new request.</p></div><button class="btn primary" onclick="go('newRequest')">＋ Create a request</button></div>
+function emptyInline(msg){return `<div style="padding:24px 0;color:var(--muted);font-size:12px">${msg}</div>`}
+function emptyState(title,desc,action){return `<div class="empty"><div class="empty-icon">⌕</div><h3>${title}</h3><p>${desc}</p><button class="btn secondary" onclick="${action}">Reset search</button></div>`}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function attr(s){return esc(s).replace(/`/g,'&#96;')}
+
+/* ============ NOTIFICATIONS ============ */
+function pushNotification(text,page){
+  state.notifications=state.notifications||[];
+  state.notifications.unshift({id:'n'+Date.now()+Math.random().toString(16).slice(2,6),text,page:page||'dashboard',read:false,time:'Just now'});
+  state.notifications=state.notifications.slice(0,30);
+  persist(); renderBell();
+}
+function openNotifications(){
+  const list=state.notifications||[];
+  const body=`<div class="list">${list.length?list.map(n=>`<div class="list-row" style="cursor:pointer" onclick="closeModal();openNotification('${n.id}')"><div class="request-icon" style="background:${n.read?'#f0f3f0':'#e7f0ec'};width:34px;height:34px;font-size:14px">◔</div><div class="list-info"><strong>${esc(n.text)}</strong><span>${esc(n.time||'')}</span></div>${n.read?'':'<span class="pill orange">New</span>'}</div>`).join(''):emptyInline('No notifications yet.')}</div><div class="form-actions"><button class="btn secondary" onclick="closeModal()">Close</button></div>`;
+  openModal('Notifications',body);
+  state.notifications.forEach(n=>n.read=true);
+  persist(); renderBell();
+}
+function openNotification(id){
+  const n=(state.notifications||[]).find(x=>x.id===id);
+  if(!n)return;
+  if(n.page) go(n.page);
+}
+function openAccount(){
+  const s=state.session; if(!s)return;
+  openModal('Your account',`
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px">
+      <div class="avatar large ${s.tone||''}">${s.initials}</div>
+      <div><strong style="font-size:14px">${esc(s.name)}</strong><div style="font-size:12px;color:var(--muted)">${esc(s.email)}</div><div style="margin-top:6px">${statusPill(s.role==='client'?'Client workspace':'Associate workspace')}</div></div>
+    </div>
+    <div class="match-explain">You are exploring the MaTCH demo. Sample data is stored locally in your browser and can be reset at any time.</div>
+    <div class="form-actions">
+      <button class="btn secondary" onclick="closeModal();resetDemo()">Reset demo data</button>
+      <button class="btn primary" onclick="closeModal();logout()">Sign out →</button>
+    </div>`);
+}
+
+/* ============ MATCHING ============ */
+function score(a,r){
+  if(!r)return null;
+  const skills=(r.skills||[r.category]).map(x=>x.toLowerCase());
+  const all=a.skills.join(' ').toLowerCase()+' '+a.role.toLowerCase();
+  let topic=skills.length?skills.filter(s=>all.includes(s)||a.skills.some(k=>k.toLowerCase().includes(s)||s.includes(k.toLowerCase()))).length/skills.length:0.55;
+  topic=Math.min(1,topic+.12);
+  let industry=!r.industry||a.industries.some(x=>x.toLowerCase().includes(r.industry.toLowerCase())||r.industry.toLowerCase().includes(x.toLowerCase()))?1:.48;
+  let format=!r.format||a.formats.includes(r.format)?1:.55;
+  let language=!r.language||a.languages.includes(r.language)?1:.55;
+  let budget=!r.budget||a.price<=Number(r.budget)*1.1?1:(a.price<=Number(r.budget)*1.35?.65:.25);
+  let availability=/limited/i.test(a.availability)?.65:1;
+  let factors=[['Expertise',topic,35],['Industry relevance',industry,20],['Availability',availability,15],['Budget fit',budget,15],['Delivery format',format,10],['Language',language,5]];
+  let active=factors.filter((f,i)=>!(i===1&&!r.industry)&&!(i===2&&!r.date)&&!(i===3&&!r.budget)&&!(i===4&&!r.format)&&!(i===5&&!r.language));
+  let total=active.reduce((s,f)=>s+f[1]*f[2],0)/active.reduce((s,f)=>s+f[2],0);
+  return {value:Math.round(total*100),factors:factors.map(f=>({name:f[0],value:Math.round(f[1]*100),weight:f[2]})).sort((a,b)=>b.value-a.value)};
+}
+function currentRequest(){return reqById(state.selectedRequest)||state.requests[0]||null}
+function filteredAssociates(){
+  let r=currentRequest();
+  let arr=state.associates.map(a=>({...a,match:score(a,r)}));
+  let q=(state.search||'').toLowerCase().trim();
+  if(q)arr=arr.filter(a=>(a.name+' '+a.role+' '+a.bio+' '+a.skills.join(' ')+' '+a.industries.join(' ')).toLowerCase().includes(q));
+  let f=state.filters||{};
+  if(f.industry)arr=arr.filter(a=>a.industries.includes(f.industry));
+  if(f.format)arr=arr.filter(a=>a.formats.includes(f.format));
+  if(f.language)arr=arr.filter(a=>a.languages.includes(f.language));
+  if(f.budget)arr=arr.filter(a=>a.price<=Number(f.budget));
+  if(f.sort==='price')arr.sort((a,b)=>a.price-b.price);
+  else if(f.sort==='experience')arr.sort((a,b)=>b.experience-a.experience);
+  else arr.sort((a,b)=>(b.match?.value||0)-(a.match?.value||0));
+  return arr;
+}
+
+/* ============ CLIENT PAGES ============ */
+function clientDashboard(){
+  const enquiries=state.enquiries.length;
+  return `
+<div class="pagehead"><div><div class="eyebrow">Your workspace · Client</div><h1>Good morning, ${esc(greetingName())}.</h1><p class="subhead">Find the right expertise for the work that matters. Pick up where you left off or start a new request.</p></div><button class="btn primary" onclick="go('newRequest')">＋ Create a request</button></div>
 <div class="feature-banner"><div><div class="eyebrow">A better starting point</div><h2>Tell us what you’re trying to achieve.</h2><p>MaTCH helps you narrow down the people whose experience, approach and availability fit your programme.</p></div><div class="feature-actions"><button class="btn primary" onclick="go('newRequest')">Find a professional ↗</button><button class="btn secondary" onclick="go('discover')">Browse associates</button></div></div>
 <div class="grid stats">${stat('Active requests',state.requests.filter(r=>!['Completed','Closed'].includes(r.status)).length,'Across your workspace','▤')}${stat('Saved associates',state.saved.length,'People worth revisiting','♡')}${stat('Enquiries',enquiries,'Sent and received','✉')}${stat('Matches ready',state.requests.filter(r=>r.status==='Reviewing matches').length,'Ready for your review','✳')}</div>
 <div class="grid dashboard-grid">
 <section class="panel"><div class="panel-head"><div><div class="section-title">Continue your work</div><p>Requests and programmes in progress</p></div><button class="btn quiet small" onclick="go('requests')">View all →</button></div><div class="list">${state.requests.slice(0,4).map(r=>`<div class="list-row"><div class="request-icon">↗</div><div class="list-info"><strong>${esc(r.title)}</strong><span>${esc(r.category)} · ${esc(r.format)} · ${esc(r.created||'Recently created')}</span></div><div class="row-end">${statusPill(r.status)}<div style="margin-top:6px"><button class="btn quiet small" onclick="openRequest('${r.id}')">Open →</button></div></div></div>`).join('')||emptyInline('No requests yet. Create one to get started.')}</div></section>
 <section class="panel"><div class="panel-head"><div><div class="section-title">A few worth a look</div><p>Based on common programme needs</p></div><button class="btn quiet small" onclick="go('discover')">Explore →</button></div><div class="list">${state.associates.slice(0,3).map(a=>`<div class="list-row">${avatar(a)}<div class="list-info"><strong>${esc(a.name)}</strong><span>${esc(a.role)}</span></div><button class="btn secondary small" onclick="viewAssociate('${a.id}')">Profile</button></div>`).join('')}</div></section>
 </div>
-<div class="footnote">MaTCH prototype · Sample people and engagement data are fictional and intended for demonstration.</div>`}
-function emptyInline(msg){return `<div style="padding:24px 0;color:var(--muted);font-size:12px">${msg}</div>`}
-function score(a,r){if(!r)return null;const skills=(r.skills||[r.category]).map(x=>x.toLowerCase());const all=a.skills.join(' ').toLowerCase()+' '+a.role.toLowerCase();let topic=skills.length?skills.filter(s=>all.includes(s)||a.skills.some(k=>k.toLowerCase().includes(s)||s.includes(k.toLowerCase()))).length/skills.length:0.55;topic=Math.min(1,topic+.12);let industry=!r.industry||a.industries.some(x=>x.toLowerCase().includes(r.industry.toLowerCase())||r.industry.toLowerCase().includes(x.toLowerCase()))?1:.48;let format=!r.format||a.formats.includes(r.format)?1:.55;let language=!r.language||a.languages.includes(r.language)?1:.55;let budget=!r.budget||a.price<=Number(r.budget)*1.1?1:(a.price<=Number(r.budget)*1.35?.65:.25);let availability=/limited/i.test(a.availability)?.65:1;let factors=[['Expertise',topic,35],['Industry relevance',industry,20],['Availability',availability,15],['Budget fit',budget,15],['Delivery format',format,10],['Language',language,5]];let active=factors.filter((f,i)=>!(i===1&&!r.industry)&&!(i===2&&!r.date)&&!(i===3&&!r.budget)&&!(i===4&&!r.format)&&!(i===5&&!r.language));let total=active.reduce((s,f)=>s+f[1]*f[2],0)/active.reduce((s,f)=>s+f[2],0);return {value:Math.round(total*100),factors:factors.map(f=>({...{name:f[0],value:Math.round(f[1]*100),weight:f[2]}})).sort((a,b)=>b.value-a.value)}}
-function currentRequest(){return reqById(state.selectedRequest)||state.requests[0]||null}
-function filteredAssociates(){let r=currentRequest();let arr=state.associates.map(a=>({...a,match:score(a,r)}));let q=(state.search||'').toLowerCase().trim();if(q)arr=arr.filter(a=>(a.name+' '+a.role+' '+a.bio+' '+a.skills.join(' ')+' '+a.industries.join(' ')).toLowerCase().includes(q));let f=state.filters||{};if(f.industry)arr=arr.filter(a=>a.industries.includes(f.industry));if(f.format)arr=arr.filter(a=>a.formats.includes(f.format));if(f.language)arr=arr.filter(a=>a.languages.includes(f.language));if(f.budget)arr=arr.filter(a=>a.price<=Number(f.budget));if(f.sort==='price')arr.sort((a,b)=>a.price-b.price);else if(f.sort==='experience')arr.sort((a,b)=>b.experience-a.experience);else arr.sort((a,b)=>(b.match?.value||0)-(a.match?.value||0));return arr}
-function discoverPage(){let arr=filteredAssociates();const f=state.filters;return `<div class="pagehead"><div><div class="eyebrow">Find the right fit</div><h1>Discover associates</h1><p class="subhead">Explore experienced professionals, compare their strengths, and find people who fit your brief.</p></div><button class="btn primary" onclick="go('newRequest')">＋ Build a brief</button></div>
+<div class="footnote">MaTCH prototype · Sample people and engagement data are fictional and intended for demonstration.</div>`;
+}
+
+function discoverPage(){
+  let arr=filteredAssociates();const f=state.filters;
+  return `<div class="pagehead"><div><div class="eyebrow">Find the right fit</div><h1>Discover associates</h1><p class="subhead">Explore experienced professionals, compare their strengths, and find people who fit your brief.</p></div><button class="btn primary" onclick="go('newRequest')">＋ Build a brief</button></div>
 <div class="searchbar"><input class="search-input" value="${attr(state.search||'')}" placeholder="Try “leadership”, “AI”, or a professional’s name" oninput="state.search=this.value;persist();refreshResults()"><button class="btn secondary" onclick="clearFilters()">Clear filters</button></div>
 <div class="filter-row"><select aria-label="Industry filter" onchange="setFilter('industry',this.value)"><option value="">All industries</option>${['Technology','Professional Services','Finance','Manufacturing','Retail','Education','Healthcare','Startups'].map(x=>`<option ${f.industry===x?'selected':''}>${x}</option>`).join('')}</select><select aria-label="Delivery format filter" onchange="setFilter('format',this.value)"><option value="">Any format</option>${['In-person','Online','Hybrid'].map(x=>`<option ${f.format===x?'selected':''}>${x}</option>`).join('')}</select><select aria-label="Language filter" onchange="setFilter('language',this.value)"><option value="">Any language</option>${['English','Malay','Mandarin','Arabic','Tamil'].map(x=>`<option ${f.language===x?'selected':''}>${x}</option>`).join('')}</select><select aria-label="Maximum budget" onchange="setFilter('budget',this.value)"><option value="">Any budget</option><option value="3000" ${f.budget==='3000'?'selected':''}>Up to RM 3,000</option><option value="4000" ${f.budget==='4000'?'selected':''}>Up to RM 4,000</option><option value="5000" ${f.budget==='5000'?'selected':''}>Up to RM 5,000</option></select><select aria-label="Sort results" onchange="setFilter('sort',this.value)"><option value="relevance" ${f.sort!=='price'&&f.sort!=='experience'?'selected':''}>Sort: Best fit</option><option value="price" ${f.sort==='price'?'selected':''}>Price: low to high</option><option value="experience" ${f.sort==='experience'?'selected':''}>Most experience</option></select></div>
 <div class="result-head"><span><strong style="color:var(--ink)">${arr.length}</strong> professionals ${currentRequest()?`· ranked against <strong style="color:var(--ink)">${esc(currentRequest().title)}</strong>`:'available in the demo'}</span><button class="btn quiet small" onclick="go('newRequest')">Change brief →</button></div>
 <div class="associate-list" id="associateResults">${arr.length?arr.map(associateCard).join(''):emptyState('No associates match these filters','Try removing a filter or broadening your search.','clearFilters()')}</div>
-<div class="footnote">Match scores are illustrative and calculated from the selected demo request. They are not a prediction of professional performance.</div>`}
-function associateCard(a){const match=a.match||score(a,currentRequest());return `<article class="associate-card">${avatar(a,true)}<div class="associate-main"><div class="name-line"><h3>${esc(a.name)}</h3>${a.verified?'<span class="pill">Profile reviewed</span>':''}</div><div class="role">${esc(a.role)} · ${a.experience} years’ experience</div><p class="bio">${esc(a.bio)}</p><div class="tags">${a.skills.slice(0,3).map(s=>`<span class="tag">${esc(s)}</span>`).join('')}<span class="tag">${esc(a.location.split(',')[0])}</span></div><div class="card-actions"><button class="btn primary small" onclick="viewAssociate('${a.id}')">View profile →</button><button class="btn secondary small" onclick="startEnquiry('${a.id}')">Enquire</button></div></div><div class="card-side"><button class="heart ${state.saved.includes(a.id)?'saved':''}" aria-label="${state.saved.includes(a.id)?'Remove from saved':'Save associate'}" title="${state.saved.includes(a.id)?'Remove saved associate':'Save associate'}" onclick="toggleSave('${a.id}')">${state.saved.includes(a.id)?'♥':'♡'}</button><div><div class="match-score">${match?match.value+'%':'—'}</div><div class="match-label">Brief fit</div></div><div class="price">${fmt(a.price)}<br><span style="color:var(--muted)">indicative / day</span></div></div></article>`}
-function refreshResults(){const el=document.getElementById('associateResults');if(el){let arr=filteredAssociates();el.innerHTML=arr.length?arr.map(associateCard).join(''):emptyState('No associates match these filters','Try removing a filter or broadening your search.','clearFilters()');const count=document.querySelector('.result-head span');if(count)count.innerHTML=`<strong style="color:var(--ink)">${arr.length}</strong> professionals · ranked against <strong style="color:var(--ink)">${esc(currentRequest()?.title||'your brief')}</strong>`}}
+<div class="footnote">Match scores are illustrative and calculated from the selected demo request. They are not a prediction of professional performance.</div>`;
+}
+
+function associateCard(a){
+  const match=a.match||score(a,currentRequest());
+  return `<article class="associate-card">${avatar(a,true)}<div class="associate-main"><div class="name-line"><h3>${esc(a.name)}</h3>${a.verified?'<span class="pill">Profile reviewed</span>':''}</div><div class="role">${esc(a.role)} · ${a.experience} years’ experience</div><p class="bio">${esc(a.bio)}</p><div class="tags">${a.skills.slice(0,3).map(s=>`<span class="tag">${esc(s)}</span>`).join('')}<span class="tag">${esc(a.location.split(',')[0])}</span></div><div class="card-actions"><button class="btn primary small" onclick="viewAssociate('${a.id}')">View profile →</button><button class="btn secondary small" onclick="startEnquiry('${a.id}')">Enquire</button></div></div><div class="card-side"><div style="display:flex;gap:6px"><button class="heart ${state.saved.includes(a.id)?'saved':''}" aria-label="${state.saved.includes(a.id)?'Remove from saved':'Save associate'}" title="${state.saved.includes(a.id)?'Remove saved associate':'Save associate'}" onclick="toggleSave('${a.id}')">${state.saved.includes(a.id)?'♥':'♡'}</button><button class="heart ${state.compare.includes(a.id)?'compared':''}" aria-label="Compare associate" title="Add to comparison" onclick="toggleCompare('${a.id}')">⇄</button></div><div><div class="match-score">${match?match.value+'%':'—'}</div><div class="match-label">Brief fit</div></div><div class="price">${fmt(a.price)}<br><span style="color:var(--muted)">indicative / day</span></div></div></article>`;
+}
+function refreshResults(){
+  const el=document.getElementById('associateResults');
+  if(el){
+    let arr=filteredAssociates();
+    el.innerHTML=arr.length?arr.map(associateCard).join(''):emptyState('No associates match these filters','Try removing a filter or broadening your search.','clearFilters()');
+    const count=document.querySelector('.result-head span');
+    if(count)count.innerHTML=`<strong style="color:var(--ink)">${arr.length}</strong> professionals · ranked against <strong style="color:var(--ink)">${esc(currentRequest()?.title||'your brief')}</strong>`;
+  }
+}
 function setFilter(k,v){state.filters[k]=v;persist();render()}
 function goDiscover(){go('discover')}
 function clearFilters(){state.search='';state.filters={industry:'',format:'',language:'',budget:'',sort:'relevance'};persist();render()}
-function emptyState(title,desc,action){return `<div class="empty"><div class="empty-icon">⌕</div><h3>${title}</h3><p>${desc}</p><button class="btn secondary" onclick="${action}">Reset search</button></div>`}
-function requestPage(){let d=state.draft||{};return `<div class="pagehead"><div><div class="eyebrow">Start with the outcome</div><h1>Create a matching request</h1><p class="subhead">Share the essentials. You can refine the brief later, and optional details help make the recommendations more useful.</p></div></div><div class="panel form-panel"><form onsubmit="submitRequest(event)"><div class="form-section"><h3>01 · What are you trying to achieve?</h3><p>Start with the programme or business outcome, not just a job title.</p><div class="form-grid"><div class="field full"><label for="reqTitle">Request title *</label><input id="reqTitle" name="title" required placeholder="e.g. Leading teams through change" value="${attr(d.title||'')}"></div><div class="field"><label for="reqCategory">Primary expertise *</label><select id="reqCategory" name="category" required><option value="">Choose a focus</option>${['Leadership development','AI literacy','Business communication','Project management','Customer experience','Entrepreneurship & innovation','Team development','Sales & negotiation','Operational excellence','Learning design','Cybersecurity awareness'].map(x=>`<option ${d.category===x?'selected':''}>${x}</option>`).join('')}</select></div><div class="field"><label for="reqIndustry">Industry</label><select id="reqIndustry" name="industry"><option value="">Not industry-specific</option>${['Technology','Professional Services','Finance','Manufacturing','Retail','Education','Healthcare','Startups'].map(x=>`<option ${d.industry===x?'selected':''}>${x}</option>`).join('')}</select></div><div class="field full"><label for="reqSummary">Brief context *</label><textarea id="reqSummary" name="summary" required placeholder="What should participants understand, do, or be able to do differently after this engagement?">${esc(d.summary||'')}</textarea></div></div></div>
-<div class="form-section"><h3>02 · Practical requirements</h3><p>These details help distinguish a good fit from a great one.</p><div class="form-grid"><div class="field"><label for="reqFormat">Delivery format *</label><select id="reqFormat" name="format" required><option value="">Choose a format</option>${['In-person','Online','Hybrid'].map(x=>`<option ${d.format===x?'selected':''}>${x}</option>`).join('')}</select></div><div class="field"><label for="reqLocation">Location</label><input id="reqLocation" name="location" placeholder="e.g. Kuala Lumpur" value="${attr(d.location||'')}"></div><div class="field"><label for="reqDate">Preferred timing</label><select id="reqDate" name="date">${['Flexible','Available next week','November 2026','December 2026','Within 2 months'].map(x=>`<option ${d.date===x?'selected':''}>${x}</option>`).join('')}</select></div><div class="field"><label for="reqBudget">Indicative budget (RM/day)</label><select id="reqBudget" name="budget"><option value="">Not set yet</option>${['2500','3000','3500','4000','4500','5000','6000'].map(x=>`<option value="${x}" ${String(d.budget||'')===x?'selected':''}>Up to RM ${Number(x).toLocaleString()}</option>`).join('')}</select></div><div class="field"><label for="reqLanguage">Preferred language</label><select id="reqLanguage" name="language"><option value="">No preference</option>${['English','Malay','Mandarin','Arabic','Tamil'].map(x=>`<option ${d.language===x?'selected':''}>${x}</option>`).join('')}</select></div><div class="field"><label for="reqAudience">Audience size</label><select id="reqAudience" name="audience">${['Not sure','Up to 10','11–20','21–40','40+'].map(x=>`<option ${String(d.audience||'')===x?'selected':''}>${x}</option>`).join('')}</select></div><div class="field"><label for="reqDuration">Engagement duration</label><select id="reqDuration" name="duration">${['Half day','1 day','2 days','Multi-session programme','Ongoing coaching','Not decided'].map(x=>`<option ${d.duration===x?'selected':''}>${x}</option>`).join('')}</select></div></div></div><div class="form-actions"><button type="button" class="btn secondary" onclick="go('dashboard')">Cancel</button><button type="submit" class="btn primary">Find my matches →</button></div></form></div>`}
-function submitRequest(e){e.preventDefault();const f=new FormData(e.target);const title=f.get('title').trim();const category=f.get('category');const skills=[category];let existing=state.draft?.id?reqById(state.draft.id):null;const r={id:existing?.id||'r'+Date.now(),title,category,industry:f.get('industry'),format:f.get('format'),location:f.get('location'),date:f.get('date'),budget:f.get('budget')?Number(f.get('budget')):null,language:f.get('language'),audience:f.get('audience'),duration:f.get('duration'),summary:f.get('summary').trim(),skills,status:'Reviewing matches',created:'16 Oct 2026'};if(existing)Object.assign(existing,r);else state.requests.unshift(r);state.selectedRequest=r.id;state.draft=null;state.page='matches';persist();render();notify('Your brief is ready. Review the suggested matches.')}
-function matchesPage(){let r=currentRequest();if(!r)return `<div class="pagehead"><div><div class="eyebrow">Recommendations</div><h1>Your matches</h1><p>Create a brief to see relevant professionals.</p></div><button class="btn primary" onclick="go('newRequest')">Create request</button></div>`;let arr=state.associates.map(a=>({...a,match:score(a,r)})).sort((a,b)=>b.match.value-a.match.value);return `<div class="pagehead"><div><div class="eyebrow">Recommendations for your brief</div><h1>Your matches</h1><p class="subhead">A shortlist ranked against your requirements, with the reasoning visible so you can make your own judgement.</p></div><button class="btn secondary" onclick="editRequest('${r.id}')">Edit brief</button></div><div class="feature-banner"><div><div class="eyebrow">Current brief</div><h2>${esc(r.title)}</h2><p>${esc(r.summary)} </p><div class="tags" style="margin-top:13px"><span class="tag">${esc(r.format||'Any format')}</span><span class="tag">${esc(r.industry||'Any industry')}</span><span class="tag">${r.budget?fmt(r.budget)+' / day':'Budget flexible'}</span></div></div><div><div class="stat-num" style="font-size:36px">${arr.filter(a=>a.match.value>=75).length}</div><div class="stat-foot">strong fits in this demo</div></div></div><div class="result-head"><span><strong style="color:var(--ink)">${arr.length}</strong> associates ranked by brief fit</span><span>Demo scoring · transparent factors</span></div><div class="associate-list">${arr.map(a=>associateCard(a)+`<div style="margin:-8px 0 4px 72px"></div>`).join('')}</div><div class="footnote">Scores are deterministic estimates based on demo profile data and the criteria provided. They do not guarantee outcomes or replace professional evaluation.</div>`}
-function savedPage(){let arr=state.associates.filter(a=>state.saved.includes(a.id));return `<div class="pagehead"><div><div class="eyebrow">Your shortlist</div><h1>Saved associates</h1><p class="subhead">Keep promising people close while you compare experience, fit, and availability.</p></div><button class="btn primary" onclick="go('discover')">Discover more →</button></div>${arr.length?`<div class="associate-list">${arr.map(a=>associateCard({...a,match:score(a,currentRequest())})).join('')}</div>`:emptyState('Your shortlist is empty','Save associates while browsing to return to them here.','goDiscover()')}`}
-function toggleSave(id){if(state.saved.includes(id)){state.saved=state.saved.filter(x=>x!==id);notify('Removed from saved associates.')}else{state.saved.push(id);notify('Associate saved to your shortlist.')}persist();render()}
+function toggleSave(id){
+  if(state.saved.includes(id)){state.saved=state.saved.filter(x=>x!==id);notify('Removed from saved associates.');}
+  else{state.saved.push(id);notify('Associate saved to your shortlist.');}
+  persist();render();
+}
+
+/* ============ COMPARE ============ */
+function toggleCompare(id){
+  if(state.compare.includes(id)) state.compare=state.compare.filter(x=>x!==id);
+  else{
+    if(state.compare.length>=3){notify('You can compare up to three associates at once.',true);return;}
+    state.compare.push(id);
+  }
+  persist();render();
+}
+function clearCompare(){state.compare=[];persist();render();}
+function compareDock(){
+  const ids=state.compare.filter(id=>assocById(id));
+  if(!ids.length)return '';
+  return `<div class="compare-dock">
+    <span class="compare-count">${ids.length} selected</span>
+    <div class="compare-chips">${ids.map(id=>{const a=assocById(id);return `<span class="tag">${esc(a.name.split(' ')[0])}</span>`}).join('')}</div>
+    <button class="btn accent small" onclick="openCompare()">Compare →</button>
+    <button class="btn secondary small" onclick="clearCompare()">Clear</button>
+  </div>`;
+}
+function openCompare(){
+  const list=state.compare.map(assocById).filter(Boolean);
+  if(list.length<2){notify('Select at least two associates to compare.',true);return;}
+  const r=currentRequest();
+  const rows=[
+    ['Brief fit',a=>`<strong style="color:var(--green);font-size:15px">${score(a,r).value}%</strong>`],
+    ['Role',a=>esc(a.role)],
+    ['Experience',a=>a.experience+' years'],
+    ['Indicative rate',a=>fmt(a.price)+' <span style="color:var(--muted)">/ day</span>'],
+    ['Availability',a=>statusPill(a.availability)],
+    ['Location',a=>esc(a.location)],
+    ['Formats',a=>a.formats.map(esc).join(' · ')],
+    ['Languages',a=>a.languages.map(esc).join(' · ')],
+    ['Industries',a=>a.industries.map(esc).join(' · ')],
+    ['Key skills',a=>a.skills.map(s=>`<span class="tag">${esc(s)}</span>`).join(' ')]
+  ];
+  const body=`<div style="overflow:auto"><table class="cmp-table">
+    <thead><tr><th></th>${list.map(a=>`<td style="min-width:150px"><div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">${avatar(a)}<strong style="font-size:13px">${esc(a.name)}</strong></div></td>`).join('')}</tr></thead>
+    <tbody>
+      ${rows.map(([label,fn])=>`<tr><th>${label}</th>${list.map(a=>`<td>${fn(a)}</td>`).join('')}</tr>`).join('')}
+      <tr><th></th>${list.map(a=>`<td><button class="btn primary small" onclick="closeModal();viewAssociate('${a.id}')">View profile →</button></td>`).join('')}</tr>
+    </tbody></table></div>
+    <div class="form-actions"><button class="btn secondary" onclick="closeModal()">Close</button><button class="btn primary" onclick="closeModal();startProposal('${list[0].id}')">Request proposal →</button></div>`;
+  openModal('Compare associates',body,true);
+}
+
+/* ============ REQUEST FLOW ============ */
+function requestPage(){
+  let d=state.draft||{};
+  return `<div class="pagehead"><div><div class="eyebrow">Start with the outcome</div><h1>Create a matching request</h1><p class="subhead">Share the essentials. You can refine the brief later, and optional details help make the recommendations more useful.</p></div></div><div class="panel form-panel"><form onsubmit="submitRequest(event)"><div class="form-section"><h3>01 · What are you trying to achieve?</h3><p>Start with the programme or business outcome, not just a job title.</p><div class="form-grid"><div class="field full"><label for="reqTitle">Request title *</label><input id="reqTitle" name="title" required placeholder="e.g. Leading teams through change" value="${attr(d.title||'')}"></div><div class="field"><label for="reqCategory">Primary expertise *</label><select id="reqCategory" name="category" required><option value="">Choose a focus</option>${['Leadership development','AI literacy','Business communication','Project management','Customer experience','Entrepreneurship & innovation','Team development','Sales & negotiation','Operational excellence','Learning design','Cybersecurity awareness'].map(x=>`<option ${d.category===x?'selected':''}>${x}</option>`).join('')}</select></div><div class="field"><label for="reqIndustry">Industry</label><select id="reqIndustry" name="industry"><option value="">Not industry-specific</option>${['Technology','Professional Services','Finance','Manufacturing','Retail','Education','Healthcare','Startups'].map(x=>`<option ${d.industry===x?'selected':''}>${x}</option>`).join('')}</select></div><div class="field full"><label for="reqSummary">Brief context *</label><textarea id="reqSummary" name="summary" required placeholder="What should participants understand, do, or be able to do differently after this engagement?">${esc(d.summary||'')}</textarea></div></div></div>
+<div class="form-section"><h3>02 · Practical requirements</h3><p>These details help distinguish a good fit from a great one.</p><div class="form-grid"><div class="field"><label for="reqFormat">Delivery format *</label><select id="reqFormat" name="format" required><option value="">Choose a format</option>${['In-person','Online','Hybrid'].map(x=>`<option ${d.format===x?'selected':''}>${x}</option>`).join('')}</select></div><div class="field"><label for="reqLocation">Location</label><input id="reqLocation" name="location" placeholder="e.g. Kuala Lumpur" value="${attr(d.location||'')}"></div><div class="field"><label for="reqDate">Preferred timing</label><select id="reqDate" name="date">${['Flexible','Available next week','November 2026','December 2026','Within 2 months'].map(x=>`<option ${d.date===x?'selected':''}>${x}</option>`).join('')}</select></div><div class="field"><label for="reqBudget">Indicative budget (RM/day)</label><select id="reqBudget" name="budget"><option value="">Not set yet</option>${['2500','3000','3500','4000','4500','5000','6000'].map(x=>`<option value="${x}" ${String(d.budget||'')===x?'selected':''}>Up to RM ${Number(x).toLocaleString()}</option>`).join('')}</select></div><div class="field"><label for="reqLanguage">Preferred language</label><select id="reqLanguage" name="language"><option value="">No preference</option>${['English','Malay','Mandarin','Arabic','Tamil'].map(x=>`<option ${d.language===x?'selected':''}>${x}</option>`).join('')}</select></div><div class="field"><label for="reqAudience">Audience size</label><select id="reqAudience" name="audience">${['Not sure','Up to 10','11–20','21–40','40+'].map(x=>`<option ${String(d.audience||'')===x?'selected':''}>${x}</option>`).join('')}</select></div><div class="field"><label for="reqDuration">Engagement duration</label><select id="reqDuration" name="duration">${['Half day','1 day','2 days','Multi-session programme','Ongoing coaching','Not decided'].map(x=>`<option ${d.duration===x?'selected':''}>${x}</option>`).join('')}</select></div></div></div><div class="form-actions"><button type="button" class="btn secondary" onclick="go('dashboard')">Cancel</button><button type="submit" class="btn primary">Find my matches →</button></div></form></div>`;
+}
+function submitRequest(e){
+  e.preventDefault();
+  const f=new FormData(e.target);
+  const title=f.get('title').trim();
+  const category=f.get('category');
+  const skills=[category];
+  let existing=state.draft?.id?reqById(state.draft.id):null;
+  const r={id:existing?.id||'r'+Date.now(),title,category,industry:f.get('industry'),format:f.get('format'),location:f.get('location'),date:f.get('date'),budget:f.get('budget')?Number(f.get('budget')):null,language:f.get('language'),audience:f.get('audience'),duration:f.get('duration'),summary:f.get('summary').trim(),skills,status:'Reviewing matches',created:'16 Oct 2026'};
+  if(existing)Object.assign(existing,r);else state.requests.unshift(r);
+  state.selectedRequest=r.id;state.draft=null;state.page='matches';
+  pushNotification(`Brief “${title}” is ready — ${state.associates.length} associates ranked.`,'matches');
+  persist();render();
+  notify('Your brief is ready. Review the suggested matches.');
+}
+function nextStatus(s){const i=STATUS_FLOW.indexOf(s);return i<0||i>=STATUS_FLOW.length-1?null:STATUS_FLOW[i+1]}
+function advanceStatus(id){
+  const r=reqById(id); if(!r)return;
+  const next=nextStatus(r.status); if(!next)return;
+  r.status=next;
+  pushNotification(`Request “${r.title}” moved to ${next}.`,'requests');
+  persist();closeModal();render();notify(`Request status updated to ${next}.`);
+}
+
+/* ============ MATCHES / SAVED ============ */
+function matchesPage(){
+  let r=currentRequest();
+  if(!r)return `<div class="pagehead"><div><div class="eyebrow">Recommendations</div><h1>Your matches</h1><p>Create a brief to see relevant professionals.</p></div><button class="btn primary" onclick="go('newRequest')">Create request</button></div>`;
+  let arr=state.associates.map(a=>({...a,match:score(a,r)})).sort((a,b)=>b.match.value-a.match.value);
+  return `<div class="pagehead"><div><div class="eyebrow">Recommendations for your brief</div><h1>Your matches</h1><p class="subhead">A shortlist ranked against your requirements, with the reasoning visible so you can make your own judgement.</p></div><button class="btn secondary" onclick="editRequest('${r.id}')">Edit brief</button></div><div class="feature-banner"><div><div class="eyebrow">Current brief</div><h2>${esc(r.title)}</h2><p>${esc(r.summary)} </p><div class="tags" style="margin-top:13px"><span class="tag">${esc(r.format||'Any format')}</span><span class="tag">${esc(r.industry||'Any industry')}</span><span class="tag">${r.budget?fmt(r.budget)+' / day':'Budget flexible'}</span></div></div><div><div class="stat-num" style="font-size:36px">${arr.filter(a=>a.match.value>=75).length}</div><div class="stat-foot">strong fits in this demo</div></div></div><div class="result-head"><span><strong style="color:var(--ink)">${arr.length}</strong> associates ranked by brief fit</span><span>Demo scoring · transparent factors</span></div><div class="associate-list">${arr.map(a=>associateCard(a)).join('')}</div><div class="footnote">Scores are deterministic estimates based on demo profile data and the criteria provided. They do not guarantee outcomes or replace professional evaluation.</div>`;
+}
+function savedPage(){
+  let arr=state.associates.filter(a=>state.saved.includes(a.id));
+  return `<div class="pagehead"><div><div class="eyebrow">Your shortlist</div><h1>Saved associates</h1><p class="subhead">Keep promising people close while you compare experience, fit, and availability.</p></div><button class="btn primary" onclick="go('discover')">Discover more →</button></div>${arr.length?`<div class="associate-list">${arr.map(a=>associateCard({...a,match:score(a,currentRequest())})).join('')}</div>`:emptyState('Your shortlist is empty','Save associates while browsing to return to them here.','goDiscover()')}`;
+}
+
+/* ============ ASSOCIATE PROFILE ============ */
 function viewAssociate(id){state.selectedAssociate=id;state.viewed=[id,...(state.viewed||[]).filter(x=>x!==id)].slice(0,5);persist();render();document.getElementById('content').innerHTML=associateProfilePage(id)}
-function associateProfilePage(id){const a=assocById(id);if(!a)return '';const m=score(a,currentRequest());return `<div class="pagehead"><div><button class="btn quiet small" onclick="go('discover')">← Back to discovery</button><div class="eyebrow" style="margin-top:14px">Associate profile</div><h1>Get to know the person behind the expertise.</h1></div></div><div class="profile-layout"><div><section class="panel profile-hero">${avatar(a,true)}<div class="profile-title"><div class="name-line"><h2>${esc(a.name)}</h2>${a.verified?'<span class="pill">Profile reviewed</span>':''}</div><p>${esc(a.role)}</p><div class="tags"><span class="tag">${a.experience} years’ experience</span><span class="tag">${esc(a.location)}</span><span class="tag">★ ${a.rating.toFixed(1)} demo rating</span></div><div class="profile-details"><div class="detailbox"><span>Indicative rate</span><strong>${fmt(a.price)} / day</strong></div><div class="detailbox"><span>Availability</span><strong>${esc(a.availability)}</strong></div><div class="detailbox"><span>Programmes delivered</span><strong>${a.programmes} (demo)</strong></div></div></div></section><section class="panel" style="margin-top:16px"><div class="section-title">About ${esc(a.name.split(' ')[0])}</div><p class="prose" style="margin:12px 0 0">${esc(a.bio)}</p><div style="margin-top:24px"><div class="section-title">Areas of expertise</div><div class="skill-list">${a.skills.map(s=>`<span class="tag">${esc(s)}</span>`).join('')}</div></div><div style="margin-top:24px"><div class="section-title">Industry experience</div><div class="skill-list">${a.industries.map(s=>`<span class="tag">${esc(s)}</span>`).join('')}</div></div><div style="margin-top:24px"><div class="section-title">Delivery and languages</div><p class="prose" style="margin:8px 0">${a.formats.map(esc).join(' · ')}<br>${a.languages.map(esc).join(' · ')}</p></div></section></div><aside class="side-sticky"><section class="panel"><div class="eyebrow">Fit for your brief</div><div style="display:flex;align-items:baseline;gap:7px"><span class="match-score" style="font-size:37px">${m.value}%</span><span style="font-size:11px;color:var(--muted)">estimated fit</span></div><p style="font-size:11px;margin:4px 0 17px">Based on ${esc(currentRequest()?.title||'your current brief')}.</p>${m.factors.slice(0,5).map(f=>`<div style="margin:13px 0"><div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:5px"><span>${f.name}</span><strong>${f.value}%</strong></div><div class="progress"><span style="width:${f.value}%"></span></div></div>`).join('')}<div class="match-explain">This score is a guide to compare stated requirements with the sample profile. It is not a measure of professional quality.</div><div style="display:grid;gap:8px;margin-top:18px"><button class="btn primary" onclick="startEnquiry('${a.id}')">Send an enquiry →</button><button class="btn secondary" onclick="toggleSave('${a.id}')">${state.saved.includes(a.id)?'♥ Saved · Remove':'♡ Save associate'}</button><button class="btn secondary" onclick="go('matches')">Compare matches</button></div></section><div class="footnote">Profile details are fictional sample data for this prototype.</div></aside></div>`}
-function startEnquiry(id){const a=assocById(id);if(!a)return;openModal(`Enquire with ${a.name}`,`<p>Send a sample enquiry linked to your current brief. Nothing will be sent outside this demo.</p><form onsubmit="submitEnquiry(event,'${id}')"><div class="field"><label for="enqRequest">Related request</label><select id="enqRequest" name="requestId">${state.requests.map(r=>`<option value="${r.id}" ${r.id===state.selectedRequest?'selected':''}>${esc(r.title)}</option>`).join('')}</select></div><div class="field" style="margin-top:14px"><label for="enqMessage">Message *</label><textarea id="enqMessage" name="message" required placeholder="Share what you would like to explore together.">Hello ${esc(a.name.split(' ')[0])}, your experience looks relevant to our programme. Could we discuss your approach and availability?</textarea></div><div class="form-actions"><button type="button" class="btn secondary" onclick="closeModal()">Cancel</button><button class="btn primary" type="submit">Send demo enquiry</button></div></form>`)}
-function submitEnquiry(e,id){e.preventDefault();const f=new FormData(e.target);state.enquiries.unshift({id:'e'+Date.now(),associateId:id,requestId:f.get('requestId'),client:'Acme Learning Co.',message:f.get('message').trim(),status:'Sent',date:'16 Oct 2026'});state.selectedRequest=f.get('requestId');persist();closeModal();notify('Demo enquiry sent and added to Requests & enquiries.');render()}
-function requestsPage(){return `<div class="pagehead"><div><div class="eyebrow">Your activity</div><h1>Requests & enquiries</h1><p class="subhead">Keep track of briefs, conversations, and next steps in one place.</p></div><button class="btn primary" onclick="go('newRequest')">＋ New request</button></div><div class="panel"><div class="panel-head"><div><div class="section-title">Your requests</div><p>${state.requests.length} sample requests in this workspace</p></div></div><div class="list">${state.requests.map(r=>`<div class="list-row"><div class="request-icon">▤</div><div class="list-info"><strong>${esc(r.title)}</strong><span>${esc(r.category)} · ${esc(r.format)} · ${esc(r.created||'Recently created')}</span><div style="margin-top:7px">${statusPill(r.status)}</div></div><div class="row-end"><strong>${r.budget?fmt(r.budget):'Flexible'}</strong><span>indicative / day</span><div style="margin-top:8px"><button class="btn secondary small" onclick="openRequest('${r.id}')">Details</button> <button class="btn secondary small" onclick="editRequest('${r.id}')">Edit</button></div></div></div>`).join('')}</div></div><div class="panel" style="margin-top:18px"><div class="panel-head"><div><div class="section-title">Enquiries</div><p>Messages are simulated locally for the demo.</p></div></div><div class="list">${state.enquiries.map(enquiryRow).join('')||emptyInline('No enquiries yet.')}</div></div>`}
-function enquiryRow(e){const a=assocById(e.associateId),r=reqById(e.requestId);return `<div class="list-row">${avatar(a||{name:'MaTCH',initials:'M'})}<div class="list-info"><strong>${esc(a?.name||'Associate')}</strong><span>${esc(r?.title||'General enquiry')} · ${esc(e.date||'Today')}</span><div style="font-size:11px;color:#5d6b70;margin-top:6px">${esc(e.message)}</div>${e.response?`<div style="font-size:11px;color:var(--green);margin-top:6px">Response: ${esc(e.response)}</div>`:''}</div><div class="row-end">${statusPill(e.status)}<div style="margin-top:7px"><button class="btn secondary small" onclick="openEnquiry('${e.id}')">View</button></div></div></div>`}
-function openRequest(id){const r=reqById(id);if(!r)return;openModal(r.title,`<div class="tags" style="margin-bottom:14px">${statusPill(r.status)}<span class="tag">${esc(r.category)}</span><span class="tag">${esc(r.format)}</span></div><p>${esc(r.summary)}</p><div class="two-col"><div class="detailbox"><span>Industry</span><strong>${esc(r.industry||'Flexible')}</strong></div><div class="detailbox"><span>Budget</span><strong>${r.budget?fmt(r.budget):'Not set'}</strong></div><div class="detailbox"><span>Timing</span><strong>${esc(r.date||'Flexible')}</strong></div><div class="detailbox"><span>Audience</span><strong>${esc(r.audience||'Not specified')}</strong></div></div><div class="form-actions"><button class="btn secondary" onclick="closeModal()">Close</button><button class="btn primary" onclick="closeModal();state.selectedRequest='${id}';go('matches')">View matches →</button></div>`)}
+function reviewsFor(a){
+  const first=a.name.split(' ')[0];
+  const s1=a.skills[0]||'facilitation';
+  const s2=a.skills[1]||s1;
+  return [
+    {name:'Nurul A.', role:'Head of People', org:a.industries[0]||'Professional Services', rating:5, date:'Aug 2026', text:`${first} worked closely with our team on ${s1.toLowerCase()}. The sessions were practical, well paced, and gave us clear next steps we actually used.`},
+    {name:'Marcus T.', role:'Programme Lead', org:a.industries[1]||a.industries[0]||'Technology', rating:5, date:'May 2026', text:`Clear, thoughtful and easy to work with. Our managers left with a shared language for ${s2.toLowerCase()} and a plan for the following quarter.`},
+    {name:'Siew L.', role:'Operations Director', org:a.industries[2]||a.industries[0]||'Manufacturing', rating:4, date:'Feb 2026', text:`Strong facilitation and a good balance of theory and practice. Would engage again for future ${s1.toLowerCase()} work.`}
+  ];
+}
+function associateProfilePage(id){
+  const a=assocById(id); if(!a)return '';
+  const m=score(a,currentRequest());
+  return `<div class="pagehead"><div><button class="btn quiet small" onclick="go('discover')">← Back to discovery</button><div class="eyebrow" style="margin-top:14px">Associate profile</div><h1>Get to know the person behind the expertise.</h1></div></div>
+  <div class="profile-layout"><div>
+    <section class="panel profile-hero">${avatar(a,true)}<div class="profile-title"><div class="name-line"><h2>${esc(a.name)}</h2>${a.verified?'<span class="pill">Profile reviewed</span>':''}</div><p>${esc(a.role)}</p><div class="tags"><span class="tag">${a.experience} years’ experience</span><span class="tag">${esc(a.location)}</span><span class="tag">★ ${a.rating.toFixed(1)} demo rating</span></div><div class="profile-details"><div class="detailbox"><span>Indicative rate</span><strong>${fmt(a.price)} / day</strong></div><div class="detailbox"><span>Availability</span><strong>${esc(a.availability)}</strong></div><div class="detailbox"><span>Programmes delivered</span><strong>${a.programmes} (demo)</strong></div></div></div></section>
+    <section class="panel" style="margin-top:16px"><div class="section-title">About ${esc(a.name.split(' ')[0])}</div><p class="prose" style="margin:12px 0 0">${esc(a.bio)}</p><div style="margin-top:24px"><div class="section-title">Areas of expertise</div><div class="skill-list">${a.skills.map(s=>`<span class="tag">${esc(s)}</span>`).join('')}</div></div><div style="margin-top:24px"><div class="section-title">Industry experience</div><div class="skill-list">${a.industries.map(s=>`<span class="tag">${esc(s)}</span>`).join('')}</div></div><div style="margin-top:24px"><div class="section-title">Delivery and languages</div><p class="prose" style="margin:8px 0">${a.formats.map(esc).join(' · ')}<br>${a.languages.map(esc).join(' · ')}</p></div></section>
+    <section class="panel" style="margin-top:16px"><div class="panel-head"><div><div class="section-title">Client feedback</div><p>Sample feedback from previous demo engagements</p></div><span class="pill">★ ${a.rating.toFixed(1)} · ${a.programmes} programmes</span></div><div>${reviewsFor(a).map(r=>`<div class="review"><div class="avatar">${initials(r.name)}</div><div style="flex:1;min-width:0"><div class="review-head"><div><strong>${esc(r.name)}</strong> <span style="color:var(--muted)">· ${esc(r.role)}, ${esc(r.org)}</span></div><div class="stars" title="${r.rating} out of 5">${'★'.repeat(r.rating)}${'☆'.repeat(5-r.rating)}</div></div><p>${esc(r.text)}</p></div></div>`).join('')}</div></section>
+  </div><aside class="side-sticky"><section class="panel"><div class="eyebrow">Fit for your brief</div><div style="display:flex;align-items:baseline;gap:7px"><span class="match-score" style="font-size:37px">${m.value}%</span><span style="font-size:11px;color:var(--muted)">estimated fit</span></div><p style="font-size:11px;margin:4px 0 17px">Based on ${esc(currentRequest()?.title||'your current brief')}.</p>${m.factors.slice(0,5).map(f=>`<div style="margin:13px 0"><div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:5px"><span>${f.name}</span><strong>${f.value}%</strong></div><div class="progress"><span style="width:${f.value}%"></span></div></div>`).join('')}<div class="match-explain">This score is a guide to compare stated requirements with the sample profile. It is not a measure of professional quality.</div><div style="display:grid;gap:8px;margin-top:18px"><button class="btn primary" onclick="startProposal('${a.id}')">Request a proposal →</button><button class="btn secondary" onclick="startEnquiry('${a.id}')">Send an enquiry</button><button class="btn secondary" onclick="toggleSave('${a.id}')">${state.saved.includes(a.id)?'♥ Saved · Remove':'♡ Save associate'}</button><button class="btn secondary" onclick="toggleCompare('${a.id}')">${state.compare.includes(a.id)?'✓ In comparison':'⇄ Add to compare'}</button></div></section><div class="footnote">Profile details are fictional sample data for this prototype.</div></aside></div>`;
+}
+
+/* ============ ENQUIRIES ============ */
+function startEnquiry(id){
+  const a=assocById(id);if(!a)return;
+  openModal(`Enquire with ${a.name}`,`<p>Send a sample enquiry linked to your current brief. Nothing will be sent outside this demo.</p><form onsubmit="submitEnquiry(event,'${id}')"><div class="field"><label for="enqRequest">Related request</label><select id="enqRequest" name="requestId">${state.requests.map(r=>`<option value="${r.id}" ${r.id===state.selectedRequest?'selected':''}>${esc(r.title)}</option>`).join('')}</select></div><div class="field" style="margin-top:14px"><label for="enqMessage">Message *</label><textarea id="enqMessage" name="message" required placeholder="Share what you would like to explore together.">Hello ${esc(a.name.split(' ')[0])}, your experience looks relevant to our programme. Could we discuss your approach and availability?</textarea></div><div class="form-actions"><button type="button" class="btn secondary" onclick="closeModal()">Cancel</button><button class="btn primary" type="submit">Send demo enquiry</button></div></form>`);
+}
+function submitEnquiry(e,id){
+  e.preventDefault();
+  const f=new FormData(e.target);
+  state.enquiries.unshift({id:'e'+Date.now(),associateId:id,requestId:f.get('requestId'),client:state.session?.name||'Acme Learning Co.',message:f.get('message').trim(),status:'Sent',date:'16 Oct 2026'});
+  state.selectedRequest=f.get('requestId');
+  const a=assocById(id);
+  pushNotification(`Enquiry sent to ${a?.name||'associate'}.`,'requests');
+  persist();closeModal();render();
+  notify('Demo enquiry sent and added to Requests & enquiries.');
+}
+
+/* ============ PROPOSALS ============ */
+function startProposal(id){
+  const a=assocById(id); if(!a)return;
+  openModal(`Request a proposal from ${a.name}`,`
+    <p>Share a short scope. ${esc(a.name.split(' ')[0])} can accept or decline in the associate workspace.</p>
+    <form onsubmit="submitProposal(event,'${id}')">
+      <div class="form-grid">
+        <div class="field full"><label for="propReq">Related brief *</label><select id="propReq" name="requestId" required>${state.requests.map(r=>`<option value="${r.id}" ${r.id===state.selectedRequest?'selected':''}>${esc(r.title)}</option>`).join('')}</select></div>
+        <div class="field"><label for="propDate">Proposed start</label><input id="propDate" name="date" placeholder="e.g. 15 November 2026" value="${attr(a.availability)}"></div>
+        <div class="field"><label for="propBudget">Budget (RM / day)</label><input id="propBudget" name="budget" type="number" min="0" step="100" value="${a.price}"></div>
+        <div class="field full"><label for="propMsg">Scope and expectations *</label><textarea id="propMsg" name="message" required placeholder="Outline the outcome, audience size and any constraints."></textarea></div>
+      </div>
+      <div class="form-actions"><button type="button" class="btn secondary" onclick="closeModal()">Cancel</button><button class="btn primary" type="submit">Send proposal →</button></div>
+    </form>`);
+}
+function submitProposal(e,id){
+  e.preventDefault();
+  const f=new FormData(e.target);
+  const p={
+    id:'p'+Date.now(),
+    associateId:id,
+    requestId:f.get('requestId'),
+    date:f.get('date'),
+    budget:Number(f.get('budget'))||null,
+    message:f.get('message').trim(),
+    status:'Pending',
+    client:state.session?.name||'Acme Learning Co.',
+    created:'16 Oct 2026',
+    response:''
+  };
+  state.proposals.unshift(p);
+  const r=reqById(p.requestId);
+  pushNotification(`Proposal sent to ${assocById(id)?.name} for “${r?.title||'your brief'}”.`,'requests');
+  persist();closeModal();render();
+  notify('Proposal sent. You can track it under Requests & enquiries.');
+}
+function proposalClientRow(p){
+  const a=assocById(p.associateId), r=reqById(p.requestId);
+  return `<div class="list-row">${avatar(a||{name:'MaTCH',initials:'M'})}<div class="list-info"><strong>${esc(a?.name||'Associate')}</strong><span>${esc(r?.title||'General brief')} · ${esc(p.date||'Timing flexible')} · ${p.budget?fmt(p.budget)+' / day':'Budget open'}</span><div style="font-size:11px;color:#5d6b70;margin-top:6px">${esc(p.message)}</div>${p.response?`<div style="font-size:11px;color:var(--green);margin-top:6px">Response: ${esc(p.response)}</div>`:''}</div><div class="row-end">${statusPill(p.status)}</div></div>`;
+}
+function proposalAssocRow(p){
+  const r=reqById(p.requestId);
+  return `<div class="request-card" style="margin-bottom:11px;box-shadow:none">
+    <div class="request-icon">◈</div>
+    <div class="request-main">
+      <div class="request-top"><div><h3>${esc(r?.title||'Proposal request')}</h3><div class="role">${esc(p.client||'Client')} · ${esc(p.created||'Today')}</div></div>${statusPill(p.status)}</div>
+      <p>${esc(p.message)}</p>
+      <div class="request-meta"><span>◷ ${esc(p.date||'Flexible')}</span><span>${p.budget?fmt(p.budget)+' / day':'Budget open'}</span><span>↗ ${esc(r?.format||'Hybrid')}</span></div>
+      ${p.response?`<div class="match-explain"><strong>Your response</strong><br>${esc(p.response)}</div>`:''}
+      <div class="card-actions">
+        ${p.status==='Pending'
+          ? `<button class="btn primary small" onclick="openProposalResponse('${p.id}','Accepted')">Accept proposal</button><button class="btn secondary small" onclick="openProposalResponse('${p.id}','Declined')">Decline</button>`
+          : `<button class="btn secondary small" onclick="openRequest('${p.requestId}')">View brief</button>`}
+      </div>
+    </div>
+  </div>`;
+}
+function openProposalResponse(id,decision){
+  const p=state.proposals.find(x=>x.id===id); if(!p)return;
+  const label=decision==='Accepted'?'Accept proposal':'Decline proposal';
+  const preset=decision==='Accepted'
+    ? 'Thank you — I would be glad to take this on. I can confirm availability and share a short outline before we begin.'
+    : 'Thank you for thinking of me. Unfortunately I am not able to take this on at the proposed time.';
+  openModal(label,`<p>This response will be recorded in the demo workspace.</p><form onsubmit="submitProposalResponse(event,'${id}','${decision}')"><div class="field"><label for="propResp">Response *</label><textarea id="propResp" name="response" required>${preset}</textarea></div><div class="form-actions"><button type="button" class="btn secondary" onclick="closeModal()">Cancel</button><button class="btn primary" type="submit">${label}</button></div></form>`);
+}
+function submitProposalResponse(e,id,decision){
+  e.preventDefault();
+  const p=state.proposals.find(x=>x.id===id); if(!p)return;
+  p.status=decision;
+  p.response=new FormData(e.target).get('response').trim();
+  p.respondedAt='16 Oct 2026';
+  const r=reqById(p.requestId);
+  pushNotification(`Proposal ${decision.toLowerCase()} for “${r?.title||'a brief'}”.`,'requests');
+  persist();closeModal();render();
+  notify(`Proposal ${decision.toLowerCase()}.`);
+}
+
+/* ============ REQUESTS PAGE ============ */
+function requestsPage(){
+  return `<div class="pagehead"><div><div class="eyebrow">Your activity</div><h1>Requests & enquiries</h1><p class="subhead">Keep track of briefs, conversations, proposals and next steps in one place.</p></div><button class="btn primary" onclick="go('newRequest')">＋ New request</button></div><div class="panel"><div class="panel-head"><div><div class="section-title">Your requests</div><p>${state.requests.length} sample requests in this workspace</p></div></div><div class="list">${state.requests.map(r=>`<div class="list-row"><div class="request-icon">▤</div><div class="list-info"><strong>${esc(r.title)}</strong><span>${esc(r.category)} · ${esc(r.format)} · ${esc(r.created||'Recently created')}</span><div style="margin-top:7px">${statusPill(r.status)}</div></div><div class="row-end"><strong>${r.budget?fmt(r.budget):'Flexible'}</strong><span>indicative / day</span><div style="margin-top:8px"><button class="btn secondary small" onclick="openRequest('${r.id}')">Details</button> <button class="btn secondary small" onclick="editRequest('${r.id}')">Edit</button></div></div></div>`).join('')}</div></div>
+<div class="panel" style="margin-top:18px"><div class="panel-head"><div><div class="section-title">Proposals</div><p>Structured booking requests you have sent to associates.</p></div></div><div class="list">${state.proposals.map(proposalClientRow).join('')||emptyInline('No proposals sent yet. Open an associate profile and choose “Request a proposal”.')}</div></div>
+<div class="panel" style="margin-top:18px"><div class="panel-head"><div><div class="section-title">Enquiries</div><p>Messages are simulated locally for the demo.</p></div></div><div class="list">${state.enquiries.map(enquiryRow).join('')||emptyInline('No enquiries yet.')}</div></div>`;
+}
+function enquiryRow(e){
+  const a=assocById(e.associateId),r=reqById(e.requestId);
+  return `<div class="list-row">${avatar(a||{name:'MaTCH',initials:'M'})}<div class="list-info"><strong>${esc(a?.name||'Associate')}</strong><span>${esc(r?.title||'General enquiry')} · ${esc(e.date||'Today')}</span><div style="font-size:11px;color:#5d6b70;margin-top:6px">${esc(e.message)}</div>${e.response?`<div style="font-size:11px;color:var(--green);margin-top:6px">Response: ${esc(e.response)}</div>`:''}</div><div class="row-end">${statusPill(e.status)}<div style="margin-top:7px"><button class="btn secondary small" onclick="openEnquiry('${e.id}')">View</button></div></div></div>`;
+}
+function openRequest(id){
+  const r=reqById(id);if(!r)return;
+  const next=nextStatus(r.status);
+  openModal(r.title,`<div class="tags" style="margin-bottom:14px">${statusPill(r.status)}<span class="tag">${esc(r.category)}</span><span class="tag">${esc(r.format)}</span></div><p>${esc(r.summary)}</p><div class="two-col"><div class="detailbox"><span>Industry</span><strong>${esc(r.industry||'Flexible')}</strong></div><div class="detailbox"><span>Budget</span><strong>${r.budget?fmt(r.budget):'Not set'}</strong></div><div class="detailbox"><span>Timing</span><strong>${esc(r.date||'Flexible')}</strong></div><div class="detailbox"><span>Audience</span><strong>${esc(r.audience||'Not specified')}</strong></div></div><div class="form-actions"><button class="btn secondary" onclick="closeModal()">Close</button>${next?`<button class="btn secondary" onclick="advanceStatus('${id}')">Mark as ${next}</button>`:''}<button class="btn primary" onclick="closeModal();state.selectedRequest='${id}';go('matches')">View matches →</button></div>`);
+}
 function editRequest(id){const r=reqById(id);if(!r)return;state.draft=structuredClone(r);state.selectedRequest=id;state.page='newRequest';persist();render()}
-function openEnquiry(id){const e=state.enquiries.find(x=>x.id===id);if(!e)return;const a=assocById(e.associateId);openModal(`Enquiry · ${a?.name||'Associate'}`,`<div class="tags" style="margin-bottom:14px">${statusPill(e.status)}<span class="tag">${esc(e.date||'Today')}</span></div><p><strong>Message</strong><br>${esc(e.message)}</p>${e.response?`<div class="match-explain"><strong>Response</strong><br>${esc(e.response)}</div>`:''}<div class="form-actions"><button class="btn secondary" onclick="closeModal()">Close</button>${state.mode==='associate'&&!e.response?`<button class="btn primary" onclick="respondEnquiry('${id}')">Respond</button>`:''}</div>`)}
-function associateDashboard(){const pending=state.enquiries.filter(e=>e.associateId==='a1'&&e.status!=='Closed').length;const interested=state.opportunityResponses.length;return `<div class="pagehead"><div><div class="eyebrow">Your workspace · Associate</div><h1>Good morning, Amira.</h1><p class="subhead">Your professional workspace, with relevant opportunities and conversations in one place.</p></div><button class="btn primary" onclick="go('editProfile')">Edit my profile →</button></div><div class="feature-banner"><div><div class="eyebrow">Your professional profile</div><h2>Make it easier for the right clients to find you.</h2><p>Keep your expertise, delivery preferences and availability current so your profile reflects the work you want to do.</p></div><button class="btn primary" onclick="go('profilePreview')">Preview profile ↗</button></div><div class="grid stats">${stat('Profile completeness','82%','A few details can improve clarity','◎')}${stat('Relevant opportunities','6','Based on your demo profile','◈')}${stat('Open enquiries',pending,'Across your sample inbox','✉')}${stat('Interest expressed',interested,'Responses in this session','↗')}</div><div class="grid dashboard-grid"><section class="panel"><div class="panel-head"><div><div class="section-title">Opportunities to consider</div><p>Sample briefs that may fit your expertise</p></div><button class="btn quiet small" onclick="go('opportunities')">View all →</button></div>${opportunities().slice(0,3).map(opportunityCard).join('')}</section><section class="panel"><div class="panel-head"><div><div class="section-title">Recent enquiries</div><p>Conversation and response status</p></div><button class="btn quiet small" onclick="go('inbox')">Open inbox →</button></div><div class="list">${state.enquiries.filter(e=>e.associateId==='a1').map(enquiryRow).join('')||emptyInline('No enquiries yet.')}</div></section></div>`}
+function openEnquiry(id){
+  const e=state.enquiries.find(x=>x.id===id);if(!e)return;
+  const a=assocById(e.associateId);
+  openModal(`Enquiry · ${a?.name||'Associate'}`,`<div class="tags" style="margin-bottom:14px">${statusPill(e.status)}<span class="tag">${esc(e.date||'Today')}</span></div><p><strong>Message</strong><br>${esc(e.message)}</p>${e.response?`<div class="match-explain"><strong>Response</strong><br>${esc(e.response)}</div>`:''}<div class="form-actions"><button class="btn secondary" onclick="closeModal()">Close</button>${state.mode==='associate'&&!e.response?`<button class="btn primary" onclick="respondEnquiry('${id}')">Respond</button>`:''}</div>`);
+}
+
+/* ============ ASSOCIATE VIEW ============ */
+function associateDashboard(){
+  const pending=state.enquiries.filter(e=>e.associateId==='a1'&&e.status!=='Closed').length;
+  const pendingProps=state.proposals.filter(p=>p.associateId==='a1'&&p.status==='Pending').length;
+  const interested=state.opportunityResponses.length;
+  return `<div class="pagehead"><div><div class="eyebrow">Your workspace · Associate</div><h1>Good morning, ${esc(greetingName())}.</h1><p class="subhead">Your professional workspace, with relevant opportunities and conversations in one place.</p></div><button class="btn primary" onclick="go('editProfile')">Edit my profile →</button></div>
+<div class="feature-banner"><div><div class="eyebrow">Your professional profile</div><h2>Make it easier for the right clients to find you.</h2><p>Keep your expertise, delivery preferences and availability current so your profile reflects the work you want to do.</p></div><button class="btn primary" onclick="go('profilePreview')">Preview profile ↗</button></div>
+<div class="grid stats">${stat('Profile completeness','82%','A few details can improve clarity','◎')}${stat('Relevant opportunities',opportunities().length,'Based on your demo profile','◈')}${stat('Open enquiries',pending,'Across your sample inbox','✉')}${stat('Proposals',pendingProps,'Awaiting your response','◈')}</div>
+<div class="grid dashboard-grid">
+  <section class="panel"><div class="panel-head"><div><div class="section-title">Opportunities to consider</div><p>Sample briefs that may fit your expertise</p></div><button class="btn quiet small" onclick="go('opportunities')">View all →</button></div>${opportunities().slice(0,3).map(opportunityCard).join('')||emptyInline('You have reviewed every sample opportunity.')}</section>
+  <section class="panel"><div class="panel-head"><div><div class="section-title">Recent enquiries</div><p>Conversation and response status</p></div><button class="btn quiet small" onclick="go('inbox')">Open inbox →</button></div><div class="list">${state.enquiries.filter(e=>e.associateId==='a1').map(enquiryRow).join('')||emptyInline('No enquiries yet.')}</div></section>
+</div>
+<div class="panel" style="margin-top:18px"><div class="panel-head"><div><div class="section-title">Profile performance</div><p>Sample metrics for this demo workspace</p></div><button class="btn quiet small" onclick="go('profilePreview')">View profile →</button></div><div class="grid" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:14px">
+  <div><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:6px"><span>Response rate</span><strong>92%</strong></div><div class="progress"><span style="width:92%"></span></div><div class="stat-foot" style="margin-top:6px">Enquiries answered within 2 days</div></div>
+  <div><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:6px"><span>Profile completeness</span><strong>82%</strong></div><div class="progress"><span style="width:82%"></span></div><div class="stat-foot" style="margin-top:6px">Add references to reach 100%</div></div>
+  <div><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:6px"><span>Repeat engagement</span><strong>61%</strong></div><div class="progress"><span style="width:61%"></span></div><div class="stat-foot" style="margin-top:6px">Clients who booked twice (demo)</div></div>
+</div></div>`;
+}
 const demoOpportunities=[
 {id:'o1',title:'Leading through organisational change',client:'Sample client · Professional services',category:'Leadership development',format:'Hybrid',location:'Kuala Lumpur',budget:4500,date:'November 2026',audience:'18 managers',summary:'A practical session for managers who need to lead teams through a new operating model.',skills:['Leadership development','Change management']},
 {id:'o2',title:'Building a feedback culture',client:'Sample client · Technology',category:'Team development',format:'Online',location:'Malaysia',budget:3800,date:'Flexible',audience:'25 team leads',summary:'Help team leads build confidence in giving useful feedback and handling difficult conversations.',skills:['Team development','Communication']},
@@ -133,22 +741,70 @@ const demoOpportunities=[
 {id:'o6',title:'Team effectiveness workshop',client:'Sample client · Education',category:'Team development',format:'In-person',location:'Kuala Lumpur',budget:3900,date:'Flexible',audience:'22 colleagues',summary:'A facilitated session to clarify team agreements, collaboration habits and shared accountability.',skills:['Team development','Facilitation']}
 ];
 function opportunities(){return demoOpportunities.filter(o=>!state.opportunityResponses.includes(o.id))}
-function opportunityCard(o){const fit=(o.skills.some(s=>state.profile.skills.some(x=>x.toLowerCase().includes(s.toLowerCase())||s.toLowerCase().includes(x.toLowerCase())))?85:66);return `<div class="request-card" style="margin-bottom:11px"><div class="request-icon">◈</div><div class="request-main"><div class="request-top"><div><h3>${esc(o.title)}</h3><div class="role">${esc(o.client)}</div></div><span class="pill green">${fit}% profile fit</span></div><p>${esc(o.summary)}</p><div class="request-meta"><span>◷ ${esc(o.date)}</span><span>⌖ ${esc(o.location)}</span><span>↗ ${esc(o.format)}</span><span>${fmt(o.budget)} / day</span></div><div class="card-actions"><button class="btn primary small" onclick="expressInterest('${o.id}')">Express interest</button><button class="btn secondary small" onclick="openOpportunity('${o.id}')">View details</button></div></div></div>`}
-function opportunitiesPage(){let ops=opportunities();return `<div class="pagehead"><div><div class="eyebrow">Find work that fits</div><h1>Opportunities</h1><p class="subhead">Review sample client briefs and decide which ones align with your expertise and availability.</p></div></div><div class="result-head"><span><strong style="color:var(--ink)">${ops.length}</strong> opportunities in this demo</span><span>Sample opportunities · not live requests</span></div>${ops.length?ops.map(opportunityCard).join(''):emptyState('You’ve reviewed every sample opportunity','Reset the demo to restore the original opportunities.','resetDemo()')}`}
-function openOpportunity(id){const o=demoOpportunities.find(x=>x.id===id);if(!o)return;openModal(o.title,`<div class="tags" style="margin-bottom:14px"><span class="tag">${esc(o.category)}</span><span class="tag">${esc(o.format)}</span><span class="tag">${esc(o.location)}</span></div><p>${esc(o.summary)}</p><div class="two-col"><div class="detailbox"><span>Indicative budget</span><strong>${fmt(o.budget)} / day</strong></div><div class="detailbox"><span>Preferred timing</span><strong>${esc(o.date)}</strong></div><div class="detailbox"><span>Audience</span><strong>${esc(o.audience)}</strong></div><div class="detailbox"><span>Client</span><strong>${esc(o.client)}</strong></div></div><div style="margin-top:18px"><strong style="font-size:12px">Relevant focus areas</strong><div class="skill-list">${o.skills.map(s=>`<span class="tag">${esc(s)}</span>`).join('')}</div></div><div class="form-actions"><button class="btn secondary" onclick="closeModal()">Close</button><button class="btn primary" onclick="closeModal();expressInterest('${id}')">Express interest →</button></div>`)}
-function expressInterest(id){if(state.opportunityResponses.includes(id)){notify('You have already expressed interest in this opportunity.');return}state.opportunityResponses.push(id);persist();render();notify('Interest recorded in the demo workspace.')}
-function inboxPage(){const own=state.enquiries.filter(e=>e.associateId==='a1');return `<div class="pagehead"><div><div class="eyebrow">Conversations</div><h1>Enquiries</h1><p class="subhead">Review what clients are asking and respond with a clear next step.</p></div></div><div class="panel"><div class="panel-head"><div><div class="section-title">Your inbox</div><p>Demo messages only; no email or external messaging is sent.</p></div></div><div class="list">${own.map(enquiryRow).join('')||emptyInline('Your inbox is clear.')}</div></div>`}
-function respondEnquiry(id){const e=state.enquiries.find(x=>x.id===id);if(!e)return;openModal('Respond to enquiry',`<form onsubmit="submitResponse(event,'${id}')"><div class="field"><label for="responseText">Your response *</label><textarea id="responseText" name="response" required placeholder="Thank the client and suggest a useful next step.">Thank you for reaching out. I’d be happy to learn more about your objectives and discuss a suitable approach.</textarea></div><div class="form-actions"><button type="button" class="btn secondary" onclick="closeModal()">Cancel</button><button type="submit" class="btn primary">Save response</button></div></form>`)}
-function submitResponse(e,id){e.preventDefault();const en=state.enquiries.find(x=>x.id===id);if(!en)return;en.response=new FormData(e.target).get('response').trim();en.status='Responded';persist();closeModal();render();notify('Your response has been added to the demo thread.')}
-function editProfilePage(){let p=state.profile;return `<div class="pagehead"><div><div class="eyebrow">Your professional identity</div><h1>My professional profile</h1><p class="subhead">Describe the work you do and the conditions where you do it best. These details are used in your client-facing preview.</p></div><button class="btn secondary" onclick="go('profilePreview')">Preview profile ↗</button></div><div class="panel form-panel"><form onsubmit="saveProfile(event)"><div class="form-section"><h3>Professional summary</h3><p>Be specific about the problems you help clients solve.</p><div class="field"><label for="profileSummary">About you *</label><textarea name="summary" id="profileSummary" required>${esc(p.summary)}</textarea></div></div><div class="form-section"><h3>Expertise</h3><p>Use a few focused areas that reflect your real strengths.</p><div class="field"><label for="profileSkills">Skills and specialisations (comma-separated)</label><input id="profileSkills" name="skills" value="${attr(p.skills.join(', '))}" required></div></div><div class="form-section"><h3>Delivery preferences</h3><div class="form-grid"><div class="field"><label for="profileFormats">Formats (comma-separated)</label><input id="profileFormats" name="formats" value="${attr(p.formats.join(', '))}"></div><div class="field"><label for="profileLanguages">Languages (comma-separated)</label><input id="profileLanguages" name="languages" value="${attr(p.languages.join(', '))}"></div><div class="field"><label for="profileLocation">Location</label><input id="profileLocation" name="location" value="${attr(p.location)}"></div><div class="field"><label for="profilePrice">Indicative daily rate (RM)</label><input id="profilePrice" name="price" type="number" min="0" step="100" value="${attr(p.price)}"></div><div class="field full"><label for="profileAvailability">Availability</label><select id="profileAvailability" name="availability">${['Available next week','Available in 2 weeks','Available in November','Available in December','Limited availability','By arrangement'].map(x=>`<option ${p.availability===x?'selected':''}>${x}</option>`).join('')}</select></div></div></div><div class="form-actions"><button type="button" class="btn secondary" onclick="go('associateDashboard')">Cancel</button><button type="submit" class="btn primary">Save profile changes</button></div></form></div>`}
-function saveProfile(e){e.preventDefault();const f=new FormData(e.target);state.profile={summary:f.get('summary').trim(),skills:f.get('skills').split(',').map(x=>x.trim()).filter(Boolean),formats:f.get('formats').split(',').map(x=>x.trim()).filter(Boolean),languages:f.get('languages').split(',').map(x=>x.trim()).filter(Boolean),location:f.get('location').trim(),price:Number(f.get('price'))||0,availability:f.get('availability')};persist();render();notify('Profile changes saved and reflected in your preview.')}
-function profilePreviewPage(){const p=state.profile;return `<div class="pagehead"><div><div class="eyebrow">Client-facing view</div><h1>Profile preview</h1><p class="subhead">This is a sample preview of how your professional information could appear to clients.</p></div><button class="btn primary" onclick="go('editProfile')">Edit profile →</button></div><div class="profile-layout"><div><section class="panel profile-hero">${avatar({name:'Amira Hassan',initials:'AH',tone:'green'},true)}<div class="profile-title"><div class="name-line"><h2>Amira Hassan</h2><span class="pill">Demo profile</span></div><p>Leadership & Culture Facilitator</p><div class="tags"><span class="tag">${esc(p.location)}</span><span class="tag">14 years’ experience</span></div><div class="profile-details"><div class="detailbox"><span>Indicative rate</span><strong>${fmt(p.price)} / day</strong></div><div class="detailbox"><span>Availability</span><strong>${esc(p.availability)}</strong></div><div class="detailbox"><span>Delivery</span><strong>${p.formats.map(esc).join(', ')}</strong></div></div></div></section><section class="panel" style="margin-top:16px"><div class="section-title">About</div><p class="prose" style="margin:12px 0">${esc(p.summary)}</p><div class="section-title" style="margin-top:24px">Expertise</div><div class="skill-list">${p.skills.map(s=>`<span class="tag">${esc(s)}</span>`).join('')}</div><div class="section-title" style="margin-top:24px">Languages</div><div class="skill-list">${p.languages.map(s=>`<span class="tag">${esc(s)}</span>`).join('')}</div></section></div><aside><section class="panel"><div class="eyebrow">How clients see this</div><h3>Clarity builds confidence.</h3><p style="font-size:12px">A focused summary, concrete expertise and clear working preferences help clients judge whether your approach suits their needs.</p><button class="btn secondary" style="width:100%" onclick="go('editProfile')">Update details</button></section><div class="footnote">This preview uses demo profile data and is not publicly published.</div></aside></div>`}
-function openModal(title,body){document.getElementById('modalRoot').innerHTML=`<div class="overlay" onclick="if(event.target===this)closeModal()"><section class="modal" role="dialog" aria-modal="true" aria-label="${attr(title)}"><div class="modal-head"><div><h2>${esc(title)}</h2></div><button class="close" aria-label="Close dialog" onclick="closeModal()">×</button></div>${body}</section></div>`}
+function opportunityCard(o){
+  const fit=(o.skills.some(s=>state.profile.skills.some(x=>x.toLowerCase().includes(s.toLowerCase())||s.toLowerCase().includes(x.toLowerCase())))?85:66);
+  return `<div class="request-card" style="margin-bottom:11px"><div class="request-icon">◈</div><div class="request-main"><div class="request-top"><div><h3>${esc(o.title)}</h3><div class="role">${esc(o.client)}</div></div><span class="pill green">${fit}% profile fit</span></div><p>${esc(o.summary)}</p><div class="request-meta"><span>◷ ${esc(o.date)}</span><span>⌖ ${esc(o.location)}</span><span>↗ ${esc(o.format)}</span><span>${fmt(o.budget)} / day</span></div><div class="card-actions"><button class="btn primary small" onclick="expressInterest('${o.id}')">Express interest</button><button class="btn secondary small" onclick="openOpportunity('${o.id}')">View details</button></div></div></div>`;
+}
+function opportunitiesPage(){
+  let ops=opportunities();
+  return `<div class="pagehead"><div><div class="eyebrow">Find work that fits</div><h1>Opportunities</h1><p class="subhead">Review sample client briefs and decide which ones align with your expertise and availability.</p></div></div><div class="result-head"><span><strong style="color:var(--ink)">${ops.length}</strong> opportunities in this demo</span><span>Sample opportunities · not live requests</span></div>${ops.length?ops.map(opportunityCard).join(''):emptyState('You’ve reviewed every sample opportunity','Reset the demo to restore the original opportunities.','resetDemo()')}`;
+}
+function openOpportunity(id){
+  const o=demoOpportunities.find(x=>x.id===id);if(!o)return;
+  openModal(o.title,`<div class="tags" style="margin-bottom:14px"><span class="tag">${esc(o.category)}</span><span class="tag">${esc(o.format)}</span><span class="tag">${esc(o.location)}</span></div><p>${esc(o.summary)}</p><div class="two-col"><div class="detailbox"><span>Indicative budget</span><strong>${fmt(o.budget)} / day</strong></div><div class="detailbox"><span>Preferred timing</span><strong>${esc(o.date)}</strong></div><div class="detailbox"><span>Audience</span><strong>${esc(o.audience)}</strong></div><div class="detailbox"><span>Client</span><strong>${esc(o.client)}</strong></div></div><div style="margin-top:18px"><strong style="font-size:12px">Relevant focus areas</strong><div class="skill-list">${o.skills.map(s=>`<span class="tag">${esc(s)}</span>`).join('')}</div></div><div class="form-actions"><button class="btn secondary" onclick="closeModal()">Close</button><button class="btn primary" onclick="closeModal();expressInterest('${id}')">Express interest →</button></div>`);
+}
+function expressInterest(id){
+  if(state.opportunityResponses.includes(id)){notify('You have already expressed interest in this opportunity.');return;}
+  state.opportunityResponses.push(id);
+  const o=demoOpportunities.find(x=>x.id===id);
+  pushNotification(`Interest recorded for “${o?.title||'an opportunity'}”.`,'opportunities');
+  persist();render();
+  notify('Interest recorded in the demo workspace.');
+}
+function inboxPage(){
+  const ownEnq=state.enquiries.filter(e=>e.associateId==='a1');
+  const ownProps=state.proposals.filter(p=>p.associateId==='a1');
+  return `<div class="pagehead"><div><div class="eyebrow">Conversations</div><h1>Enquiries</h1><p class="subhead">Review what clients are asking and respond with a clear next step.</p></div></div>
+  <div class="panel"><div class="panel-head"><div><div class="section-title">Proposals</div><p>Structured booking requests from clients — accept or decline below.</p></div></div><div>${ownProps.map(proposalAssocRow).join('')||emptyInline('No proposals yet.')}</div></div>
+  <div class="panel" style="margin-top:18px"><div class="panel-head"><div><div class="section-title">Your inbox</div><p>Demo messages only; no email or external messaging is sent.</p></div></div><div class="list">${ownEnq.map(enquiryRow).join('')||emptyInline('Your inbox is clear.')}</div></div>`;
+}
+function respondEnquiry(id){
+  const e=state.enquiries.find(x=>x.id===id);if(!e)return;
+  openModal('Respond to enquiry',`<form onsubmit="submitResponse(event,'${id}')"><div class="field"><label for="responseText">Your response *</label><textarea id="responseText" name="response" required placeholder="Thank the client and suggest a useful next step.">Thank you for reaching out. I’d be happy to learn more about your objectives and discuss a suitable approach.</textarea></div><div class="form-actions"><button type="button" class="btn secondary" onclick="closeModal()">Cancel</button><button type="submit" class="btn primary">Save response</button></div></form>`);
+}
+function submitResponse(e,id){
+  e.preventDefault();
+  const en=state.enquiries.find(x=>x.id===id);if(!en)return;
+  en.response=new FormData(e.target).get('response').trim();
+  en.status='Responded';
+  pushNotification('You responded to an enquiry.','inbox');
+  persist();closeModal();render();
+  notify('Your response has been added to the demo thread.');
+}
+function editProfilePage(){
+  let p=state.profile;
+  return `<div class="pagehead"><div><div class="eyebrow">Your professional identity</div><h1>My professional profile</h1><p class="subhead">Describe the work you do and the conditions where you do it best. These details are used in your client-facing preview.</p></div><button class="btn secondary" onclick="go('profilePreview')">Preview profile ↗</button></div><div class="panel form-panel"><form onsubmit="saveProfile(event)"><div class="form-section"><h3>Professional summary</h3><p>Be specific about the problems you help clients solve.</p><div class="field"><label for="profileSummary">About you *</label><textarea name="summary" id="profileSummary" required>${esc(p.summary)}</textarea></div></div><div class="form-section"><h3>Expertise</h3><p>Use a few focused areas that reflect your real strengths.</p><div class="field"><label for="profileSkills">Skills and specialisations (comma-separated)</label><input id="profileSkills" name="skills" value="${attr(p.skills.join(', '))}" required></div></div><div class="form-section"><h3>Delivery preferences</h3><div class="form-grid"><div class="field"><label for="profileFormats">Formats (comma-separated)</label><input id="profileFormats" name="formats" value="${attr(p.formats.join(', '))}"></div><div class="field"><label for="profileLanguages">Languages (comma-separated)</label><input id="profileLanguages" name="languages" value="${attr(p.languages.join(', '))}"></div><div class="field"><label for="profileLocation">Location</label><input id="profileLocation" name="location" value="${attr(p.location)}"></div><div class="field"><label for="profilePrice">Indicative daily rate (RM)</label><input id="profilePrice" name="price" type="number" min="0" step="100" value="${attr(p.price)}"></div><div class="field full"><label for="profileAvailability">Availability</label><select id="profileAvailability" name="availability">${['Available next week','Available in 2 weeks','Available in November','Available in December','Limited availability','By arrangement'].map(x=>`<option ${p.availability===x?'selected':''}>${x}</option>`).join('')}</select></div></div></div><div class="form-actions"><button type="button" class="btn secondary" onclick="go('associateDashboard')">Cancel</button><button type="submit" class="btn primary">Save profile changes</button></div></form></div>`;
+}
+function saveProfile(e){
+  e.preventDefault();
+  const f=new FormData(e.target);
+  state.profile={summary:f.get('summary').trim(),skills:f.get('skills').split(',').map(x=>x.trim()).filter(Boolean),formats:f.get('formats').split(',').map(x=>x.trim()).filter(Boolean),languages:f.get('languages').split(',').map(x=>x.trim()).filter(Boolean),location:f.get('location').trim(),price:Number(f.get('price'))||0,availability:f.get('availability')};
+  pushNotification('Your profile was updated.','profilePreview');
+  persist();render();
+  notify('Profile changes saved and reflected in your preview.');
+}
+function profilePreviewPage(){
+  const p=state.profile;
+  const s=state.session||{name:'Amira Hassan',initials:'AH',tone:'green',role:'associate'};
+  return `<div class="pagehead"><div><div class="eyebrow">Client-facing view</div><h1>Profile preview</h1><p class="subhead">This is a sample preview of how your professional information could appear to clients.</p></div><button class="btn primary" onclick="go('editProfile')">Edit profile →</button></div><div class="profile-layout"><div><section class="panel profile-hero">${avatar({name:s.name,initials:s.initials,tone:s.tone||'green'},true)}<div class="profile-title"><div class="name-line"><h2>${esc(s.name)}</h2><span class="pill">Demo profile</span></div><p>Leadership & Culture Facilitator</p><div class="tags"><span class="tag">${esc(p.location)}</span><span class="tag">14 years’ experience</span></div><div class="profile-details"><div class="detailbox"><span>Indicative rate</span><strong>${fmt(p.price)} / day</strong></div><div class="detailbox"><span>Availability</span><strong>${esc(p.availability)}</strong></div><div class="detailbox"><span>Delivery</span><strong>${p.formats.map(esc).join(', ')}</strong></div></div></div></section><section class="panel" style="margin-top:16px"><div class="section-title">About</div><p class="prose" style="margin:12px 0">${esc(p.summary)}</p><div class="section-title" style="margin-top:24px">Expertise</div><div class="skill-list">${p.skills.map(s=>`<span class="tag">${esc(s)}</span>`).join('')}</div><div class="section-title" style="margin-top:24px">Languages</div><div class="skill-list">${p.languages.map(s=>`<span class="tag">${esc(s)}</span>`).join('')}</div></section></div><aside><section class="panel"><div class="eyebrow">How clients see this</div><h3>Clarity builds confidence.</h3><p style="font-size:12px">A focused summary, concrete expertise and clear working preferences help clients judge whether your approach suits their needs.</p><button class="btn secondary" style="width:100%" onclick="go('editProfile')">Update details</button></section><div class="footnote">This preview uses demo profile data and is not publicly published.</div></aside></div>`;
+}
+
+/* ============ MODAL ============ */
+function openModal(title,body,wide){
+  document.getElementById('modalRoot').innerHTML=`<div class="overlay" onclick="if(event.target===this)closeModal()"><section class="modal ${wide?'wide':''}" role="dialog" aria-modal="true" aria-label="${attr(title)}"><div class="modal-head"><div><h2>${esc(title)}</h2></div><button class="close" aria-label="Close dialog" onclick="closeModal()">×</button></div>${body}</section></div>`;
+}
 function closeModal(){document.getElementById('modalRoot').innerHTML=''}
-function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function attr(s){return esc(s).replace(/`/g,'&#96;')}
 window.addEventListener('resize',()=>{document.getElementById('mobileBrand').style.display=innerWidth<=760?'flex':'none'});
-// Keep matching/profile actions safe and deterministic for this local prototype.
 render();
 </script>
 </body></html>
